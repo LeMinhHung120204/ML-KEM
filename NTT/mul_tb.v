@@ -5,8 +5,8 @@ module mul_tb;
     // Tín hiệu kết nối
     reg         clk;
     reg         rst_n;
-    reg  [31:0] A, B;
-    wire [63:0] R;
+    reg  [15:0] A, B;
+    wire [31:0] R;
 
     // Khởi tạo DUT
     mul dut (
@@ -29,26 +29,26 @@ module mul_tb;
         B     = 0;
 
         #10 rst_n = 1;
-        A = 32'd8380401;
-        B = 32'd2154;
+        A = 16'd13001;
+        B = 16'd2154;
         
-//        #10
-//        // Test case 1: 6 * -3 = -18
-//        A = 32'd0;
-//        B = 32'd0;  // signed negative number
+        #10
+        // Test case 1: 6 * -3 = -18
+        A = 16'd0;
+        B = 16'd0;  // signed negative number
 
-//        // Test case 2: -5 * -7 = 35
-//        #10
-//        A = 32'd5;
-//        B = 32'd7;
+        // Test case 2: -5 * -7 = 35
+        #10
+        A = 16'd5;
+        B = 16'd7;
         
-//        #10
-//        A = 32'd2;
-//        B = 32'd3;
+        #10
+        A = 16'd2;
+        B = 16'd3;
         
-//        #10
-//        A = -32'd6;
-//        B = 32'd10;
+        #10
+        A = -16'd6;
+        B = 16'd10;
 
         #170 $finish;
     end

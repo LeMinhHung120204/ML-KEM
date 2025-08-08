@@ -4,9 +4,8 @@ module barret_tb;
 
     reg clk;
     reg rst_n;
-    reg [63:0] C;
-    wire [31:0] R;
-    wire done;
+    reg [31:0] C;
+    wire [15:0] R;
 
     // Instantiate DUT
     barret uut (
@@ -24,26 +23,26 @@ module barret_tb;
         $display("Start Barrett Testbench");
         clk = 0;
         rst_n = 0;
-        C = 64'd0;
+        C = 31'd0;
 
         // Reset
         #20;
         rst_n = 1;
 
         // Test case 1
-        #10; C = 64'haFFFFFFFFFFF;
+        #10; C = 32'd33295;
 
         // Test case 2
-        #10; C = 64'd8380417;   // same as q in Kyber
+        #10; C = 32'd33299;   // same as q in Kyber
 
         // Test case 3
-        #10; C = 64'd10;
+        #10; C = 32'd10;
 
         // Test case 4
-        #10; C = 64'd8380418;
+        #10; C = 32'd8380418;
 
         // Test case 5
-        #10; C = 64'd1;  // max 16-bit
+        #10; C = 32'd1;  // max 16-bit
 
         // Wait and finish
         #100;
