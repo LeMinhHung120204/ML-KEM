@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="129.901 ns"></ZoomEndTime>
+      <Cursor1Time time="924.566 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="165"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="29" />
+   <wvobject fp_name="/tb_top/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/is_ntt" type="logic">
+      <obj_property name="ElementShortName">is_ntt</obj_property>
+      <obj_property name="ObjectShortName">is_ntt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/done_compute" type="logic">
+      <obj_property name="ElementShortName">done_compute</obj_property>
+      <obj_property name="ObjectShortName">done_compute</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/done_store" type="logic">
+      <obj_property name="ElementShortName">done_store</obj_property>
+      <obj_property name="ObjectShortName">done_store</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/addr_j" type="array">
+      <obj_property name="ElementShortName">addr_j[7:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_j[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/addr_jl" type="array">
+      <obj_property name="ElementShortName">addr_jl[7:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_jl[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/waddr_a" type="array">
+      <obj_property name="ElementShortName">waddr_a[7:0]</obj_property>
+      <obj_property name="ObjectShortName">waddr_a[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/waddr_b" type="array">
+      <obj_property name="ElementShortName">waddr_b[7:0]</obj_property>
+      <obj_property name="ObjectShortName">waddr_b[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/addr_zetas" type="array">
+      <obj_property name="ElementShortName">addr_zetas[6:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_zetas[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/out_j_ntt" type="array">
+      <obj_property name="ElementShortName">out_j_ntt[15:0]</obj_property>
+      <obj_property name="ObjectShortName">out_j_ntt[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/out_j_intt" type="array">
+      <obj_property name="ElementShortName">out_j_intt[15:0]</obj_property>
+      <obj_property name="ObjectShortName">out_j_intt[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/out_jl_ntt" type="array">
+      <obj_property name="ElementShortName">out_jl_ntt[15:0]</obj_property>
+      <obj_property name="ObjectShortName">out_jl_ntt[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/out_jl_intt" type="array">
+      <obj_property name="ElementShortName">out_jl_intt[15:0]</obj_property>
+      <obj_property name="ObjectShortName">out_jl_intt[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/zetas" type="array">
+      <obj_property name="ElementShortName">zetas[15:0]</obj_property>
+      <obj_property name="ObjectShortName">zetas[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/Bin_a" type="array">
+      <obj_property name="ElementShortName">Bin_a[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Bin_a[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/Bin_b" type="array">
+      <obj_property name="ElementShortName">Bin_b[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Bin_b[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/Bo_a" type="array">
+      <obj_property name="ElementShortName">Bo_a[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Bo_a[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/Bo_b" type="array">
+      <obj_property name="ElementShortName">Bo_b[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Bo_b[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/valid_addr" type="logic">
+      <obj_property name="ElementShortName">valid_addr</obj_property>
+      <obj_property name="ObjectShortName">valid_addr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/done_addr" type="logic">
+      <obj_property name="ElementShortName">done_addr</obj_property>
+      <obj_property name="ObjectShortName">done_addr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/valid" type="logic">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/owrite_en" type="logic">
+      <obj_property name="ElementShortName">owrite_en</obj_property>
+      <obj_property name="ObjectShortName">owrite_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/check_state" type="array">
+      <obj_property name="ElementShortName">check_state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">check_state[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/data_bram" type="array">
+      <obj_property name="ElementShortName">data_bram[8191:0]</obj_property>
+      <obj_property name="ObjectShortName">data_bram[8191:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/mem_tb" type="array">
+      <obj_property name="ElementShortName">mem_tb[0:255][31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_tb[0:255][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/cycle_count" type="array">
+      <obj_property name="ElementShortName">cycle_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cycle_count[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

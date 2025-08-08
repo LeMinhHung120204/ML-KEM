@@ -13,7 +13,7 @@ module top #(
     output [WIDTH - 1:0]                    out_j_ntt, out_j_intt, out_jl_ntt, out_jl_intt, zetas,
     output [WIDTH - 1:0]                    Bin_a, Bin_b, Bo_a, Bo_b, 
     output [1:0]                            check_state,
-    output [WIDTH_BUS_DATA - 1 : 0]         data_bram,
+    // output [WIDTH_BUS_DATA - 1 : 0]         data_bram,
     output                                  valid_addr, done_addr, valid, owrite_en
 );
     localparam IDLE = 2'd0, INIT = 2'd1, RUN = 2'd2, DONE = 2'd3;
@@ -216,8 +216,8 @@ module top #(
         .raddr_b(addr_jl),
         .waddr_b(waddr_b),
         .din_b({{16{A_Out_mux[15]}}, B_Out_mux}),
-        .dout_b(ob_b),
-        .bus_data(data_bram)
+        .dout_b(ob_b)
+        // .bus_data(data_bram)
     );
 
     AddressGenerator AddrGend(

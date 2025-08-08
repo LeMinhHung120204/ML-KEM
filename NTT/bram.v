@@ -18,22 +18,22 @@ module bram #(
     input [ADDR_WIDTH-1:0]  waddr_b,
     input [ADDR_WIDTH-1:0]  raddr_b,
     input [WIDTH-1:0]       din_b,
-    output reg [WIDTH-1:0]  dout_b,
+    output reg [WIDTH-1:0]  dout_b
 
     // dubug
-    output [(WIDTH) * (DEPTH) - 1:0] bus_data
+    // output [(WIDTH) * (DEPTH) - 1:0] bus_data
 );
     // Memory
     reg [WIDTH-1:0] mem [0:DEPTH-1];
     
     // Flatten mem -> bus_data
     // `ifdef SIM
-    genvar k;
-        generate
-            for (k = 0; k < DEPTH; k = k + 1) begin : FLATTEN_MEM
-                assign bus_data[(k+1)*WIDTH-1 -: WIDTH] = mem[k];
-            end
-        endgenerate
+    // genvar k;
+    //     generate
+    //         for (k = 0; k < DEPTH; k = k + 1) begin : FLATTEN_MEM
+    //             assign bus_data[(k+1)*WIDTH-1 -: WIDTH] = mem[k];
+    //         end
+    //     endgenerate
     // `else 
     //     localparam integer BUSW = WIDTH * DEPTH;
     //     assign bus_data = {BUSW{1'b0}};

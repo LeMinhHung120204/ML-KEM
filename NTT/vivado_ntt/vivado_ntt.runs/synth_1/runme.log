@@ -1,0 +1,362 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+
+****** Vivado v2022.2.2 (64-bit)
+  **** SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
+  **** IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+    ** Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Hung/Viettel/Stage2/ML-KEM/NTT/vivado_ntt/vivado_ntt.srcs/utils_1/imports/synth_1/csa.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Hung/Viettel/Stage2/ML-KEM/NTT/vivado_ntt/vivado_ntt.srcs/utils_1/imports/synth_1/csa.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top -part xczu7ev-ffvc1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 26488
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1905.691 ; gain = 338.371
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/top.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Hung/Viettel/Stage2/ML-KEM/NTT/top.v:75]
+INFO: [Synth 8-6157] synthesizing module 'MyBootROM' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/MyBootRom.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MyBootROM' (0#1) [C:/Hung/Viettel/Stage2/ML-KEM/NTT/MyBootRom.v:1]
+INFO: [Synth 8-6157] synthesizing module 'bram' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/bram.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'bram' (0#1) [C:/Hung/Viettel/Stage2/ML-KEM/NTT/bram.v:1]
+INFO: [Synth 8-6157] synthesizing module 'AddressGenerator' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/AddressGenerator.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Hung/Viettel/Stage2/ML-KEM/NTT/AddressGenerator.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'AddressGenerator' (0#1) [C:/Hung/Viettel/Stage2/ML-KEM/NTT/AddressGenerator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'bu_ntt' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/bu_ntt.v:1]
+INFO: [Synth 8-6157] synthesizing module 'barret' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'barret' (0#1) [C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mul' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/mul.v:1]
+INFO: [Synth 8-6157] synthesizing module 'BoothDecode' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'BoothDecode' (0#1) [C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mul' (0#1) [C:/Hung/Viettel/Stage2/ML-KEM/NTT/mul.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'bu_ntt' (0#1) [C:/Hung/Viettel/Stage2/ML-KEM/NTT/bu_ntt.v:1]
+INFO: [Synth 8-6157] synthesizing module 'bu_intt' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/bu_intt.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'bu_intt' (0#1) [C:/Hung/Viettel/Stage2/ML-KEM/NTT/bu_intt.v:1]
+INFO: [Synth 8-6157] synthesizing module 'normalize_output' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/normalize_output.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'normalize_output' (0#1) [C:/Hung/Viettel/Stage2/ML-KEM/NTT/normalize_output.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Hung/Viettel/Stage2/ML-KEM/NTT/top.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2058.105 ; gain = 490.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2058.105 ; gain = 490.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2058.105 ; gain = 490.785
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.181 . Memory (MB): peak = 2058.105 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Hung/Viettel/Stage2/ML-KEM/NTT/vivado_ntt/vivado_ntt.srcs/constrs_1/new/constran_clock.xdc]
+Finished Parsing XDC File [C:/Hung/Viettel/Stage2/ML-KEM/NTT/vivado_ntt/vivado_ntt.srcs/constrs_1/new/constran_clock.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2166.215 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.243 . Memory (MB): peak = 2166.215 ; gain = 0.000
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2166.215 ; gain = 598.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2166.215 ; gain = 598.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2166.215 ; gain = 598.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2166.215 ; gain = 598.895
+---------------------------------------------------------------------------------
+top__GCB0bram__GB5bram__GB4bram__GB3bram__GB2bram__GB1bram__GB0MyBootROM---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2166.215 ; gain = 598.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2166.215 ; gain = 598.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Mimic Skeleton from Reference
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Mimic Skeleton from Reference : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2166.215 ; gain = 598.895
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: yes
+
+   Stitch points used : changed
+
+
+2. Change Summary
+
+Report Incremental Modules: 
++-+----------------+------------+----------+----------+
+| |Changed Modules |Replication |Instances |Changed % |
++-+----------------+------------+----------+----------+
++-+----------------+------------+----------+----------+
+
+
+   Full Design Size (number of cells) : 140095
+   Resynthesis Design Size (number of cells) : 0
+   Resynth % : 0.0000,  Reuse % : 100.0000
+
+3. Reference Checkpoint Information
+
++---------------------------------------------------------------------------------------------------------------+
+| DCP Location:  | C:/Hung/Viettel/Stage2/ML-KEM/NTT/vivado_ntt/vivado_ntt.srcs/utils_1/imports/synth_1/csa.dcp |
++---------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------+------------------------------+
+|         DCP Information        |             Value            |
++--------------------------------+------------------------------+
+| Vivado Version                 |                    v2022.2.2 |
+| DCP State                      |                              |
++--------------------------------+------------------------------+
+
+
+
+Report RTL Partitions: 
++------+------------------+------------+----------+
+|      |RTL Partition     |Replication |Instances |
++------+------------------+------------+----------+
+|1     |MyBootROM_#REUSE# |           1|         0|
+|2     |bram__GB0_#REUSE# |           1|         0|
+|3     |bram__GB1_#REUSE# |           1|         0|
+|4     |bram__GB2_#REUSE# |           1|         0|
+|5     |bram__GB3_#REUSE# |           1|         0|
+|6     |bram__GB4_#REUSE# |           1|         0|
+|7     |bram__GB5_#REUSE# |           1|         0|
+|8     |top__GCB0_#REUSE# |           1|         0|
++------+------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7077] IncrSyn: subsequent runs will still be incremental as the reference run was parallel and that data is reused
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2166.215 ; gain = 598.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Stitch Unchanged AreaOpt Partitions
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged AreaOpt Partitions : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2166.215 ; gain = 598.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 2647.133 ; gain = 1079.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 2647.648 ; gain = 1080.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7077] IncrSyn: subsequent runs will still be incremental as the reference run was parallel and that data is reused
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 2666.195 ; gain = 1098.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Stitch Unchanged Partitions
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged Partitions : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 2666.195 ; gain = 1098.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 2686.785 ; gain = 1119.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 2686.785 ; gain = 1119.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 2686.785 ; gain = 1119.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 2686.785 ; gain = 1119.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 2686.785 ; gain = 1119.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 2686.785 ; gain = 1119.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                           | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|top         | bu_ntt0/mul_inst/result_reg[7][9]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|top         | bu_ntt0/mul_inst/result_reg[7][7]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|top         | bu_ntt0/mul_inst/result_reg[7][5]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|top         | bu_ntt0/mul_inst/result_reg[7][3]  | 7      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|top         | bu_ntt0/mul_inst/result_reg[7][1]  | 8      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|top         | bu_ntt0/regx_reg[16][15]           | 12     | 16    | YES          | NO                 | YES               | 16     | 0       | 
+|top         | bu_intt0/mul_inst/result_reg[7][9] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|top         | bu_intt0/mul_inst/result_reg[7][7] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|top         | bu_intt0/mul_inst/result_reg[7][5] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|top         | bu_intt0/mul_inst/result_reg[7][3] | 7      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|top         | bu_intt0/mul_inst/result_reg[7][1] | 8      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|top         | bu_intt0/mul_inst/regA_reg[0][0]   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|top         | bu_intt0/mul_inst/y_ext_reg[2][2]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|top         | bu_intt0/mul_inst/y_ext_reg[3][2]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|top         | bu_intt0/mul_inst/y_ext_reg[4][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|top         | bu_intt0/mul_inst/y_ext_reg[5][2]  | 7      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|top         | bu_intt0/mul_inst/y_ext_reg[6][2]  | 8      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|top         | bu_intt0/mul_inst/y_ext_reg[7][2]  | 9      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|top         | bu_intt0/A_Outreg_reg[15]          | 14     | 16    | YES          | NO                 | YES               | 16     | 0       | 
+|top         | regx_reg[18][7]                    | 19     | 8     | YES          | NO                 | YES               | 0      | 8       | 
+|top         | regy_reg[18][7]                    | 19     | 8     | YES          | NO                 | YES               | 0      | 8       | 
+|top         | bu_intt0/regx_reg[7][4]            | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|top         | bu_intt0/regx_reg[8][6]            | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|top         | bu_intt0/mul_inst/regA_reg[0][8]   | 6      | 4     | YES          | NO                 | YES               | 4      | 0       | 
++------------+------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY8  |   300|
+|3     |LUT1    |   321|
+|4     |LUT2    |   840|
+|5     |LUT3    |   708|
+|6     |LUT4    |  1177|
+|7     |LUT5    |   975|
+|8     |LUT6    |  6979|
+|9     |MUXF7   |  1100|
+|10    |MUXF8   |   544|
+|11    |SRL16E  |    73|
+|12    |SRLC32E |    16|
+|13    |FDCE    |  5848|
+|14    |FDPE    |     8|
+|15    |FDRE    |    89|
+|16    |IBUF    |     4|
+|17    |OBUF    |   191|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 2686.785 ; gain = 1119.465
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:41 . Memory (MB): peak = 2686.785 ; gain = 1011.355
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 2686.785 ; gain = 1119.465
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.165 . Memory (MB): peak = 2699.836 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1949 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2732.738 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 4 instances
+
+Synth Design complete, checksum: ad5735f5
+INFO: [Common 17-83] Releasing license: Synthesis
+42 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:01:01 . Memory (MB): peak = 2732.738 ; gain = 2311.273
+INFO: [Common 17-1381] The checkpoint 'C:/Hung/Viettel/Stage2/ML-KEM/NTT/vivado_ntt/vivado_ntt.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Aug  8 15:45:41 2025...
