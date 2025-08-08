@@ -92,7 +92,7 @@ module tb_top;
         rst_n = 1;
 
         // Wait a bit, then start
-        #400;
+//        #400;
         start = 1;
 
         #20;

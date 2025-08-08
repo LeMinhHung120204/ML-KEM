@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Fri Aug  8 15:44:30 2025
+# Process ID: 4020
+# Current directory: C:/Hung/Viettel/Stage2/ML-KEM/NTT/vivado_ntt/vivado_ntt.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: C:/Hung/Viettel/Stage2/ML-KEM/NTT/vivado_ntt/vivado_ntt.runs/synth_1/top.vds
+# Journal file: C:/Hung/Viettel/Stage2/ML-KEM/NTT/vivado_ntt/vivado_ntt.runs/synth_1\vivado.jou
+# Running On: DESKTOP-DA5EM0P, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 16948 MB
+#-----------------------------------------------------------
+source top.tcl -notrace

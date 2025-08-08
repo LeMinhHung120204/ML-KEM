@@ -1,0 +1,22 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/NTT/AddressGenerator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AddressGenerator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BoothDecode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/NTT/MyBootRom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MyBootROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module barret
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/NTT/bram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/NTT/bu_intt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bu_intt
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/NTT/bu_ntt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bu_ntt
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/NTT/mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/NTT/normalize_output.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module normalize_output
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/NTT/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/NTT/tb_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top

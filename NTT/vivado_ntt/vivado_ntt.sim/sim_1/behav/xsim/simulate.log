@@ -1,0 +1,3 @@
+Time resolution is 1 ps
+? done_store = 1 at cycle = 918
+$finish called at time : 9235 ns : File "C:/Hung/Viettel/Stage2/ML-KEM/NTT/tb_top.v" Line 106
