@@ -215,7 +215,7 @@ module top #(
         .we_b(write_en),
         .raddr_b(addr_jl),
         .waddr_b(waddr_b),
-        .din_b({{16{A_Out_mux[15]}}, B_Out_mux}),
+        .din_b({{16{B_Out_mux[15]}}, B_Out_mux}),
         .dout_b(ob_b)
         // .bus_data(data_bram)
     );
