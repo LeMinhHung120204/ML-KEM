@@ -100,9 +100,10 @@
             end 
         end 
 
-        assign addr0 = j;
-        assign addr1 = j + l;
-        assign addr_tw = zetas;
-        assign valid = ((is_ntt) & (l >= 2'd2)) | ((~is_ntt) & (l <= 9'd128));
-        assign ntt_finished = (state == DONE);
+        assign addr0            = j;
+        assign addr1            = j + l;
+        assign addr_tw          = zetas;
+        // assign valid            = ((is_ntt) & (l >= 2'd2)) | ((~is_ntt) & (l <= 9'd127));
+        assign valid            = (l >= 9'd2) & (is_ntt | (l <= 9'd128));
+        assign ntt_finished     = (state == DONE);
     endmodule

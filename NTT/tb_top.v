@@ -5,19 +5,32 @@ module tb_top;
     // Parameters
     localparam WIDTH_ADDR_BUTTERFLY = 8;
     localparam WIDTH_ADDR_ZETAS     = 7;
-    localparam WIDTH                = 32;
+    localparam WIDTH                = 16;
+    localparam DEPTH = 256;
+    localparam WORDW = 32;   // mỗi phần tử trong BRAM
+    localparam WIDTH_BUS_DATA       = DEPTH * WORDW;
 
     // Signals
     reg clk, rst_n, start, is_ntt;
     wire done_compute, done_store;
 
 
-    wire [WIDTH_ADDR_BUTTERFLY - 1:0] addr_j, addr_jl;
+    wire [WIDTH_ADDR_BUTTERFLY - 1:0] addr_j, addr_jl, waddr_a, waddr_b;
     wire [WIDTH_ADDR_ZETAS - 1:0] addr_zetas;
     wire [WIDTH - 1:0] out_j_ntt, out_j_intt, out_jl_ntt, out_jl_intt, zetas;
-    wire [WIDTH - 1:0] A, B;
-    wire valid_addr, done_addr, valid;
+    wire [WIDTH - 1:0] Bin_a, Bin_b, Bo_a, Bo_b;
+    wire valid_addr, done_addr, valid, owrite_en;
     wire [1:0] check_state;
+    wire [WIDTH_BUS_DATA - 1:0] data_bram;
+
+    // Mảng để xem cho dễ trên waveform
+    reg [WORDW-1:0] mem_tb [0:DEPTH-1]; 
+    integer i;
+    // Unpack data_bram -> mem_tb[i]
+    always @* begin
+    for (i = 0; i < DEPTH; i = i + 1)
+        mem_tb[i] = data_bram[(i+1)*WORDW-1 -: WORDW]; // khớp công thức bạn dùng khi pack
+    end
 
     // Instantiate DUT
     top #(
@@ -41,10 +54,16 @@ module tb_top;
         .valid_addr(valid_addr),
         .done_addr(done_addr),
         .valid(valid),
-        .A(A),
-        .B(B),
         .zetas(zetas),
-        .check_state(check_state)
+        .Bin_a(Bin_a),
+        .Bin_b(Bin_b),
+        .Bo_a(Bo_a),
+        .Bo_b(Bo_b),
+        .waddr_a(waddr_a),
+        .waddr_b(waddr_b),
+        .check_state(check_state),
+        .owrite_en(owrite_en),
+        .data_bram(data_bram)
     );
 
     // Clock generator: 10ns period
