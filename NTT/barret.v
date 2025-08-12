@@ -2,14 +2,14 @@ module barret #(
     parameter WIDTH = 16
 )(
     input clk, rst_n, 
-    input [(WIDTH * 2) - 1:0] C,
+    input signed [(WIDTH * 2) - 1:0] C,
     output [WIDTH - 1:0] R
 );
 
     localparam Qmod = 16'd3329;
     localparam num_reg = 3;
 
-    reg [(2 * WIDTH) + 13:0] regx [0 : num_reg - 1];
+    reg signed [(2 * WIDTH) + 13:0] regx [0 : num_reg - 1];
     reg [(2 * WIDTH) + 13:0] tmp1, tmp2, tmp3;
 
     integer i;
@@ -26,7 +26,7 @@ module barret #(
             tmp1    <= C; 
 
             // stage 2
-            regx[1] <= regx[0] >> 26;
+            regx[1] <= regx[0] >>> 26;
             tmp2    <= tmp1;
             
             // stage 3

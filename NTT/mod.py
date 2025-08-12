@@ -29,11 +29,11 @@ a = 12345678
 b = 12345678
 R = 2**(32) % q # 4193792
 
-mu = (-pow(q, -1, 2**16)) % 2**16
-res = AHMM(a, b, q, mu)
-print(f"{a} * {b} * R^-1 mod {q} = {res}")
-print("Expected:", (a * b * pow(2**32, -1, q)) % q)
-print()
-print(f"{a} * {b} mod {q} = {(res * R) % q}")
-print("Expected:", (a * b) % q)
+# mu = (-pow(q, -1, 2**16)) % 2**16
+# res = AHMM(a, b, q, mu)
+# print(f"{a} * {b} * R^-1 mod {q} = {res}")
+print("Expected:", (pow(3329, -1, q)) % 3329)
+# print()
+# print(f"{a} * {b} mod {q} = {(res * R) % q}")
+# print("Expected:", (a * b) % q)
 

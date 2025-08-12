@@ -15,7 +15,6 @@
         
         reg [WIDTH_ADDR_ZETAS - 1:0] zetas, next_zetas;
         reg [WIDTH_ADDR_BUTTERFLY:0] j, first_p, l, next_j, next_l, next_first_p;
-        reg done;
 
         wire [WIDTH_ADDR_BUTTERFLY : 0] tmp = first_p + (l << 1);
 
