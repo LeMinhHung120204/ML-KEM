@@ -1,112 +1,79 @@
-`timescale 1ns / 1ps
+`timescale 1ns/1ps
 
 module tb_top;
+  // Tham số
+  localparam WIDTH = 16;
 
-    // Parameters
-    localparam WIDTH_ADDR_BUTTERFLY = 8;
-    localparam WIDTH_ADDR_ZETAS     = 7;
-    localparam WIDTH                = 16;
-    localparam DEPTH = 256;
-    localparam WORDW = 32;   // mỗi phần tử trong BRAM
-    localparam WIDTH_BUS_DATA       = DEPTH * WORDW;
+  // I/O DUT
+  reg  clk, rst_n, start, is_ntt, valid_input;
+  reg  [WIDTH-1:0] in0, in1;
+  wire done_compute, done_store, load_done;
 
-    // Signals
-    reg clk, rst_n, start, is_ntt;
-    wire done_compute, done_store;
+  // Clock 10ns
+  always #5 clk = ~clk;
 
+  // DUT
+  top #(
+    .WIDTH(WIDTH)
+  ) dut (
+    .clk(clk),
+    .rst_n(rst_n),
+    .start(start),
+    .is_ntt(is_ntt),
+    .valid_input(valid_input),
+    .in0(in0),
+    .in1(in1),
+    .done_compute(done_compute),
+    .done_store(done_store),
+    .load_done(load_done)
+  );
 
-    wire [WIDTH_ADDR_BUTTERFLY - 1:0] addr_j, addr_jl, waddr_a, waddr_b;
-    wire [WIDTH_ADDR_ZETAS - 1:0] addr_zetas;
-    wire [WIDTH - 1:0] out_j_ntt, out_j_intt, out_jl_ntt, out_jl_intt, zetas;
-    wire [WIDTH - 1:0] Bin_a, Bin_b, Bo_a, Bo_b;
-    wire valid_addr, done_addr, valid, owrite_en;
-    wire [1:0] check_state;
-    wire [WIDTH_BUS_DATA - 1:0] data_bram;
+  integer k;
 
-    // Mảng để xem cho dễ trên waveform
-    reg [WORDW-1:0] mem_tb [0:DEPTH-1]; 
-    integer i;
-    // Unpack data_bram -> mem_tb[i]
-    always @* begin
-    for (i = 0; i < DEPTH; i = i + 1)
-        mem_tb[i] = data_bram[(i+1)*WORDW-1 -: WORDW]; // khớp công thức bạn dùng khi pack
+  initial begin
+    // Khởi tạo
+    clk = 0;
+    rst_n = 0;
+    start = 0;
+    is_ntt = 1'b1;        // chạy NTT
+    valid_input = 0;
+    in0 = 16'd0; 
+    in1 = 16'd0;
+
+    // Reset
+    #10 rst_n = 1;
+
+    // Bắt đầu
+    @(posedge clk); start = 1;
+    @(posedge clk); start = 0;
+
+    // Nạp 128 lần dữ liệu
+    for (k = 0; k < 128; k = k + 1) begin
+        @(posedge clk);
+        valid_input <= 1'b1;
+        in0 <= k;                // giá trị in0
+        in1 <= 16'd1000 + k;     // giá trị in1
     end
 
-    // Instantiate DUT
-    top #(
-        .WIDTH_ADDR_BUTTERFLY(WIDTH_ADDR_BUTTERFLY),
-        .WIDTH_ADDR_ZETAS(WIDTH_ADDR_ZETAS),
-        .WIDTH(WIDTH)
-    ) dut (
-        .clk(clk),
-        .rst_n(rst_n),
-        .start(start),
-        .is_ntt(is_ntt),
-        .done_compute(done_compute),
-        .done_store(done_store),
-        .addr_j(addr_j),
-        .addr_jl(addr_jl),
-        .addr_zetas(addr_zetas),
-        .out_j_ntt(out_j_ntt),
-        .out_jl_ntt(out_jl_ntt),
-        .out_j_intt(out_j_intt),
-        .out_jl_intt(out_jl_intt),
-        .valid_addr(valid_addr),
-        .done_addr(done_addr),
-        .valid(valid),
-        .zetas(zetas),
-        .Bin_a(Bin_a),
-        .Bin_b(Bin_b),
-        .Bo_a(Bo_a),
-        .Bo_b(Bo_b),
-        .waddr_a(waddr_a),
-        .waddr_b(waddr_b),
-        .check_state(check_state),
-        .owrite_en(owrite_en),
-        .data_bram(data_bram)
-    );
+    // Ngắt valid_input
+    @(posedge clk);
+    valid_input <= 1'b0;
+    in0 <= 0;
+    in1 <= 0;
 
-    // Clock generator: 10ns period
-    always #5 clk = ~clk;
+    // Chờ xử lý xong
+    wait (done_store);
+    $display("[%0t] DONE_STORE!", $time);
 
-    // Cycle counter
-    integer cycle_count;
+    #20;
+    $finish;
+  end
 
-    always @(posedge clk or negedge rst_n) begin
-        if (~rst_n)
-            cycle_count <= 0;
-        else
-            cycle_count <= cycle_count + 1;
-    end
+  // Timeout phòng treo
+  initial begin
+    #200000;
+    $display("TIMEOUT");
+    $finish;
+  end
 
-    // Main stimulus
-    initial begin
-        // Initialize signals
-        clk     = 0;
-        rst_n   = 0;
-        start   = 0;
-        is_ntt  = 1;
-
-        // Apply reset
-        #10;
-        rst_n = 1;
-
-        // Wait a bit, then start
-//        #400;
-        start = 1;
-
-        #20;
-        start = 0;
-
-        // Wait for done_store = 1
-        wait(done_store);
-        $display("? done_store = 1 at cycle = %0d", cycle_count);
-
-        #50;
-        $finish;
-    end
-    initial begin
-        #10000
-        $finish;
-    end
 endmodule

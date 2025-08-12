@@ -1,0 +1,19 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../NTT/AddressGenerator.v" \
+"../../../../../NTT/BoothDecode.v" \
+"../../../../../NTT/MyBootRom.v" \
+"../../../../../NTT/barret.v" \
+"../../../../../NTT/bram.v" \
+"../../../../../NTT/bu_intt.v" \
+"../../../../../NTT/bu_ntt.v" \
+"../../../../../NTT/mul.v" \
+"../../../../../NTT/normalize_output.v" \
+"../../../../../NTT/top.v" \
+"../../../../../NTT/tb_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

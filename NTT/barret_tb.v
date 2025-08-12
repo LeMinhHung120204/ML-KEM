@@ -30,7 +30,7 @@ module barret_tb;
         rst_n = 1;
 
         // Test case 1
-        #10; C = 32'd33295;
+        #10; C = -32'd33;
 
         // Test case 2
         #10; C = 32'd33299;   // same as q in Kyber
