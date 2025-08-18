@@ -41,20 +41,20 @@ module top #(
     wire start_normalize, oe_normalize;
     wire start_gen_addr, valid_load;
     wire done_add;
-    
     wire [WIDTH - 1:0] sub_tmp  = regy[15] - regx[15];
+
+    //----------------------------------- cac phase tinh toan -----------------------------------
     wire phase1                 = (counter >= 6'd19) & (sub_tmp > 2'd2);
     wire phase2                 = (counter >= 6'd18) & (counter <= 6'd20) & (~start_normalize);
     wire phase3                 = (count_addr >= 8'd2) & (count_addr <= 8'd129);
     
-    // tin hieu dieu khien
+    //----------------------------------- tin hieu dieu khien cac module con -----------------------------------
     assign start_normalize      = ((sub_tmp == 8'd128) & (~is_ntt));
     assign start_gen_addr       = (state == INIT) & load_done_reg;
     assign valid_load           = (state == INIT) & valid_input;
     assign oe_normalize         = (state == RUN) & phase3;
     // assign valid_mem            = (state == RUN) | done_compute | valid_load;
     // assign done_compute         = (state == RUN) & ((is_ntt & (counter > 6'd37)) | (count_addr >= 8'd131));
-    assign done_compute         = (state == DONE);
 
     //----------------------------------- tin hieu dieu khien bram -----------------------------------
     wire we_next, vl_mem_next;
@@ -121,13 +121,16 @@ module top #(
     //----------------------------------- output -----------------------------------
     reg valid_output_reg;
     // assign valid_output         = (is_ntt & (sub_tmp == 2'd2)) | phase3;
+
+    wire valid_output_next;
     assign out0                 = (valid_output == 1'b1) ? A_Out_mux    : 8'd0;
     assign out1                 = (valid_output == 1'b1) ? B_Out_mux    : 8'd0;
     assign addr0                = (valid_output == 1'b1) ? ((is_ntt) ? waddr_a : count_addr - 2'd2)    : 8'd0;
     assign addr1                = (valid_output == 1'b1) ? ((is_ntt) ? waddr_b : count_addr + 8'd126)  : 8'd0;
-    wire valid_output_next;
-    assign valid_output_next = (state == RUN) & (is_ntt & (sub_tmp == 2'd2)) | ((count_addr > 1'b0) & (count_addr < 8'd129));
+    assign valid_output_next    = (state == RUN) & (is_ntt & (sub_tmp == 2'd2)) | ((count_addr > 1'b0) & (count_addr < 8'd129));
     assign valid_output         = valid_output_reg;
+    assign done_compute         = (state == DONE);
+    assign load_done            = load_done_reg;
 
     always @(posedge clk or negedge rst_n) begin
         if (~rst_n) begin
@@ -145,7 +148,6 @@ module top #(
     // assign Bin_b        = din_b;
     // assign Bo_a         = A;
     // assign Bo_b         = B;
-    assign load_done    = load_done_reg;
     // assign owrite_en    = write_en_reg;
     // assign owaddr_a     = waddr_a;
     // assign owaddr_b     = waddr_b;
