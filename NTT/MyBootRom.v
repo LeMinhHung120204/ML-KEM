@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module MyBootROM #(
     parameter WIDTH_ADDR = 7
 )(

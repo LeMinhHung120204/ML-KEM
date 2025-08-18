@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module bram #(
     parameter DEPTH = 256,
     parameter ADDR_WIDTH = $clog2(DEPTH),   //8

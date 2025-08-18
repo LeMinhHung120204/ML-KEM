@@ -2,13 +2,192 @@
 # Vivado v2022.2.2 (64-bit)
 # SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
 # IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
-# Start of session at: Tue Aug 12 14:41:40 2025
-# Process ID: 14412
+# Start of session at: Mon Aug 18 13:55:19 2025
+# Process ID: 30176
 # Current directory: C:/Hung/Viettel/Stage2/ML-KEM/ml_kem
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10392 C:\Hung\Viettel\Stage2\ML-KEM\ml_kem\ml_kem.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11088 C:\Hung\Viettel\Stage2\ML-KEM\ml_kem\ml_kem.xpr
 # Log file: C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/vivado.log
 # Journal file: C:/Hung/Viettel/Stage2/ML-KEM/ml_kem\vivado.jou
 # Running On: DESKTOP-DA5EM0P, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 16948 MB
 #-----------------------------------------------------------
 start_gui
 open_project C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg
+source tb_top.tcl
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/start_normalize}} 
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/counter}} {{/tb_top/dut/count_addr}} 
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/normalize_inst/A}} {{/tb_top/dut/normalize_inst/B}} {{/tb_top/dut/normalize_inst/oA}} {{/tb_top/dut/normalize_inst/oB}} 
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+relaunch_sim
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/phase3}} 
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+relaunch_sim
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/normalize_inst/A}} {{/tb_top/dut/normalize_inst/B}} {{/tb_top/dut/normalize_inst/oA}} {{/tb_top/dut/normalize_inst/oB}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top top [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg
+source tb_top.tcl
+relaunch_sim
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/clk}} {{/tb_top/rst_n}} {{/tb_top/start}} {{/tb_top/is_ntt}} {{/tb_top/valid_input}} {{/tb_top/in0}} {{/tb_top/in1}} {{/tb_top/addr0}} {{/tb_top/addr1}} {{/tb_top/out0}} {{/tb_top/out1}} {{/tb_top/done_compute}} {{/tb_top/load_done}} {{/tb_top/valid_output}} {{/tb_top/owaddr_a}} {{/tb_top/owaddr_b}} {{/tb_top/addr_zetas}} {{/tb_top/zetas}} {{/tb_top/barret1}} {{/tb_top/barret2}} {{/tb_top/barret3}} {{/tb_top/Bin_a}} {{/tb_top/Bin_b}} {{/tb_top/Bo_a}} {{/tb_top/Bo_b}} {{/tb_top/mul_out}} {{/tb_top/sub_out}} {{/tb_top/add_out}} {{/tb_top/k}} {{/tb_top/WIDTH_ADDR_BUTTERFLY}} {{/tb_top/WIDTH_ADDR_ZETAS}} {{/tb_top/WIDTH}} {{/tb_top/WIDTH_BUS_DATA}} 
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/out_j_intt}} {{/tb_top/dut/out_jl_intt}} 
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/waddr_a}} {{/tb_top/dut/waddr_b}} 
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/din_a}} {{/tb_top/dut/din_b}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/write_en_reg}} 
+relaunch_sim
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/counter}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/raddr_a}} {{/tb_top/dut/raddr_b}} 
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/ob_a}} {{/tb_top/dut/ob_b}} 
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+relaunch_sim
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/zetas}} 
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/out_j_ntt}} {{/tb_top/dut/out_jl_ntt}} 
+relaunch_sim
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/bu_ntt0/A_In}} {{/tb_top/dut/bu_ntt0/B_In}} {{/tb_top/dut/bu_ntt0/W_In}} {{/tb_top/dut/bu_ntt0/A_Out}} {{/tb_top/dut/bu_ntt0/B_Out}} 
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/bu_ntt0/A_Out}} {{/tb_top/dut/bu_ntt0/B_Out}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/bu_ntt0/mul_out}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/bu_ntt0/barrett_out3}} 
+relaunch_sim
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/bu_ntt0/barrett_out1}} {{/tb_top/dut/bu_ntt0/barrett_out2}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/bu_ntt0/regx[2]}} {{/tb_top/dut/bu_ntt0/regx[3]}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/bu_ntt0/sub_tmp}} 
+relaunch_sim
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/bu_ntt0/regx[16]}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/counter}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/state}} 
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/clk}} {{/tb_top/rst_n}} {{/tb_top/start}} {{/tb_top/is_ntt}} {{/tb_top/valid_input}} {{/tb_top/in0}} {{/tb_top/in1}} {{/tb_top/addr0}} {{/tb_top/addr1}} {{/tb_top/out0}} {{/tb_top/out1}} {{/tb_top/done_compute}} {{/tb_top/load_done}} {{/tb_top/valid_output}} {{/tb_top/owaddr_a}} {{/tb_top/owaddr_b}} {{/tb_top/addr_zetas}} {{/tb_top/zetas}} {{/tb_top/barret1}} {{/tb_top/barret2}} {{/tb_top/barret3}} {{/tb_top/Bin_a}} {{/tb_top/Bin_b}} {{/tb_top/Bo_a}} {{/tb_top/Bo_b}} {{/tb_top/mul_out}} {{/tb_top/sub_out}} {{/tb_top/add_out}} {{/tb_top/k}} {{/tb_top/WIDTH_ADDR_BUTTERFLY}} {{/tb_top/WIDTH_ADDR_ZETAS}} {{/tb_top/WIDTH}} {{/tb_top/WIDTH_BUS_DATA}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+close_sim
