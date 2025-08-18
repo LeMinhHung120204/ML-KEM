@@ -3,7 +3,7 @@
 module top #(
     parameter WIDTH_ADDR_BUTTERFLY = 8,
     parameter WIDTH_ADDR_ZETAS = 7,
-    parameter WIDTH = 16,
+    parameter WIDTH = 17,
     parameter WIDTH_BUS_DATA = 256 * 32
 )(
     input clk, rst_n, start, is_ntt, valid_input,
@@ -25,7 +25,7 @@ module top #(
     // output                                  valid_addr, done_addr, valid, owrite_en
 );
     localparam IDLE = 2'd0, INIT = 2'd1, RUN = 2'd2, DONE = 2'd3;
-    localparam num_reg = 16;
+    localparam num_reg = 17;
 
     reg [1:0] state, next_state;
     reg [5:0] counter;
@@ -57,9 +57,9 @@ module top #(
     // assign done_compute         = (state == RUN) & ((is_ntt & (counter > 6'd37)) | (count_addr >= 8'd131));
 
     //----------------------------------- tin hieu dieu khien bram -----------------------------------
-    wire we_next, vl_mem_next;
+    wire we_next, vl_mem_next, next_valid_addr;
     wire [31:0] ob_a, ob_b, din_a_next, din_b_next;
-    wire [WIDTH_ADDR_BUTTERFLY-1:0] waddr_a_next, waddr_b_next, raddr_a_next, raddr_b_next, next_valid_addr; 
+    wire [WIDTH_ADDR_BUTTERFLY-1:0] waddr_a_next, waddr_b_next, raddr_a_next, raddr_b_next; 
     
     reg valid_mem, write_en_reg, valid_addr;
     reg [31:0] din_a, din_b;
@@ -67,8 +67,8 @@ module top #(
     
     assign we_next          = valid_load | ((state == RUN) & ((is_ntt & phase1) | ((~is_ntt) & phase2)));
     assign vl_mem_next      = (state == RUN) | done_compute | valid_load;
-    assign waddr_a_next     = (state == INIT) ? (count_load << 1)           : ((phase3 == 1'b1) ? 8'd0 : regx[15]);
-    assign waddr_b_next     = (state == INIT) ? (count_load << 1) + 1'b1    : ((phase3 == 1'b1) ? 8'd0 : regy[15]);
+    assign waddr_a_next     = (state == INIT) ? (count_load << 1)           : ((phase3 == 1'b1) ? 8'd0 : ((is_ntt) ? regx[16] : regx[15]));
+    assign waddr_b_next     = (state == INIT) ? (count_load << 1) + 1'b1    : ((phase3 == 1'b1) ? 8'd0 : ((is_ntt) ? regy[16] : regy[15]));
     assign din_a_next       = {{16{A_Out_mux[15]}}, A_Out_mux};
     assign din_b_next       = {{16{B_Out_mux[15]}}, B_Out_mux};
 
@@ -125,8 +125,8 @@ module top #(
     wire valid_output_next;
     assign out0                 = (valid_output == 1'b1) ? A_Out_mux    : 8'd0;
     assign out1                 = (valid_output == 1'b1) ? B_Out_mux    : 8'd0;
-    assign addr0                = (valid_output == 1'b1) ? ((is_ntt) ? waddr_a : count_addr - 2'd2)    : 8'd0;
-    assign addr1                = (valid_output == 1'b1) ? ((is_ntt) ? waddr_b : count_addr + 8'd126)  : 8'd0;
+    assign addr0                = (valid_output == 1'b1) ? ((is_ntt) ? regx[16] : count_addr - 2'd2)    : 8'd0;
+    assign addr1                = (valid_output == 1'b1) ? ((is_ntt) ? regy[16] : count_addr + 8'd126)  : 8'd0;
     assign valid_output_next    = (state == RUN) & (is_ntt & (sub_tmp == 2'd2)) | ((count_addr > 1'b0) & (count_addr < 8'd129));
     assign valid_output         = valid_output_reg;
     assign done_compute         = (state == DONE);
@@ -274,6 +274,9 @@ module top #(
 
             regx[15] <= regx[14];
             regy[15] <= regy[14];
+
+            regx[16] <= regx[15];
+            regy[16] <= regy[15];
         end 
     end 
 
@@ -335,15 +338,14 @@ module top #(
         .B_In(B),
         .W_In(zetas),
         .A_Out(out_j_intt),
-        .B_Out(out_jl_intt),
-
-        // debug
-        .barret1(barret1),
-        .barret2(barret2),
-        .barret3(barret3),
-        .o_mul(mul_out),
-        .add_out(add_out),
-        .sub_out(sub_out)
+        .B_Out(out_jl_intt)
+        // // debug
+        // .barret1(barret1),
+        // .barret2(barret2),
+        // .barret3(barret3),
+        // .o_mul(mul_out),
+        // .add_out(add_out),
+        // .sub_out(sub_out)
     );
 
     normalize_output normalize_inst(
