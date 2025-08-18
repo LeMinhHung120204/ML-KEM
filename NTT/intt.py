@@ -1,11 +1,13 @@
-import numpy as np
-from dataclasses import dataclass
+# -*- coding: utf-8 -*-
+# NTT / iNTT (Kyber params) + input mapping interleaved như testbench:
+# in0 @ addr 2*i, in1 @ addr 2*i+1  (i = 0..127)
 
+# ----- Tham số -----
 POLY_N = 256
-POLY_Q = 3329 # 62209
-NTT_F = 3303
+POLY_Q = 3329
+NTT_F  = 3303  # hệ số nhân sau cùng của iNTT (theo mã C đã cho)
 
-NTT_ZETAS = np.array([
+NTT_ZETAS = [
     1, 1729, 2580, 3289, 2642, 630, 1897, 848,
     1062, 1919, 193, 797, 2786, 3260, 569, 1746,
     296, 2447, 1339, 1476, 3046, 56, 2240, 1333,
@@ -22,76 +24,96 @@ NTT_ZETAS = np.array([
     1063, 319, 2773, 757, 2099, 561, 2466, 2594,
     2804, 1092, 403, 1026, 1143, 2150, 2775, 886,
     1722, 1212, 1874, 1029, 2110, 2935, 885, 2154
-], dtype=np.int16)
+]
 
-@dataclass
-class PolynomialRing:
-    coeffs: np.ndarray
-    ntt: bool = False
-    valid: bool = False
+def mod_q(x: int) -> int:
+    return x % POLY_Q
 
-def ntt_inv(p: PolynomialRing) -> PolynomialRing:
-    p.coeffs = p.coeffs.astype(np.int64)
-    l = 2
-    l_upper = 128
-    k = l_upper - 1
-
-    while l <= l_upper:
-        start = 0
-        while start < POLY_N:
-            zeta = int(NTT_ZETAS[k])
-            # print(start, l, k)
-            k -= 1
-            
-            for j in range(start, start + l):
-                # print(f"({j}, {j + l})", end=" ")
-                t = p.coeffs[j]
-                u = p.coeffs[j + l]
-                p.coeffs[j] = (t + u) % POLY_Q
-                p.coeffs[j + l] = ((u - t + POLY_Q) % POLY_Q * zeta) % POLY_Q
-            # print()
-            # print()
-            start += 2 * l
-        l <<= 1
-
-    for i in range(POLY_N):
-        p.coeffs[i] = (p.coeffs[i] * NTT_F) % POLY_Q
-
-    p.ntt = False
-    return p
-
-def ntt(p: PolynomialRing) -> PolynomialRing:
-    p.coeffs = p.coeffs.astype(np.int64)
+def ntt(a):
+    """
+    NTT theo Algorithm 9 (mã C đã cho).
+    - Đầu vào: a độ dài 256, thứ tự chuẩn
+    - Đầu ra:  a ở thứ tự bit-reversed (Kyber)
+    """
+    a = [mod_q(x) for x in a]
     k = 1
-    l = 128
-
+    l = POLY_N // 2  # 128
     while l >= 2:
         start = 0
         while start < POLY_N:
-            zeta = int(NTT_ZETAS[k])
+            zeta = NTT_ZETAS[k]
             k += 1
             for j in range(start, start + l):
-                t = (zeta * p.coeffs[j + l]) % POLY_Q
-                p.coeffs[j + l] = (p.coeffs[j] - t + POLY_Q) % POLY_Q
-                p.coeffs[j] = (p.coeffs[j] + t) % POLY_Q
+                if (zeta == 1729):
+                    print(f"a[{j}]={a[j]:4d}, a[{j+l}]={a[j+l]:4d}  (j={j}, j+l={j+l})", zeta)
+                t = mod_q(zeta * a[j + l])
+                a[j + l] = mod_q(a[j] - t)
+                a[j]     = mod_q(a[j] + t)
+                if (zeta == 1729):
+                    print(f"a'[{j}]={a[j]:4d}, a'[{j+l}]={a[j+l]:4d}  (j={j}, j+l={j+l})", zeta)
+                    print()
             start += 2 * l
         l >>= 1
+    return a
 
-    p.ntt = True
-    return p
+def intt(a):
+    """
+    Inverse NTT theo Algorithm 10 (mã C đã cho).
+    - Đầu vào: a ở thứ tự bit-reversed (kết quả NTT)
+    - Đầu ra:  trở về miền hệ số thường
+    """
+    a = [mod_q(x) for x in a]
+    l = 2
+    l_upper = POLY_N // 2  # 128
+    k = l_upper - 1
+    while l <= l_upper:
+        start = 0
+        while start < POLY_N:
+            zeta = NTT_ZETAS[k]
+            k -= 1
+            for j in range(start, start + l):
+                t = a[j]
+                a[j]     = mod_q(t + a[j + l])
+                a[j + l] = mod_q(a[j + l] - t)
+                a[j + l] = mod_q(a[j + l] * zeta)
+            start += 2 * l
+        l <<= 1
+    return [mod_q(x * NTT_F) for x in a]
 
+def build_tb_interleaved():
+    """
+    Mapping đúng như TB:
+      - 128 chu kỳ với k=1..128
+      - in0 = k       --> ghi vào addr 2*(k-1)
+      - in1 = 145+2k  --> ghi vào addr 2*(k-1)+1
+    """
+    a = [0]*POLY_N
+    for k in range(1, 129):
+        a[2*(k-1)]   = k
+        a[2*(k-1)+1] = 145 + 2*k
+    return a
 
-# Khởi tạo mẫu
-p = PolynomialRing(coeffs=np.zeros(POLY_N, dtype=np.int32), ntt=False)
-p.coeffs[0] = 16
-p.coeffs[1] = 20
-p.coeffs[128] = 3
-p.coeffs[129] = 5
+if __name__ == "__main__":
+    a = build_tb_interleaved()
 
-# Forward NTT
-p_ntt = ntt(PolynomialRing(coeffs=p.coeffs.copy()))
-print("After NTT:", p_ntt.coeffs[:11])
+    # Preview mapping đầu/cuối để đối chiếu
+    # print("Mapping preview (addr:value):")
+    # for i in range(6):
+    #     i0, i1 = 2*i, 2*i+1
+    #     print(f"{i0:3d}:{a[i0]:3d}   {i1:3d}:{a[i1]:3d}")
+    # print("...")
+    # for i in range(124, 128):
+    #     i0, i1 = 2*i, 2*i+1
+    #     print(f"{i0:3d}:{a[i0]:3d}   {i1:3d}:{a[i1]:3d}")
+    # print()
 
-# Inverse NTT
-p_inv = ntt_inv(PolynomialRing(coeffs=p_ntt.coeffs.copy(), ntt=True))
-print("After INTT:", p_inv.coeffs[:11])
+    # Tính NTT và in 10 output đầu
+    a_ntt = intt(a[:])
+    print("First 10 NTT outputs:")
+    for i in range(10):
+        print(f"{i}: {a_ntt[i]}")
+
+    # # Kiểm tra tròn vòng
+    # a_back = intt(a_ntt[:])
+    # ok = all((x % POLY_Q) == (y % POLY_Q) for x, y in zip(a, a_back))
+    # print("\nRound-trip OK?:", ok)
