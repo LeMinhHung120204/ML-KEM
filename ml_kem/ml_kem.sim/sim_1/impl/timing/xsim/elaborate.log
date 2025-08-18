@@ -1,0 +1,106 @@
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot tb_top_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "tb_top_time_impl.sdf", for root module "tb_top/dut".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "tb_top_time_impl.sdf", for root module "tb_top/dut".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module simprims_ver.FDCE_default
+Compiling module simprims_ver.CARRY8
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.AddressGenerator
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.FDPE(IS_PRE_INVERTED=1'b1)
+Compiling module simprims_ver.OBUFT
+Compiling module simprims_ver.MUXF8
+Compiling module simprims_ver.MUXF7
+Compiling module xil_defaultlib.bram
+Compiling module simprims_ver.FDRE_default
+Compiling module xil_defaultlib.barret_11
+Compiling module xil_defaultlib.barret_12
+Compiling module xil_defaultlib.barret_13
+Compiling module xil_defaultlib.BoothDecode_15
+Compiling module xil_defaultlib.BoothDecode_16
+Compiling module xil_defaultlib.BoothDecode_17
+Compiling module xil_defaultlib.BoothDecode_18
+Compiling module xil_defaultlib.BoothDecode_19
+Compiling module xil_defaultlib.BoothDecode_20
+Compiling module xil_defaultlib.BoothDecode_21
+Compiling module xil_defaultlib.BoothDecode_22
+Compiling module simprims_ver.SRL16E_default
+Compiling module xil_defaultlib.mul_14
+Compiling module xil_defaultlib.bu_intt
+Compiling module xil_defaultlib.barret_1
+Compiling module xil_defaultlib.barret_2
+Compiling module xil_defaultlib.barret_3
+Compiling module xil_defaultlib.BoothDecode
+Compiling module xil_defaultlib.BoothDecode_4
+Compiling module xil_defaultlib.BoothDecode_5
+Compiling module xil_defaultlib.BoothDecode_6
+Compiling module xil_defaultlib.BoothDecode_7
+Compiling module xil_defaultlib.BoothDecode_8
+Compiling module xil_defaultlib.BoothDecode_9
+Compiling module xil_defaultlib.BoothDecode_10
+Compiling module xil_defaultlib.mul
+Compiling module xil_defaultlib.bu_ntt
+Compiling module simprims_ver.BUFGCE(CE_TYPE="ASYNC",SIM_DEVIC...
+Compiling module simprims_ver.IBUFCTRL_default
+Compiling module simprims_ver.INBUF_default
+Compiling module xil_defaultlib.IBUF_UNIQ_BASE_
+Compiling module xil_defaultlib.IBUF_HD1
+Compiling module xil_defaultlib.IBUF_HD2
+Compiling module xil_defaultlib.IBUF_HD3
+Compiling module xil_defaultlib.IBUF_HD4
+Compiling module xil_defaultlib.IBUF_HD5
+Compiling module xil_defaultlib.IBUF_HD6
+Compiling module xil_defaultlib.IBUF_HD7
+Compiling module xil_defaultlib.IBUF_HD8
+Compiling module xil_defaultlib.IBUF_HD9
+Compiling module xil_defaultlib.IBUF_HD10
+Compiling module xil_defaultlib.IBUF_HD11
+Compiling module xil_defaultlib.IBUF_HD12
+Compiling module xil_defaultlib.IBUF_HD13
+Compiling module xil_defaultlib.IBUF_HD14
+Compiling module xil_defaultlib.IBUF_HD15
+Compiling module xil_defaultlib.IBUF_HD16
+Compiling module xil_defaultlib.IBUF_HD17
+Compiling module xil_defaultlib.IBUF_HD18
+Compiling module xil_defaultlib.IBUF_HD19
+Compiling module xil_defaultlib.IBUF_HD20
+Compiling module xil_defaultlib.IBUF_HD21
+Compiling module xil_defaultlib.IBUF_HD22
+Compiling module xil_defaultlib.IBUF_HD23
+Compiling module xil_defaultlib.IBUF_HD24
+Compiling module xil_defaultlib.IBUF_HD25
+Compiling module xil_defaultlib.IBUF_HD26
+Compiling module xil_defaultlib.IBUF_HD27
+Compiling module xil_defaultlib.IBUF_HD28
+Compiling module xil_defaultlib.IBUF_HD29
+Compiling module xil_defaultlib.IBUF_HD30
+Compiling module xil_defaultlib.IBUF_HD31
+Compiling module xil_defaultlib.IBUF_HD32
+Compiling module xil_defaultlib.IBUF_HD33
+Compiling module xil_defaultlib.barret
+Compiling module xil_defaultlib.barret_0
+Compiling module xil_defaultlib.normalize_output
+Compiling module xil_defaultlib.MyBootROM
+Compiling module xil_defaultlib.IBUF_HD34
+Compiling module xil_defaultlib.IBUF_HD35
+Compiling module xil_defaultlib.IBUF_HD36
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_time_impl

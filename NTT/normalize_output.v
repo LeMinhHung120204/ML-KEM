@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module normalize_output #(
     parameter WIDTH_DATA = 16
 )(

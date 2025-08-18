@@ -27,6 +27,27 @@ def k2_red_mod_3329(a):
     return result
 
 
-a = 2**9+134
-print(k2_red_mod_3329(a))
-print(a % 3329)
+# a = 2655
+# b = 3088
+# t = a
+# a = b + t
+# b = (b - t) * 1729
+
+
+# print(a % 3329, b % 3329)
+# print((2414 * 3303) % 3329)
+# print((2961 * 3303) % 3329)
+
+a = 201
+b = 830
+zetas = 2154
+t = zetas * b
+
+print(t % 3329)
+print(a - (t % 3329))
+print(a + (t % 3329))
+
+b = a - t
+a = a + t
+
+print(a % 3329, b % 3329)

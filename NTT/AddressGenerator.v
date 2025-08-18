@@ -1,3 +1,5 @@
+    `timescale 1ns/1ps
+
     module AddressGenerator#(
         parameter WIDTH_ADDR_BUTTERFLY = 8,      // ???a ch? butterfly
         parameter WIDTH_ADDR_ZETAS = 7          // ???a ch? ?

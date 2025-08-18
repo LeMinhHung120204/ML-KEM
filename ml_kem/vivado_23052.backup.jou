@@ -1,0 +1,89 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Mon Aug 18 08:16:27 2025
+# Process ID: 23052
+# Current directory: C:/Hung/Viettel/Stage2/ML-KEM/ml_kem
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19164 C:\Hung\Viettel\Stage2\ML-KEM\ml_kem\ml_kem.xpr
+# Log file: C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/vivado.log
+# Journal file: C:/Hung/Viettel/Stage2/ML-KEM/ml_kem\vivado.jou
+# Running On: DESKTOP-DA5EM0P, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 16948 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg
+source tb_top.tcl
+relaunch_sim
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/bu_ntt0/A_In}} {{/tb_top/dut/bu_ntt0/B_In}} {{/tb_top/dut/bu_ntt0/W_In}} 
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg
+source tb_top.tcl
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/clk}} {{/tb_top/rst_n}} {{/tb_top/start}} {{/tb_top/is_ntt}} {{/tb_top/valid_input}} {{/tb_top/in0}} {{/tb_top/in1}} {{/tb_top/addr0}} {{/tb_top/addr1}} {{/tb_top/out0}} {{/tb_top/out1}} {{/tb_top/done_compute}} {{/tb_top/load_done}} {{/tb_top/valid_output}} {{/tb_top/addr_j}} {{/tb_top/addr_jl}} {{/tb_top/owaddr_a}} {{/tb_top/owaddr_b}} {{/tb_top/addr_zetas}} {{/tb_top/out_j_ntt}} {{/tb_top/out_j_intt}} {{/tb_top/out_jl_ntt}} {{/tb_top/out_jl_intt}} {{/tb_top/zetas}} {{/tb_top/barret1}} {{/tb_top/barret2}} {{/tb_top/barret3}} {{/tb_top/Bin_a}} {{/tb_top/Bin_b}} {{/tb_top/Bo_a}} {{/tb_top/Bo_b}} {{/tb_top/mul_out}} {{/tb_top/sub_out}} {{/tb_top/add_out}} {{/tb_top/check_state}} {{/tb_top/k}} {{/tb_top/WIDTH_ADDR_BUTTERFLY}} {{/tb_top/WIDTH_ADDR_ZETAS}} {{/tb_top/WIDTH}} {{/tb_top/WIDTH_BUS_DATA}} 
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -mode post-implementation -type timing
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg
+source tb_top.tcl
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+set_property AUTO_INCREMENTAL_CHECKPOINT 0 [get_runs synth_1]
+set_property incremental_checkpoint {} [get_runs synth_1]
+reset_run impl_1
+close_sim
+close_sim
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg
+source tb_top.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg
+source tb_top.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg
+source tb_top.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg
+source tb_top.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg
+source tb_top.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg
+source tb_top.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg
+source tb_top.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg
+source tb_top.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg
+source tb_top.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg
+source tb_top.tcl
+close_sim

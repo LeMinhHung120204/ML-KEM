@@ -4,74 +4,15 @@ Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 1 for port 'valid' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/top.v:315]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 16 for port 'barret1' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/top.v:339]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 16 for port 'barret2' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/top.v:340]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 16 for port 'barret3' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/top.v:341]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'o_mul' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/top.v:342]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'add_out' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/top.v:343]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'sub_out' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/top.v:344]
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/top.v" Line 1. Module top doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/MyBootRom.v" Line 1. Module MyBootROM doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/bram.v" Line 1. Module bram_default doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/AddressGenerator.v" Line 1. Module AddressGenerator doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/bu_ntt.v" Line 1. Module bu_ntt doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v" Line 1. Module barret doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v" Line 1. Module barret doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v" Line 1. Module barret doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/mul.v" Line 1. Module mul_default doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/bu_intt.v" Line 1. Module bu_intt doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v" Line 1. Module barret doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v" Line 1. Module barret doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v" Line 1. Module barret doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/mul.v" Line 1. Module mul_default doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/normalize_output.v" Line 1. Module normalize_output doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v" Line 1. Module barret doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v" Line 1. Module barret doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/top.v" Line 1. Module top doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/MyBootRom.v" Line 1. Module MyBootROM doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/bram.v" Line 1. Module bram_default doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/AddressGenerator.v" Line 1. Module AddressGenerator doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/bu_ntt.v" Line 1. Module bu_ntt doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v" Line 1. Module barret doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v" Line 1. Module barret doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v" Line 1. Module barret doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/mul.v" Line 1. Module mul_default doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/bu_intt.v" Line 1. Module bu_intt doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v" Line 1. Module barret doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v" Line 1. Module barret doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v" Line 1. Module barret doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/mul.v" Line 1. Module mul_default doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v" Line 1. Module BoothDecode doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/normalize_output.v" Line 1. Module normalize_output doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v" Line 1. Module barret doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v" Line 1. Module barret doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.MyBootROM

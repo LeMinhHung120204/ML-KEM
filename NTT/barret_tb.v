@@ -30,7 +30,7 @@ module barret_tb;
         rst_n = 1;
 
         // Test case 1
-        #10; C = -32'd33;
+        #10; C = 32'd10133409;
 
         // Test case 2
         #10; C = 32'd33299;   // same as q in Kyber
@@ -39,7 +39,7 @@ module barret_tb;
         #10; C = 32'd10;
 
         // Test case 4
-        #10; C = 32'd8380418;
+        #10; C = -32'd8380418;
 
         // Test case 5
         #10; C = 32'd1;  // max 16-bit

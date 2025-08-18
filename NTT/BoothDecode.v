@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module BoothDecode #(
     parameter WIDTH = 32
 )(
@@ -14,7 +16,7 @@ module BoothDecode #(
             3'b011: pp = A << 1;                // +2A
             3'b100: pp = ~(A << 1) + 1'b1;      // -2A
             3'b101, 3'b110: pp = ~(A) + 1'b1;   // -A
-            default: pp = pp;
+            default: pp = 32'd0;
         endcase
     end 
 

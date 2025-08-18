@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module bu_ntt #(
     parameter WIDTH = 16
 )(
@@ -14,7 +16,7 @@ module bu_ntt #(
     wire [WIDTH - 1:0] barrett_out1, barrett_out2, barrett_out3, sub_tmp;
     wire [(WIDTH * 2) - 1:0] mul_out;
 
-    assign sub_tmp = regx[num_reg - 1] - barrett_out3;
+    assign sub_tmp = regx[15] - barrett_out3;
 
     integer i;
     always @(posedge clk or negedge rst_n) begin
@@ -45,7 +47,7 @@ module bu_ntt #(
             regx[15] <= regx[14];
             regx[16] <= regx[15];
 
-            regx[3]     <= regx[num_reg - 1] + barrett_out3;
+            regx[3]     <= regx[15] + barrett_out3;
             regx[2]     <= (sub_tmp[WIDTH - 1] == 1'b1) ? sub_tmp + Qmod : sub_tmp;
 
             A_Outreg    <= barrett_out1;
