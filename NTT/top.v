@@ -3,7 +3,7 @@
 module top #(
     parameter WIDTH_ADDR_BUTTERFLY = 8,
     parameter WIDTH_ADDR_ZETAS = 7,
-    parameter WIDTH = 17,
+    parameter WIDTH = 16,
     parameter WIDTH_BUS_DATA = 256 * 32
 )(
     input clk, rst_n, start, is_ntt, valid_input,
