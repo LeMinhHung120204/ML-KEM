@@ -5,13 +5,13 @@ module bu_intt #(
 )(
     input clk, rst_n,
     input [WIDTH - 1:0] A_In, B_In, W_In,
-    output [WIDTH - 1:0] A_Out, B_Out,
+    output [WIDTH - 1:0] A_Out, B_Out
 
-    // debug
-    output [WIDTH - 1:0] barret1, barret2, barret3,
-    output [(WIDTH * 2) - 1:0] o_mul, sub_out, add_out
+    // // debug
+    // output [WIDTH - 1:0] barret1, barret2, barret3,
+    // output [(WIDTH * 2) - 1:0] o_mul, sub_out, add_out
 );
-    localparam num_reg = 20;
+    localparam num_reg = 16;
     localparam Qmod = 16'd3329;
 
     reg [WIDTH - 1:0] regx [0:num_reg - 1];
@@ -48,10 +48,10 @@ module bu_intt #(
 
             regx[4] <= regx[3];
             regx[5] <= regx[4];
-            regx[6] <= regx[5];
-            regx[7] <= regx[6];
 
-            regx[8]  <= regx[2];
+            regx[6]  <= regx[2];
+            regx[7] <= regx[6];
+            regx[8] <= regx[7];
             regx[9] <= regx[8];
             regx[10] <= regx[9];
             regx[11] <= regx[10];
@@ -59,13 +59,9 @@ module bu_intt #(
             regx[13] <= regx[12];
             regx[14] <= regx[13];
             regx[15] <= regx[14];
-            regx[16] <= regx[15];
-            regx[17] <= regx[16];
-            regx[18] <= regx[17];
-            regx[19] <= regx[18];
 
             B_Outreg    <= barrett_out3;
-            A_Outreg    <= regx[17];
+            A_Outreg    <= regx[15];
             
         end
     end

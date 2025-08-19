@@ -7,7 +7,7 @@ module bu_ntt #(
     input [WIDTH - 1:0] A_In, B_In, W_In,
     output [WIDTH - 1:0] A_Out, B_Out  // NTT
 );
-    localparam num_reg = 17;
+    localparam num_reg = 16;
     localparam Qmod = 16'd3329;
 
     reg [WIDTH - 1:0] regx [0:num_reg - 1];
@@ -45,7 +45,6 @@ module bu_ntt #(
             regx[13] <= regx[12];
             regx[14] <= regx[13];
             regx[15] <= regx[14];
-            regx[16] <= regx[15];
 
             regx[3]     <= regx[15] + barrett_out3;
             regx[2]     <= (sub_tmp[WIDTH - 1] == 1'b1) ? sub_tmp + Qmod : sub_tmp;

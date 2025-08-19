@@ -114,8 +114,8 @@ module tb_top;
     // Ngắt valid_input
     @(posedge clk);
     valid_input <= 1'b0;
-    in0 <= 0;
-    in1 <= 0;
+    in0 <= 16'd0;
+    in1 <= 16'd0;
 
     // Ch�? xử lý xong
     wait (done_compute);
