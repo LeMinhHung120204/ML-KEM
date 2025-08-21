@@ -22,7 +22,7 @@ module barret #(
     wire [44:0] tmp;
     assign tmp = s0 >>> 26; // t ~ (C*μ)>>26, giu dau cho C neu C am
 
-    always @(posedge clk) begin
+    always @(posedge clk or negedge rst_n) begin
         if (~rst_n) begin
             s0      <= 45'd0; 
             s1      <= 45'd0; 
