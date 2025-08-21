@@ -108,10 +108,26 @@ if __name__ == "__main__":
     # print()
 
     # Tính NTT và in 10 output đầu
-    a_ntt = intt(a[:])
+    a_ntt = ntt(a[:])
     print("First 10 NTT outputs:")
-    for i in range(10):
+    for i in range(256):
         print(f"{i}: {a_ntt[i]}")
+
+    # x = 2145
+    # y = 601
+    # t = x
+    # x = y + t
+    # y = (y - t) * 1729
+    # print(x % 3329, y % 3329)
+    # print((1726 * 3303) % 3329, (2265 * 3303) % 3329)
+
+    x = 4
+    y = 68
+    zetas = 1729
+    t = y * zetas
+    y = x - t
+    x = x + t
+    print(x % 3329, y % 3329)
 
     # # Kiểm tra tròn vòng
     # a_back = intt(a_ntt[:])

@@ -48,7 +48,8 @@ module tb_top;
     .out0(out0),
     .out1(out1),
     .addr0(addr0),
-    .addr1(addr1)
+    .addr1(addr1),
+    .output_valid(valid_output)
 
     // debug
     // .addr_j(addr_j),
@@ -86,12 +87,12 @@ module tb_top;
 
   initial begin
     // Khởi tạo
-    #100
+    
     
     clk = 0;
     rst_n = 0;
     start = 0;
-    is_ntt = 1'b0;
+    is_ntt = 1'b1;
     valid_input = 0;
     in0 = 16'd0; 
     in1 = 16'd0;
@@ -100,7 +101,7 @@ module tb_top;
     #400 rst_n = 1;
 
     // Bắt đầu
-    @(posedge clk); start = 1;
+    start = 1;
     #50; start = 0;
 
     // Nạp 128 lần dữ liệu
