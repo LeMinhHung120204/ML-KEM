@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../BoothDecode.v" \
+"../../../../../Rom_mul.v" \
+"../../../../../add_cell.v" \
+"../../../../../../NTT/barret.v" \
+"../../../../../mul_12bit.v" \
+"../../../../../mul_cell.v" \
+"../../../../../mul_poly.v" \
+"../../../../../mul_poly_matrix.v" \
+"../../../../../tb_mul_poly_matrix.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

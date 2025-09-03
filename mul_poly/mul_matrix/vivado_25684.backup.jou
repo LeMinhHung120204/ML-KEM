@@ -1,0 +1,88 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Fri Aug 29 21:03:55 2025
+# Process ID: 25684
+# Current directory: C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23344 C:\Hung\Viettel\Stage2\ML-KEM\mul_poly\mul_matrix\mul_matrix.xpr
+# Log file: C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/vivado.log
+# Journal file: C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix\vivado.jou
+# Running On: DESKTOP-DA5EM0P, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 16948 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/mul_matrix.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg
+source tb_mul_poly_matrix.tcl
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/clk}} {{/tb_mul_poly_matrix/rst_n}} {{/tb_mul_poly_matrix/valid_data}} {{/tb_mul_poly_matrix/a}} {{/tb_mul_poly_matrix/b}} {{/tb_mul_poly_matrix/res}} {{/tb_mul_poly_matrix/t}} {{/tb_mul_poly_matrix/WIDTH}} {{/tb_mul_poly_matrix/NUM}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/zeta1}} {{/tb_mul_poly_matrix/dut/zeta2}} {{/tb_mul_poly_matrix/dut/zeta3}} {{/tb_mul_poly_matrix/dut/zeta4}} 
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg
+source tb_mul_poly_matrix.tcl
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+set_property -name {xsim.simulate.runtime} -value {100000ns} -objects [get_filesets sim_1]
+set_property dataflow_viewer_settings "min_width=16"   [current_fileset]
+close_sim
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg
+source tb_mul_poly_matrix.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg
+source tb_mul_poly_matrix.tcl
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/zeta1}} {{/tb_mul_poly_matrix/dut/zeta2}} {{/tb_mul_poly_matrix/dut/zeta3}} {{/tb_mul_poly_matrix/dut/zeta4}} 
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/tmp}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/\G[0].u_mul /a0}} {{/tb_mul_poly_matrix/dut/\G[0].u_mul /a1}} {{/tb_mul_poly_matrix/dut/\G[0].u_mul /b0}} {{/tb_mul_poly_matrix/dut/\G[0].u_mul /b1}} {{/tb_mul_poly_matrix/dut/\G[0].u_mul /zetas}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/\G[0].u_mul /res0}} {{/tb_mul_poly_matrix/dut/\G[0].u_mul /res1}} 
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/\G[0].u_mul /a0_b0}} {{/tb_mul_poly_matrix/dut/\G[0].u_mul /a1_b1}} {{/tb_mul_poly_matrix/dut/\G[0].u_mul /a1_b0}} {{/tb_mul_poly_matrix/dut/\G[0].u_mul /a0_b1}} {{/tb_mul_poly_matrix/dut/\G[0].u_mul /a1_b1_zetas}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/\G[0].u_mul /obarret1}} {{/tb_mul_poly_matrix/dut/\G[0].u_mul /obarret2}} {{/tb_mul_poly_matrix/dut/\G[0].u_mul /obarret3}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/\G[0].u_mul /mul_inst4/A}} {{/tb_mul_poly_matrix/dut/\G[0].u_mul /mul_inst4/B}} {{/tb_mul_poly_matrix/dut/\G[0].u_mul /mul_inst4/R}} 
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/\G[0].u_mul /regx}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+close_sim

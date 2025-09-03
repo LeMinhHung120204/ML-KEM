@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_mul_poly_matrix_func_synth.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_mul_poly_matrix" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="316.612 ns"></ZoomStartTime>
+      <ZoomEndTime time="426.613 ns"></ZoomEndTime>
+      <Cursor1Time time="395.412 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="188"></NameColumnWidth>
+      <ValueColumnWidth column_width="248"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="9" />
+   <wvobject fp_name="/tb_mul_poly_matrix/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mul_poly_matrix/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mul_poly_matrix/k" type="array">
+      <obj_property name="ElementShortName">k[2:0]</obj_property>
+      <obj_property name="ObjectShortName">k[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mul_poly_matrix/valid_data" type="logic">
+      <obj_property name="ElementShortName">valid_data</obj_property>
+      <obj_property name="ObjectShortName">valid_data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mul_poly_matrix/a" type="array">
+      <obj_property name="ElementShortName">a[191:0]</obj_property>
+      <obj_property name="ObjectShortName">a[191:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mul_poly_matrix/b" type="array">
+      <obj_property name="ElementShortName">b[191:0]</obj_property>
+      <obj_property name="ObjectShortName">b[191:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mul_poly_matrix/res" type="array">
+      <obj_property name="ElementShortName">res[191:0]</obj_property>
+      <obj_property name="ObjectShortName">res[191:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mul_poly_matrix/valid_output" type="logic">
+      <obj_property name="ElementShortName">valid_output</obj_property>
+      <obj_property name="ObjectShortName">valid_output</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mul_poly_matrix/count_clock" type="array">
+      <obj_property name="ElementShortName">count_clock[9:0]</obj_property>
+      <obj_property name="ObjectShortName">count_clock[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

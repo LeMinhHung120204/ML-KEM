@@ -1,0 +1,18 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/BoothDecode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BoothDecode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/Rom_mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Rom_mul
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/add_cell.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module add_cell
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module barret
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_12bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_12bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_cell.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_cel
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_poly.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_poly
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_poly_matrix.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul_poly_matrix
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/tb_mul_poly_matrix.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_mul_poly_matrix

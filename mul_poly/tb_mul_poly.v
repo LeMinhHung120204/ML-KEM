@@ -4,8 +4,10 @@ module tb_mul_poly;
 
     reg clk;
     reg rst_n;
-    reg [15:0] a0, a1, b0, b1, zetas;
-    wire [15:0] res0, res1;
+    reg [11:0] a0, a1, b0, b1, zetas;
+    wire [11:0] res0, res1;
+    reg [8:0] counter;
+   
 
     // Instantiate DUT
     mul_poly uut (
@@ -51,6 +53,15 @@ module tb_mul_poly;
         #500;
         $display("Finished");
         $finish;
+        
+        
     end
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n)      counter <= 9'd0;     // reset khi rst_n=0
+        else             counter <= counter + 1'b1;
+    end
+
+
 
 endmodule
