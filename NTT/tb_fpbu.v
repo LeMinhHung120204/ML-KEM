@@ -3,11 +3,12 @@
 module tb_fpbu;
     reg clk, rst_n;
     reg Sel_In;
-    reg [16:0] A_In, B_In, W_In;
-    wire [16:0] A_Out, B_Out;
+    reg [15:0] A_In, B_In, W_In;
+    reg [5:0] count_clock;
+    wire [15:0] A_Out, B_Out;
 
     // Instantiate DUT
-    bu_ntt uut (
+    bu_intt uut (
         .clk(clk),
         .rst_n(rst_n),
         .A_In(A_In),
@@ -17,9 +18,20 @@ module tb_fpbu;
         .B_Out(B_Out)
     );
 
+    always @(posedge clk or negedge rst_n) begin
+        if(~rst_n) begin
+            count_clock <= 6'd0;
+        end 
+        else begin
+            count_clock <= count_clock + 1'b1;
+        end     
+    end 
+
     // Clock generation
     always #5 clk = ~clk;
-
+    
+    
+    
     initial begin
         $display("Start simulation");
         $dumpfile("fpbu.vcd");

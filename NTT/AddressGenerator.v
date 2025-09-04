@@ -10,18 +10,29 @@
         output [WIDTH_ADDR_ZETAS - 1: 0] addr_tw,            // ???a ch? ?
         output valid,                           // address valid
         output ntt_finished
+
+        // // debug
+        // output [WIDTH_ADDR_ZETAS - 1:0] o_zetas,
+        // // output o_phase,
+        // output [WIDTH_ADDR_BUTTERFLY:0] o_j, o_l
     );
         localparam POLY_N = 255;
         localparam IDLE = 2'b00, INIT = 2'b01, RUN = 2'b10, DONE = 2'b11;
         reg [1:0] state, next_state;
         
-        reg [WIDTH_ADDR_ZETAS - 1:0] zetas, next_zetas, next_phase;
+        reg [WIDTH_ADDR_ZETAS - 1:0] zetas, next_zetas;
         reg [WIDTH_ADDR_BUTTERFLY:0] j, first_p, l, next_j, next_l, next_first_p;
-        reg phase;
+        // reg phase, next_phase;
 
         wire check;
         wire [WIDTH_ADDR_BUTTERFLY : 0] tmp = first_p + (l << 1);
 
+        // debug
+
+        assign o_zetas = zetas;
+        assign o_j = j;
+        assign o_l = l;
+        // assign o_phase = phase;
         // current state
         always @(posedge clk or negedge rst_n) begin
             if (~rst_n) begin
@@ -35,11 +46,11 @@
         // next state
         always @(*) begin
             case(state)
-                IDLE: next_state = (start == 1'b1) ? INIT: IDLE;
-                INIT: next_state = RUN;
-                RUN: next_state = (check) ? RUN : DONE;
-                DONE: next_state = IDLE;
-                default: next_state = IDLE;
+                IDLE:       next_state = (start == 1'b1) ? INIT : IDLE;
+                INIT:       next_state = RUN;
+                RUN:        next_state = (check) ? RUN : DONE;
+                DONE:       next_state = IDLE;
+                default:    next_state = IDLE;
             endcase
         end 
 
@@ -51,51 +62,51 @@
                     next_l          = 9'd0;
                     next_first_p    = 9'd0; 
                     next_j          = 9'd0;
-                    next_phase      = 1'b0;
+                    // next_phase      = 1'b0;
                 end 
                 INIT: begin
                     next_zetas      = (is_ntt == 1'b1) ? 7'd1 : 7'd127;
                     next_l          = (is_ntt == 1'b1) ? 9'd128 : 9'd2;
                     next_first_p    = 9'd0; 
                     next_j          = 9'd0;
-                    next_phase      = 1'b0;
+                    // next_phase      = 1'b0;
                 end 
                 RUN: begin
-                    next_phase = ~phase;
-                    if (~phase) begin
-                        if (j < first_p + l - 1'b1) begin
-                            next_zetas      = zetas;
-                            next_l          = l;
-                            next_j          = j + 1'b1;
-                            next_first_p    = first_p; 
-                        end
-                        else if (tmp < POLY_N) begin
-                            next_j          = tmp;
-                            next_first_p    = tmp;
-                            next_l          = l;
-                            next_zetas      = (is_ntt == 1'b1) ? zetas + 1'b1 : zetas - 1'b1;
-
-                        end 
-                        else begin
-                            next_first_p    = 8'd0;
-                            next_j          = 8'd0;
-                            next_zetas      = (is_ntt == 1'b1) ? zetas + 1'b1 : zetas - 1'b1;
-                            next_l          = (is_ntt == 1'b1) ? l >> 1 : l << 1;
-                        end 
-                    end
-                    else begin
+                    // next_phase = ~phase;
+                    // if (~phase) begin
+                    if (j < first_p + l - 1'b1) begin
                         next_zetas      = zetas;
                         next_l          = l;
+                        next_j          = j + 1'b1;
                         next_first_p    = first_p; 
-                        next_j          = j;
+                    end
+                    else if (tmp < POLY_N) begin
+                        next_j          = tmp;
+                        next_first_p    = tmp;
+                        next_l          = l;
+                        next_zetas      = (is_ntt == 1'b1) ? zetas + 1'b1 : zetas - 1'b1;
+
                     end 
-                end 
+                    else begin
+                        next_first_p    = 8'd0;
+                        next_j          = 8'd0;
+                        next_zetas      = (is_ntt == 1'b1) ? zetas + 1'b1 : zetas - 1'b1;
+                        next_l          = (is_ntt == 1'b1) ? l >> 1 : l << 1;
+                    end 
+                end
+                // else begin
+                //     next_zetas      = zetas;
+                //     next_l          = l;
+                //     next_first_p    = first_p; 
+                //     next_j          = j;
+                // end 
+                // end 
                 default: begin
-                    next_zetas      = zetas;
-                    next_l          = l;
-                    next_first_p    = first_p; 
-                    next_j          = j;
-                    next_phase      = ~phase;
+                    next_zetas      = 7'd0;
+                    next_l          = 9'd0;
+                    next_first_p    = 9'd0; 
+                    next_j          = 9'd0;
+                    // next_phase      = 1'b0;
                 end 
             endcase    
         end  
@@ -106,22 +117,22 @@
                 j       <= 9'b0;
                 l       <= 9'd0;
                 first_p <= 9'd0;
-                phase   <= 1'b0;
+                // phase   <= 1'b0;
             end 
             else begin
                 zetas   <= next_zetas;
                 j       <= next_j;
                 l       <= next_l;
                 first_p <= next_first_p;
-                phase   <= next_phase;
+                // phase   <= next_phase;
             end 
         end 
 
         assign addr0            = j;
         assign addr1            = j + l;
         assign addr_tw          = zetas;
-        // assign valid            = ((is_ntt) & (l >= 2'd2)) | ((~is_ntt) & (l <= 9'd127));
         assign check            = (l >= 9'd2) & (is_ntt | (l <= 9'd128));
-        assign valid            = (~phase) & check;
+        // assign valid            = (~phase) & check;
+        assign valid            = check;
         assign ntt_finished     = (state == DONE);
     endmodule

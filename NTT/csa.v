@@ -24,7 +24,7 @@ module csa #(
 
 	// Stage 2: Ripple Carry Adder – sum_stage1 + (carry_stage << 1)
 	// assign {carry, sum}  = sum_out + (carry_stage << 1);
-    assign carry = {carry_stage[30:0], 1'b0};
+    assign carry = {carry_stage[WIDTH - 2:0], 1'b0};
 endmodule
 
 module fulladder (

@@ -29,6 +29,15 @@ NTT_ZETAS = [
 def mod_q(x: int) -> int:
     return x % POLY_Q
 
+def cal_ntt(a, b, zeta):
+    t = zeta * b
+    return ((a + t) % 3329, (a - t) % 3329)
+def cal_intt(a, b, zeta):
+    t = a
+    a = t + b
+    b = (b - t) * zeta
+    return (a % 3329, b % 3329)
+
 def ntt(a):
     """
     NTT theo Algorithm 9 (mã C đã cho).
@@ -44,17 +53,19 @@ def ntt(a):
             zeta = NTT_ZETAS[k]
             k += 1
             for j in range(start, start + l):
-                if (zeta == 1729):
-                    print(f"a[{j}]={a[j]:4d}, a[{j+l}]={a[j+l]:4d}  (j={j}, j+l={j+l})", zeta)
                 t = mod_q(zeta * a[j + l])
                 a[j + l] = mod_q(a[j] - t)
                 a[j]     = mod_q(a[j] + t)
-                if (zeta == 1729):
-                    print(f"a'[{j}]={a[j]:4d}, a'[{j+l}]={a[j+l]:4d}  (j={j}, j+l={j+l})", zeta)
-                    print()
             start += 2 * l
         l >>= 1
     return a
+
+def div2(a):
+    if (a & 1 == 1):
+        return (a >> 1) + 1665
+    else :
+        return a >> 1
+    
 
 def intt(a):
     """
@@ -73,12 +84,15 @@ def intt(a):
             k -= 1
             for j in range(start, start + l):
                 t = a[j]
-                a[j]     = mod_q(t + a[j + l])
-                a[j + l] = mod_q(a[j + l] - t)
-                a[j + l] = mod_q(a[j + l] * zeta)
+                a[j]     = div2((t + a[j + l]) % POLY_Q)
+                a[j + l] = div2(((a[j + l] - t) * zeta) % POLY_Q)
+                
+                # a[j]     = mod_q(t + a[j + l])
+                # a[j + l] = mod_q((a[j + l] - t) * zeta)
             start += 2 * l
         l <<= 1
-    return [mod_q(x * NTT_F) for x in a]
+    # return [mod_q(x * NTT_F) for x in a]
+    return [mod_q(x) for x in a]
 
 def build_tb_interleaved():
     """
@@ -108,26 +122,17 @@ if __name__ == "__main__":
     # print()
 
     # Tính NTT và in 10 output đầu
-    a_ntt = ntt(a[:])
+    a_ntt = intt(a[:])
     print("First 10 NTT outputs:")
     for i in range(256):
         print(f"{i}: {a_ntt[i]}")
 
-    # x = 2145
-    # y = 601
-    # t = x
-    # x = y + t
-    # y = (y - t) * 1729
-    # print(x % 3329, y % 3329)
-    # print((1726 * 3303) % 3329, (2265 * 3303) % 3329)
-
-    x = 4
-    y = 68
-    zetas = 1729
-    t = y * zetas
-    y = x - t
-    x = x + t
-    print(x % 3329, y % 3329)
+    # x = 1
+    # y = 65
+    # zetas = 1729
+    # print(cal_ntt(x, y, zetas))
+    # print((x - y * zetas) % 3329)
+    # print((1598 * 3303) % 3329, (1201 * 3303) % 3329)
 
     # # Kiểm tra tròn vòng
     # a_back = intt(a_ntt[:])
