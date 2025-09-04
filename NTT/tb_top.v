@@ -1,30 +1,23 @@
 `timescale 1ns/1ps
 
 module tb_top;
-  // Tham số
+  // Tham s?
   localparam WIDTH_ADDR_BUTTERFLY = 8;
   localparam WIDTH_ADDR_ZETAS = 7;
   localparam WIDTH = 16;
   localparam WIDTH_BUS_DATA = 256 * 32;
 
   // I/O DUT
-  reg  clk, rst_n, start, is_ntt, valid_input;
+  reg  clk, rst_n, start, is_ntt, valid_input, load_done;
   reg  [WIDTH-1:0] in0, in1;
 
-  wire [WIDTH_ADDR_BUTTERFLY - 1:0] addr0, addr1;
+  wire [WIDTH_ADDR_BUTTERFLY - 1:0] addr0, addr1, oaddr0, oaddr1, addr_in1, addr_in2;
+  wire [12:0] bin0, bin1, bout0, bout1, ozeta, out_j, out_jl, barret1, barret2, barret3;
+  wire [11:0] check_counter;
+  wire [31:0] check_mul;
+  wire [1:0] ostate, o_next_state;
   wire [WIDTH-1:0] out0, out1;
-  wire done_compute, load_done, valid_output;
-  // wire [WIDTH_ADDR_BUTTERFLY - 1:0] addr_j, addr_jl;
-  wire [WIDTH_ADDR_BUTTERFLY - 1:0] owaddr_a, owaddr_b;
-  wire [WIDTH_ADDR_ZETAS - 1:0] addr_zetas;
-  // wire [WIDTH - 1:0] out_j_ntt, out_j_intt, out_jl_ntt, out_jl_intt;
-  wire [WIDTH - 1:0] zetas;
-  wire [WIDTH - 1:0] barret1, barret2, barret3;
-  wire [WIDTH - 1:0] Bin_a, Bin_b, Bo_a, Bo_b;
-  wire [(WIDTH * 2) - 1:0] mul_out, sub_out, add_out;
-  // wire [1:0] check_state;
-  // wire valid_addr, done_addr, valid, owrite_en;
-  // wire [7:0] check_count_addr, check_count_load;
+  wire done_compute, valid_output, check_write, check_toggle, o_start_gen_addr;
 
   // Clock 10ns
   always #2.5 clk = ~clk;
@@ -42,51 +35,41 @@ module tb_top;
     .valid_input(valid_input),
     .in0(in0),
     .in1(in1),
+    // .addr_in1(addr_in1),
+    // .addr_in2(addr_in2),
     .done_compute(done_compute),
-    .load_done(load_done),
-    .valid_output(valid_output),
-    .out0(out0),
-    .out1(out1),
-    .addr0(addr0),
-    .addr1(addr1),
-    .output_valid(valid_output)
-
-    // debug
-    // .addr_j(addr_j),
-    // .addr_jl(addr_jl),
-    // .owaddr_a(owaddr_a),
-    // .owaddr_b(owaddr_b),
-    // .oaddr_zetas(addr_zetas),
-    // .out_j_ntt(out_j_ntt),
-    // .out_j_intt(out_j_intt),
-    // .out_jl_ntt(out_jl_ntt),
-    // .out_jl_intt(out_jl_intt),
-    // .zetas(zetas),
-    // .Bin_a(Bin_a),
-    // .Bin_b(Bin_b),
-    // .Bo_a(Bo_a),
-    // .Bo_b(Bo_b),
-    // .check_state(check_state),
+//     .load_done(load_done),
+     .out0(out0),
+     .out1(out1),
+     .addr0(addr0),
+     .addr1(addr1),
+    // .output_valid(valid_output),
+    // .oaddr0(oaddr0),
+    // .oaddr1(oaddr1),
+    // .bin0(bin0),
+    // .bin1(bin1),
+    // .bout0(bout0),
+    // .bout1(bout1),
+    // .ozeta(ozeta),
+    // .out_j(out_j),
+    // .out_jl(out_jl),
     // .barret1(barret1),
     // .barret2(barret2),
     // .barret3(barret3),
-    // .mul_out(mul_out),
-    // .sub_out(sub_out),
-    // .add_out(add_out)
-    // .valid_addr(valid_addr),
-    // .done_addr(done_addr),
-    // .valid(valid),
-    // .owrite_en(owrite_en)
-    // .check_count_addr(check_count_addr),
-    // .check_count_load(check_count_load)
-
+    // .check_mul(check_mul),
+    // .check_counter(check_counter),
+    // .check_write(check_write),
+    // .check_toggle(check_toggle),
+     .ostate(ostate)
+    // .o_next_state(o_next_state),
+    // .o_start_gen_addr(o_start_gen_addr)
   );
 
 
   integer k;
 
   initial begin
-    // Khởi tạo
+    // Kh?i t?o
     
     
     clk = 0;
@@ -96,29 +79,35 @@ module tb_top;
     valid_input = 0;
     in0 = 16'd0; 
     in1 = 16'd0;
+    load_done = 1'b0;
 
     // Reset
     #400 rst_n = 1;
 
-    // Bắt đầu
+    // B?t ??u
     start = 1;
     #50; start = 0;
-
-    // Nạp 128 lần dữ liệu
+    // N?p 128 l?n d? li?u
+    valid_input <= 1'b1;
     for (k = 1; k <= 128; k = k + 1) begin
-        @(posedge clk);
-        valid_input <= 1'b1;
-        in0 <= k;                // giá trị in0
-        in1 <= 16'd145 + k * 2;     // giá trị in1
+        @(negedge clk);
+//        valid_input <= 1'b1;
+        in0 <= k;                // gi� tr? in0
+        in1 <= 16'd145 + k * 2;     // gi� tr? in1
     end
-
-    // Ngắt valid_input
-    @(posedge clk);
-    valid_input <= 1'b0;
+    
+    // Ng?t valid_input
+//    @(negedge clk);
+    #5; valid_input <= 1'b0;
+ 
+    #2.5;
+    
+    load_done <= 1'b1;
+    
     in0 <= 16'd0;
     in1 <= 16'd0;
 
-    // Ch�? xử lý xong
+    // Ch?? x? l� xong
     wait (done_compute);
     $display("[%0t] DONE_STORE!", $time);
 
@@ -126,9 +115,9 @@ module tb_top;
     $finish;
   end
 
-  // Timeout phòng treo
+  // Timeout ph�ng treo
   initial begin
-    #200000;
+    #20000;
     $display("TIMEOUT");
     $finish;
   end

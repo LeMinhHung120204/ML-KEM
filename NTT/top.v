@@ -3,166 +3,68 @@
 module top #(
     parameter WIDTH_ADDR_BUTTERFLY = 8,
     parameter WIDTH_ADDR_ZETAS = 7,
-    parameter WIDTH = 16,
-    parameter WIDTH_BUS_DATA = 256 * 32
+    parameter WIDTH = 16
 )(
     input clk, rst_n, start, is_ntt, valid_input,
     input   [WIDTH - 1:0]                   in0, in1,
     output  [WIDTH - 1:0]                   out0, out1,
     output  [WIDTH_ADDR_BUTTERFLY - 1:0]    addr0, addr1,
-    output  done_compute, load_done, valid_output, output_valid
+    output  done_compute, output_valid,
+
+    // debug
+    output [1:0] ostate
 );
     localparam IDLE = 2'd0, INIT = 2'd1, RUN = 2'd2, DONE = 2'd3;
-    localparam num_reg = 17;
+    localparam num_reg = 16;
 
-    wire [WIDTH_ADDR_BUTTERFLY - 1:0]   addr_a, addr_b, mux_addr_a, mux_addr_b;
-    wire [WIDTH_ADDR_ZETAS - 1:0]       addr_tw;
-    wire [WIDTH - 1:0]                  A, B, out_rom, zetas;
-    wire [WIDTH - 1:0]                  din_a, din_b, out_j_intt, out_jl_intt, out_j_ntt, out_jl_ntt;
+    wire [WIDTH - 1:0]                  A, B, zetas;
+    wire [WIDTH - 1:0]                  out_j_intt, out_jl_intt, out_j_ntt, out_jl_ntt;
     wire valid_addr, gen_addr_done;
 
-    reg [WIDTH_ADDR_BUTTERFLY - 1:0]    hold_addra [0:num_reg - 1];
-    reg [WIDTH_ADDR_BUTTERFLY - 1:0]    hold_addrb [0:num_reg - 1];
-    reg [WIDTH - 1:0]                   hold_j_intt, hold_jl_intt;
-    reg [1:0]                           state, next_state;
-    reg toggle;
+
+    reg [(WIDTH_ADDR_BUTTERFLY * num_reg) - 1:0]    hold_addra, hold_addrb;
+    reg [1:0]                                       state, next_state;
 
     //----------------------------------- conter -----------------------------------
-    reg [6:0]   count_load;
-    reg [11:0]  counter;
-    reg [7:0]   count_addr;
-
-    wire [7:0]  sub = mux_addr_a - mux_addr_b;
+    reg [7:0]   count_load;
+    reg [10:0]  counter;
+    wire [7:0]  sub;
+//    assign sub = mux_addr_a - mux_addr_b;
     always @(posedge clk or negedge rst_n) begin
         if (~rst_n) begin
-            count_load  <= 7'd0;
-            count_addr  <= 8'd0;
-            counter     <= 12'd0;
-            toggle      <= 1'b0;
+            count_load  <= 8'd0;
+            counter     <= 11'd0;
         end 
         else begin
             case(state)
                 IDLE: begin
-                    count_load  <= 7'd0;
-                    count_addr  <= 8'd0;
-                    counter     <= 12'd0;
-                    toggle      <= 1'b0;
+                    count_load  <= 8'd0;
+                    counter     <= 11'd0;
                 end 
                 INIT: begin
-                    if (valid_input) begin
+                    if (valid_input & count_load < 8'd127) begin
                         count_load <= count_load + 1'b1;
                     end
                 end 
                 RUN: begin
-                    toggle <= ~toggle;
-                    if (load_done) begin
-                        counter <= counter + 1'b1;
-                    end  
-                    if ((counter >= 12'd1557) & toggle & (count_addr < 8'd128)) begin
-                        count_addr <= count_addr + 1'b1;
-                    end
+                    counter <= counter + 1'b1;
                 end 
                 DONE: begin
-                    count_load  <= 7'd0;
-                    count_addr  <= 8'd0;
-                    counter     <= 12'd0;
-                    toggle      <= 1'b0;
+                    count_load  <= 8'd0;
+                    counter     <= 11'd0;
                 end 
             endcase
         end 
     end 
 
-    //----------------------------------- In / Out Bram -----------------------------------
-    assign din_a        = (state == INIT) ? in0                     : ((is_ntt) ? out_j_ntt         : hold_j_intt);
-    assign din_b        = (state == INIT) ? in1                     : ((is_ntt) ? out_jl_ntt        : hold_jl_intt);
-    assign mux_addr_a   = (state == INIT) ? count_load << 1         : ((toggle) ? hold_addra[16]    : addr_a);
-    assign mux_addr_b   = (state == INIT) ? (count_load << 1) + 1   : ((toggle) ? hold_addrb[16]    : addr_b);
-    //----------------------------------- holdaddr -----------------------------------
-    integer i;
-    always @(posedge clk or negedge rst_n) begin
-        if (~rst_n) begin
-            for (i = 0; i < num_reg; i = i + 1'b1) begin
-                hold_addra[i]   <= 8'd0;
-                hold_addrb[i]   <= 8'd0;
-            end
-            hold_j_intt         <= 16'd0;
-            hold_jl_intt        <= 16'd0;  
-        end 
-        else begin
-            hold_j_intt     <= out_j_intt;
-            hold_jl_intt    <= out_jl_intt;
-
-            hold_addra[0]   <= addr_a;
-            hold_addrb[0]   <= addr_b;
-
-            hold_addra[1]   <= hold_addra[0];
-            hold_addrb[1]   <= hold_addrb[0];
-            
-            hold_addra[2]   <= hold_addra[1];
-            hold_addrb[2]   <= hold_addrb[1];
-
-            hold_addra[3]   <= hold_addra[2];
-            hold_addrb[3]   <= hold_addrb[2];
-
-            hold_addra[4]   <= hold_addra[3];
-            hold_addrb[4]   <= hold_addrb[3];
-
-            hold_addra[5]   <= hold_addra[4];
-            hold_addrb[5]   <= hold_addrb[4];
-
-            hold_addra[6]   <= hold_addra[5];
-            hold_addrb[6]   <= hold_addrb[5];
-
-            hold_addra[7]   <= hold_addra[6];
-            hold_addrb[7]   <= hold_addrb[6];
-
-            hold_addra[8]   <= hold_addra[7];
-            hold_addrb[8]   <= hold_addrb[7];
-
-            hold_addra[9]   <= hold_addra[8];
-            hold_addrb[9]   <= hold_addrb[8];
-
-            hold_addra[10]  <= hold_addra[9];
-            hold_addrb[10]  <= hold_addrb[9];
-
-            hold_addra[11]  <= hold_addra[10];
-            hold_addrb[11]  <= hold_addrb[10];
-
-            hold_addra[12]  <= hold_addra[11];
-            hold_addrb[12]  <= hold_addrb[11];
-
-            hold_addra[13]  <= hold_addra[12];
-            hold_addrb[13]  <= hold_addrb[12];
-
-            hold_addra[14]  <= hold_addra[13];
-            hold_addrb[14]  <= hold_addrb[13];
-
-            hold_addra[15]  <= hold_addra[14];
-            hold_addrb[15]  <= hold_addrb[14];
-
-            hold_addra[16]  <= hold_addra[15];
-            hold_addrb[16]  <= hold_addrb[15];
-        end 
-    end 
-
-    //----------------------------------- output normalize -----------------------------------
-    wire [WIDTH - 1:0] oA_normal, oB_normal;
-    wire start_normalize, oe_normalize;
-
-    assign start_normalize = (counter >= 12'd1554);
-    assign oe_normalize = start_normalize;
     //----------------------------------- FSM -----------------------------------
 
     // tin hieu dieu khien
-    wire start_gen_addr, we;
+    reg reg_done_compute;
+    wire start_gen_addr;
+    wire done_run, load_done;
 
-    assign we           = (state == INIT) | (toggle & (counter >= 12'd19) & (counter < 12'd1555));
-    assign output_valid = (state == RUN) & (((counter >= 12'd1556) & (~is_ntt) & (~toggle)) | ((counter >= 12'd1554) & is_ntt & toggle));
-    assign out0         = (output_valid) ? ((is_ntt) ? out_j_ntt    : oA_normal)            : 16'd0;
-    assign out1         = (output_valid) ? ((is_ntt) ? out_jl_ntt   : oB_normal)            : 16'd0;
-    assign addr0        = (output_valid) ? ((is_ntt) ? mux_addr_a   : count_addr)           : 8'd0;
-    assign addr1        = (output_valid) ? ((is_ntt) ? mux_addr_b   : count_addr + 8'd128)  : 8'd0;
-
+    assign done_run     = counter >= 11'd914;
     always @(posedge clk or negedge rst_n) begin
         if (~rst_n) begin
             state <= IDLE;
@@ -172,45 +74,111 @@ module top #(
         end 
     end 
 
+    always @(posedge clk or negedge rst_n) begin
+        if (~rst_n) begin
+            reg_done_compute <= 1'b0;
+        end 
+        else begin
+            if (state == DONE)
+                reg_done_compute <= 1'b1;
+        end 
+    end 
+
     always @(*) begin
         case(state)
-            IDLE:       next_state = (start)                ? INIT  : IDLE;
-            INIT:       next_state = (count_load == 8'd127) ? RUN   : INIT;
-            RUN:        next_state = (count_addr == 8'd127) ? DONE  : RUN;
+            IDLE:       next_state = (start)        ? INIT  : IDLE;
+            INIT:       next_state = (load_done)    ? RUN   : INIT;
+            RUN:        next_state = (done_run)     ? DONE  : RUN;
             DONE:       next_state = IDLE;
             default:    next_state = IDLE;
         endcase
     end 
-    assign done_compute     = (state == DONE);
+    assign done_compute     = reg_done_compute;
     assign start_gen_addr   = (state == RUN);
-    assign load_done        = (state == RUN);
+    assign load_done        = (count_load == 8'd127);
     
+    //----------------------------------- debug -----------------------------------
+
+    assign ostate = state;
+
+    //----------------------------------- In/Out Mem -----------------------------------
+
+    reg [WIDTH_ADDR_BUTTERFLY - 1:0]    waddr1, waddr2, raddr1, raddr2;
+    reg [WIDTH_ADDR_ZETAS - 1:0]        addr_tw;
+    reg [WIDTH - 1:0]                   din_a, din_b;
+    reg we;
+
+    wire [WIDTH_ADDR_BUTTERFLY - 1:0]   addr_a, addr_b;
+    wire [WIDTH_ADDR_BUTTERFLY - 1:0]   waddr1_next, waddr2_next, raddr1_next, raddr2_next;
+    wire [WIDTH_ADDR_BUTTERFLY - 1:0]   check_a, check_b;
+    wire [WIDTH_ADDR_ZETAS - 1:0]       addr_tw_next;
+    wire [WIDTH - 1:0]                  din_a_next, din_b_next;
+    wire we_next;
+
+    assign waddr1_next  = (state == INIT) ? count_load << 1          : check_a;
+    assign waddr2_next  = (state == INIT) ? (count_load << 1) + 1'b1 : check_b;
+    assign raddr1_next  = addr_a;
+    assign raddr2_next  = addr_b;
+
+    
+    assign check_a      = hold_addra[(WIDTH_ADDR_BUTTERFLY * num_reg) - 1: (WIDTH_ADDR_BUTTERFLY * (num_reg - 1))];
+    assign check_b      = hold_addrb[(WIDTH_ADDR_BUTTERFLY * num_reg) - 1: (WIDTH_ADDR_BUTTERFLY * (num_reg - 1))];
+
+    assign din_a_next   = (state == INIT) ? in0 : (is_ntt) ? out_j_ntt  : out_j_intt;
+    assign din_b_next   = (state == INIT) ? in1 : (is_ntt) ? out_jl_ntt : out_jl_intt;
+    assign we_next      = valid_input | (counter >= 11'd18) & (counter <= 11'd785);
+
+    always @(posedge clk or negedge rst_n) begin
+        if (~rst_n) begin
+            waddr1  <= {WIDTH_ADDR_BUTTERFLY{1'b0}};
+            waddr2  <= {WIDTH_ADDR_BUTTERFLY{1'b0}};
+            raddr1  <= {WIDTH_ADDR_BUTTERFLY{1'b0}};
+            raddr2  <= {WIDTH_ADDR_BUTTERFLY{1'b0}};
+            addr_tw <= {WIDTH_ADDR_ZETAS{1'b0}};
+            din_a   <= {WIDTH{1'd0}};
+            din_b   <= {WIDTH{1'd0}};
+            we      <= 1'b0;
+        end 
+        else begin
+            waddr1  <= waddr1_next;
+            waddr2  <= waddr2_next;
+            raddr1  <= raddr1_next;
+            raddr2  <= raddr2_next;
+            addr_tw <= addr_tw_next;
+            din_a   <= din_a_next;
+            din_b   <= din_b_next;
+            we      <= we_next;
+        end 
+    end 
+
+    //----------------------------------- holdaddr -----------------------------------
+
+    always @(posedge clk or negedge rst_n) begin
+        if (~rst_n) begin
+            hold_addra <= {(WIDTH_ADDR_BUTTERFLY * num_reg){1'b0}};
+            hold_addrb <= {(WIDTH_ADDR_BUTTERFLY * num_reg){1'b0}};
+        end 
+        else begin
+            hold_addra <= {hold_addra[(WIDTH_ADDR_BUTTERFLY * (num_reg - 1)) - 1:0], addr_a};
+            hold_addrb <= {hold_addrb[(WIDTH_ADDR_BUTTERFLY * (num_reg - 1)) - 1:0], addr_b};
+        end 
+    end 
+
+    //----------------------------------- output -----------------------------------
+
+    assign output_valid = (counter >= 11'd787) & (state == RUN);
+    assign out0         = (output_valid) ? din_a    : 16'd0;
+    assign out1         = (output_valid) ? din_b    : 16'd0;
+    assign addr0        = (output_valid) ? waddr1   : 8'd0;
+    assign addr1        = (output_valid) ? waddr2   : 8'd0;
+
     //----------------------------------- module con -----------------------------------
-    assign zetas = out_rom[WIDTH - 1:0];
     MyBootROM rom_inst(
         .clk(clk),
         .rst_n(rst_n),
-        .oe(1'b1),
-        .me(1'b1),
         .address(addr_tw),
-        .q(out_rom)
+        .q(zetas)
     ); 
-
-    blk_mem_gen_0 bram_inst(
-        .addra(mux_addr_a),
-        .clka(clk),
-        .dina(din_a),
-        .douta(A),
-        .ena(1'b1),
-        .wea(we),
-        
-        .addrb(mux_addr_b),
-        .clkb(clk),
-        .dinb(din_b),
-        .doutb(B),
-        .enb(1'b1),
-        .web(we)
-    );
 
     AddressGenerator AddrGend(
         .clk(clk),
@@ -219,9 +187,23 @@ module top #(
         .start(start_gen_addr),
         .addr0(addr_a),            // [j]
         .addr1(addr_b),            // [j + l]
-        .addr_tw(addr_tw),
+        .addr_tw(addr_tw_next),
         .valid(valid_addr),
         .ntt_finished(gen_addr_done)
+    );
+
+    MyReg MyReg_inst(
+        .clk(clk), 
+        .rst_n(rst_n), 
+        .we(we), 
+        .raddr1(raddr1), 
+        .raddr2(raddr2), 
+        .waddr1(waddr1), 
+        .waddr2(waddr2), 
+        .din1(din_a), 
+        .din2(din_b), 
+        .dout1(A), 
+        .dout2(B)
     );
 
     bu_ntt bu_ntt0(
@@ -242,16 +224,5 @@ module top #(
         .W_In(zetas),
         .A_Out(out_j_intt),
         .B_Out(out_jl_intt)
-    );
-
-    normalize_output normalize_inst(
-        .clk(clk),
-        .rst_n(rst_n),
-        .A({16'b0, out_j_intt}),
-        .B({16'b0, out_jl_intt}),
-        .start(start_normalize),
-        .oe(oe_normalize),
-        .oA(oA_normal),
-        .oB(oB_normal)
     );
 endmodule
