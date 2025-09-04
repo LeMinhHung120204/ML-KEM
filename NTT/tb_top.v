@@ -75,7 +75,7 @@ module tb_top;
     clk = 0;
     rst_n = 0;
     start = 0;
-    is_ntt = 1'b1;
+    is_ntt = 1'b0;
     valid_input = 0;
     in0 = 16'd0; 
     in1 = 16'd0;

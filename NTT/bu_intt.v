@@ -14,6 +14,7 @@ module bu_intt #(
     localparam num_reg = 2;
     localparam num_reg_barret1 = 9;
     localparam Qmod = 16'd3329;
+    localparam div2 = 1665;
 
     reg [WIDTH - 1:0]                       regx [0:num_reg - 1];
     reg [WIDTH - 1:0]                       A_Outreg, B_Outreg;
@@ -21,16 +22,13 @@ module bu_intt #(
     reg [(WIDTH * num_reg_barret1) - 1:0]   reg_barret1;
 
     wire [(WIDTH * 2) - 1:0]    mul_out, in_barret2;
-    wire [WIDTH - 1:0]          barrett_out1, barrett_out2, subb_tmp;
-    wire [WIDTH - 1:0]          in_barret1;
+    wire [WIDTH - 1:0]          barrett_out1, barrett_out2, subb_tmp, oA, oB;
+    wire [WIDTH - 1:0]          in_barret1, tmp;
 
-    // debug
-    // assign barret1 = barrett_out1;
-    // assign barret2 = barrett_out2;
-    // assign barret3 = barrett_out3;
-    // assign o_mul = mul_out;
-    // assign sub_out = subb_ex;
-    // assign add_out = {{16{add_tmp[15]}}, add_tmp};
+    
+    assign tmp  = reg_barret1[(WIDTH * num_reg_barret1) - 1:(WIDTH * (num_reg_barret1 - 1))];
+    assign oB   = (barrett_out2[0]) ? (barrett_out2 >> 1) + div2    : barrett_out2 >> 1;
+    assign oA   = (tmp[0])          ? (tmp >> 1) + div2             : tmp >> 1;
 
     integer i;
     always @(posedge clk or negedge rst_n) begin
@@ -47,15 +45,19 @@ module bu_intt #(
             regx[1]     <= A_In;
             reg_zeta    <= W_In;
             reg_barret1 <= {reg_barret1[(WIDTH * (num_reg_barret1 - 1)) - 1:0]  , barrett_out1};
-            B_Outreg    <= barrett_out2;
-            A_Outreg    <= reg_barret1[(WIDTH * num_reg_barret1) - 1:(WIDTH * (num_reg_barret1 - 1))];
+            // B_Outreg    <= barrett_out2;
+            // A_Outreg    <= reg_barret1[(WIDTH * num_reg_barret1) - 1:(WIDTH * (num_reg_barret1 - 1))];
+            B_Outreg    <= oB;
+            A_Outreg    <= oA;
             
         end
     end
 
+
+
     assign subb_tmp     = ~(regx[1]) + 1'b1 + regx[0]; // B - A    
-    assign in_barret1   = (regx[0] + regx[1]) >> 1;
-    assign in_barret2   = {mul_out[31], mul_out[31:1]};
+    assign in_barret1   = regx[0] + regx[1];
+    assign in_barret2   = mul_out;
 
     barret barret_inst1(
         .clk(clk), 
