@@ -1,25 +1,24 @@
 `timescale 1ns/1ps
 
 module tb_top;
-  // Tham s?
+  // Tham số
   localparam WIDTH_ADDR_BUTTERFLY = 8;
-  localparam WIDTH_ADDR_ZETAS = 7;
-  localparam WIDTH = 16;
-  localparam WIDTH_BUS_DATA = 256 * 32;
+  localparam WIDTH_ADDR_ZETAS     = 7;
+  localparam WIDTH                = 16;
+
+  localparam NWORDS  = 256;
+  localparam NPAIRS  = NWORDS/2;
 
   // I/O DUT
-  reg  clk, rst_n, start, is_ntt, valid_input, load_done;
+  reg  clk, rst_n, start, is_ntt, valid_input;
   reg  [WIDTH-1:0] in0, in1;
 
-  wire [WIDTH_ADDR_BUTTERFLY - 1:0] addr0, addr1, oaddr0, oaddr1, addr_in1, addr_in2;
-  wire [12:0] bin0, bin1, bout0, bout1, ozeta, out_j, out_jl, barret1, barret2, barret3;
-  wire [11:0] check_counter;
-  wire [31:0] check_mul;
-  wire [1:0] ostate, o_next_state;
+  wire [1:0] ostate;
   wire [WIDTH-1:0] out0, out1;
-  wire done_compute, valid_output, check_write, check_toggle, o_start_gen_addr;
+  wire done_compute;
+  wire [WIDTH_ADDR_BUTTERFLY-1:0] addr0, addr1;
 
-  // Clock 10ns
+  // Clock 5ns (200 MHz)
   always #2.5 clk = ~clk;
 
   // DUT
@@ -35,79 +34,52 @@ module tb_top;
     .valid_input(valid_input),
     .in0(in0),
     .in1(in1),
-    // .addr_in1(addr_in1),
-    // .addr_in2(addr_in2),
     .done_compute(done_compute),
-//     .load_done(load_done),
-     .out0(out0),
-     .out1(out1),
-     .addr0(addr0),
-     .addr1(addr1),
-    // .output_valid(valid_output),
-    // .oaddr0(oaddr0),
-    // .oaddr1(oaddr1),
-    // .bin0(bin0),
-    // .bin1(bin1),
-    // .bout0(bout0),
-    // .bout1(bout1),
-    // .ozeta(ozeta),
-    // .out_j(out_j),
-    // .out_jl(out_jl),
-    // .barret1(barret1),
-    // .barret2(barret2),
-    // .barret3(barret3),
-    // .check_mul(check_mul),
-    // .check_counter(check_counter),
-    // .check_write(check_write),
-    // .check_toggle(check_toggle),
-     .ostate(ostate)
-    // .o_next_state(o_next_state),
-    // .o_start_gen_addr(o_start_gen_addr)
+    .out0(out0),
+    .out1(out1),
+    .addr0(addr0),
+    .addr1(addr1),
+    .ostate(ostate)
   );
 
+  // Bộ nhớ dữ liệu đầu vào
+  reg [15:0] data_mem [0:NWORDS-1];
 
-  integer k;
+  integer i;
 
   initial begin
-    // Kh?i t?o
-    
-    
+    // Init
     clk = 0;
     rst_n = 0;
     start = 0;
-    is_ntt = 1'b0;
+    is_ntt = 1'b1;
     valid_input = 0;
-    in0 = 16'd0; 
+    in0 = 16'd0;
     in1 = 16'd0;
-    load_done = 1'b0;
+
+    // Nạp dữ liệu từ file hex (mỗi token = 16-bit, base16)
+    $readmemh("C:/Hung/Viettel/Stage2/ML-KEM/NTT/input.hex", data_mem);
 
     // Reset
-    #400 rst_n = 1;
+    #200  rst_n = 1;   // bạn đang để #400; nếu cần giữ dài thì chỉnh lại
+    #10;
 
-    // B?t ??u
     start = 1;
-    #50; start = 0;
-    // N?p 128 l?n d? li?u
+    #5;  start = 0;
+
     valid_input <= 1'b1;
-    for (k = 1; k <= 128; k = k + 1) begin
-        @(negedge clk);
-//        valid_input <= 1'b1;
-        in0 <= k;                // gi� tr? in0
-        in1 <= 16'd145 + k * 2;     // gi� tr? in1
+    for (i = 0; i < NPAIRS; i = i + 1) begin
+      @(negedge clk);
+      in0 <= data_mem[2*i];
+      in1 <= data_mem[2*i + 1];
     end
-    
-    // Ng?t valid_input
-//    @(negedge clk);
-    #5; valid_input <= 1'b0;
- 
-    #2.5;
-    
-    load_done <= 1'b1;
-    
+
+    // Hạ valid, clear input
+    @(negedge clk);
+    valid_input <= 1'b0;
     in0 <= 16'd0;
     in1 <= 16'd0;
 
-    // Ch?? x? l� xong
     wait (done_compute);
     $display("[%0t] DONE_STORE!", $time);
 
@@ -115,11 +87,10 @@ module tb_top;
     $finish;
   end
 
-  // Timeout ph�ng treo
+  // Timeout
   initial begin
     #20000;
     $display("TIMEOUT");
     $finish;
   end
-
 endmodule

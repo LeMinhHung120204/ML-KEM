@@ -6,6 +6,9 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/mul_p
 INFO: [VRFC 10-311] analyzing module add_cell
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module barret
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/csa.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module csa
+INFO: [VRFC 10-311] analyzing module fulladder
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_12bit.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module mul_12bit
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_cell.v" into library xil_defaultlib

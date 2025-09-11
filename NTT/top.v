@@ -79,8 +79,16 @@ module top #(
             reg_done_compute <= 1'b0;
         end 
         else begin
-            if (state == DONE)
-                reg_done_compute <= 1'b1;
+            case(state)
+                DONE: begin
+                    reg_done_compute <= 1'b1;
+                end 
+                default: begin
+                    reg_done_compute <= 1'b0;
+                end 
+            endcase
+            // if (state == DONE)
+            //     reg_done_compute <= 1'b1;
         end 
     end 
 

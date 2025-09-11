@@ -122,7 +122,7 @@ if __name__ == "__main__":
     # print()
 
     # Tính NTT và in 10 output đầu
-    a_ntt = intt(a[:])
+    a_ntt = ntt(a[:])
     print("First 10 NTT outputs:")
     for i in range(256):
         print(f"{i}: {a_ntt[i]}")

@@ -1,3 +1,3 @@
 Time resolution is 1 ps
-[5775000] DONE_STORE!
-$finish called at time : 5855 ns : File "C:/Hung/Viettel/Stage2/ML-KEM/NTT/tb_top.v" Line 125
+[5273000] DONE_STORE!
+$finish called at time : 5352500 ps : File "C:/Hung/Viettel/Stage2/ML-KEM/NTT/tb_top.v" Line 87

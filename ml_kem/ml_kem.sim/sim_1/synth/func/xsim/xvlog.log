@@ -1,0 +1,31 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/synth/func/xsim/tb_top_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AddressGenerator
+INFO: [VRFC 10-311] analyzing module BoothDecode
+INFO: [VRFC 10-311] analyzing module BoothDecode_1
+INFO: [VRFC 10-311] analyzing module BoothDecode_10
+INFO: [VRFC 10-311] analyzing module BoothDecode_11
+INFO: [VRFC 10-311] analyzing module BoothDecode_12
+INFO: [VRFC 10-311] analyzing module BoothDecode_13
+INFO: [VRFC 10-311] analyzing module BoothDecode_14
+INFO: [VRFC 10-311] analyzing module BoothDecode_15
+INFO: [VRFC 10-311] analyzing module BoothDecode_16
+INFO: [VRFC 10-311] analyzing module BoothDecode_17
+INFO: [VRFC 10-311] analyzing module BoothDecode_2
+INFO: [VRFC 10-311] analyzing module BoothDecode_3
+INFO: [VRFC 10-311] analyzing module BoothDecode_4
+INFO: [VRFC 10-311] analyzing module BoothDecode_5
+INFO: [VRFC 10-311] analyzing module BoothDecode_6
+INFO: [VRFC 10-311] analyzing module MyBootROM
+INFO: [VRFC 10-311] analyzing module MyReg
+INFO: [VRFC 10-311] analyzing module barret
+INFO: [VRFC 10-311] analyzing module barret_0
+INFO: [VRFC 10-311] analyzing module barret_7
+INFO: [VRFC 10-311] analyzing module barret_8
+INFO: [VRFC 10-311] analyzing module bu_intt
+INFO: [VRFC 10-311] analyzing module bu_ntt
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-311] analyzing module mul_9
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/NTT/tb_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top

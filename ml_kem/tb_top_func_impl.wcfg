@@ -3,7 +3,7 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="tb_top_behav.wdb" id="1">
+      <db_ref path="tb_top_func_impl.wdb" id="1">
          <top_modules>
             <top_module name="glbl" />
             <top_module name="tb_top" />
@@ -11,15 +11,19 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="4,671.880 ns"></ZoomStartTime>
-      <ZoomEndTime time="4,798.981 ns"></ZoomEndTime>
-      <Cursor1Time time="5,855.000 ns"></Cursor1Time>
+      <ZoomStartTime time="5,336.500 ns"></ZoomStartTime>
+      <ZoomEndTime time="5,453.901 ns"></ZoomEndTime>
+      <Cursor1Time time="5,427.600 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="193"></NameColumnWidth>
-      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+      <NameColumnWidth column_width="284"></NameColumnWidth>
+      <ValueColumnWidth column_width="78"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="19" />
+   <WVObjectSize size="13" />
+   <wave_markers>
+      <marker time="777817" label="" />
+      <marker time="1177500" label="" />
+   </wave_markers>
    <wvobject fp_name="/tb_top/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -51,10 +55,12 @@
    <wvobject fp_name="/tb_top/addr0" type="array">
       <obj_property name="ElementShortName">addr0[7:0]</obj_property>
       <obj_property name="ObjectShortName">addr0[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_top/addr1" type="array">
       <obj_property name="ElementShortName">addr1[7:0]</obj_property>
       <obj_property name="ObjectShortName">addr1[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_top/out0" type="array">
       <obj_property name="ElementShortName">out0[15:0]</obj_property>
@@ -68,32 +74,8 @@
       <obj_property name="ElementShortName">done_compute</obj_property>
       <obj_property name="ObjectShortName">done_compute</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_top/load_done" type="logic">
-      <obj_property name="ElementShortName">load_done</obj_property>
-      <obj_property name="ObjectShortName">load_done</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_top/valid_output" type="logic">
-      <obj_property name="ElementShortName">valid_output</obj_property>
-      <obj_property name="ObjectShortName">valid_output</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_top/k" type="array">
-      <obj_property name="ElementShortName">k[31:0]</obj_property>
-      <obj_property name="ObjectShortName">k[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_top/WIDTH_ADDR_BUTTERFLY" type="array">
-      <obj_property name="ElementShortName">WIDTH_ADDR_BUTTERFLY[31:0]</obj_property>
-      <obj_property name="ObjectShortName">WIDTH_ADDR_BUTTERFLY[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_top/WIDTH_ADDR_ZETAS" type="array">
-      <obj_property name="ElementShortName">WIDTH_ADDR_ZETAS[31:0]</obj_property>
-      <obj_property name="ObjectShortName">WIDTH_ADDR_ZETAS[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_top/WIDTH" type="array">
-      <obj_property name="ElementShortName">WIDTH[31:0]</obj_property>
-      <obj_property name="ObjectShortName">WIDTH[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_top/WIDTH_BUS_DATA" type="array">
-      <obj_property name="ElementShortName">WIDTH_BUS_DATA[31:0]</obj_property>
-      <obj_property name="ObjectShortName">WIDTH_BUS_DATA[31:0]</obj_property>
+   <wvobject fp_name="/tb_top/ostate" type="array">
+      <obj_property name="ElementShortName">ostate[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ostate[1:0]</obj_property>
    </wvobject>
 </wave_config>

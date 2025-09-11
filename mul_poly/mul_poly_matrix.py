@@ -138,5 +138,11 @@ def main():
 
 if __name__ == "__main__":
     # main()
-    print((1*101 + 2*102*(1637)) % 3329) 
-    print((3*103 + 4*104*(-1637)) % 3329) 
+    res = ntt_base_multiplication(3145, 71, 1924, 1433, 2288)
+    print(res)
+
+    res = ntt_base_multiplication(678, 67, 2405, 2264, 1637)
+    # print(res)
+    print(71*1433)
+    print((71*1433)%3329)
+    print(((71*1433)%3329) * 2288 + 3145*1924)

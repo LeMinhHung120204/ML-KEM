@@ -1,30 +1,8 @@
 Vivado Simulator v2022.2.2
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 1 for port 'valid' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/top.v:315]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 16 for port 'barret1' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/top.v:339]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 16 for port 'barret2' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/top.v:340]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 16 for port 'barret3' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/top.v:341]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'o_mul' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/top.v:342]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'add_out' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/top.v:343]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'sub_out' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/top.v:344]
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.MyBootROM
-Compiling module xil_defaultlib.bram_default
-Compiling module xil_defaultlib.AddressGenerator
-Compiling module xil_defaultlib.barret
-Compiling module xil_defaultlib.BoothDecode
-Compiling module xil_defaultlib.mul_default
-Compiling module xil_defaultlib.bu_ntt
-Compiling module xil_defaultlib.bu_intt
-Compiling module xil_defaultlib.normalize_output
-Compiling module xil_defaultlib.top
-Compiling module xil_defaultlib.tb_top
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_top_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
