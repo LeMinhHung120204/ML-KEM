@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Tue Sep  9 08:44:05 2025
+# Process ID: 29900
+# Current directory: C:/Hung/Viettel/Stage2/ML-KEM/ml_kem
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25268 C:\Hung\Viettel\Stage2\ML-KEM\ml_kem\ml_kem.xpr
+# Log file: C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/vivado.log
+# Journal file: C:/Hung/Viettel/Stage2/ML-KEM/ml_kem\vivado.jou
+# Running On: DESKTOP-DA5EM0P, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 16948 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg
+source tb_top.tcl
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/state}} 
+relaunch_sim
+current_wave_config {tb_top_func_impl.wcfg}
+add_wave {{/tb_top/dut/count_load}} 
+restart

@@ -4,7 +4,8 @@ module tb_mul_poly;
 
     reg clk;
     reg rst_n;
-    reg [11:0] a0, a1, b0, b1, zetas;
+    reg [11:0] a0, a1, b0, b1;
+    reg [12:0] zetas;
     wire [11:0] res0, res1;
     reg [8:0] counter;
    
@@ -29,27 +30,27 @@ module tb_mul_poly;
         $display("Start Barrett Testbench");
         clk = 0;
         rst_n = 0;
-        a0 = 16'd0;
-        a1 = 16'd0;
-        b0 = 16'd0;
-        b1 = 16'd0;
-        zetas = 16'd0;
+        a0 = 12'd0;
+        a1 = 12'd0;
+        b0 = 12'd0;
+        b1 = 12'd0;
+        zetas = 13'd0;
 
         // Reset
         #20;
         rst_n = 1;
-        a0 = 16'd1;
-        a1 = 16'd2;
-        b0 = 16'd3;
-        b1 = 16'd4;
-        zetas = 16'd5;
+        a0 = 12'd1;
+        a1 = 12'd2;
+        b0 = 12'd3;
+        b1 = 12'd4;
+        zetas = -13'd5;
 
         #10;
-        a0 = 16'd13;
-        a1 = 16'd16;
-        b0 = 16'd432;
-        b1 = 16'd978;
-        zetas = 16'd35;
+        a0 = 12'd13;
+        a1 = 12'd3328;
+        b0 = 12'd432;
+        b1 = 12'd978;
+        zetas = 13'd3000;
         #500;
         $display("Finished");
         $finish;

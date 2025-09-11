@@ -1,4 +1,7 @@
-Running: xsim.dir/tb_mul_poly_matrix_func_synth/xsimk.exe -simmode gui -wdb tb_mul_poly_matrix_func_synth.wdb -simrunnum 0 -socket 56314
+Running: xsim.dir/tb_mul_poly_matrix_func_synth/xsimk.exe -simmode gui -wdb tb_mul_poly_matrix_func_synth.wdb -simrunnum 0 -socket 57234
 Design successfully loaded
-Design Loading Memory Usage: 140904 KB (Peak: 140904 KB)
-Design Loading CPU Usage: 280 ms
+Design Loading Memory Usage: 140124 KB (Peak: 140124 KB)
+Design Loading CPU Usage: 296 ms
+Simulation completed
+Simulation Memory Usage: 187728 KB (Peak: 187728 KB)
+Simulation CPU Usage: 1514 ms

@@ -1,0 +1,496 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Wed Sep 10 08:24:40 2025
+# Process ID: 26808
+# Current directory: C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11916 C:\Hung\Viettel\Stage2\ML-KEM\mul_poly\mul_matrix\mul_matrix.xpr
+# Log file: C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/vivado.log
+# Journal file: C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix\vivado.jou
+# Running On: DESKTOP-DA5EM0P, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 16948 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/mul_matrix.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg
+source tb_mul_poly_matrix.tcl
+relaunch_sim
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg
+source tb_mul_poly_matrix.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/test_a}} {{/tb_mul_poly_matrix/dut/test_b}} {{/tb_mul_poly_matrix/dut/test_tmp}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/a}} {{/tb_mul_poly_matrix/dut/b}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/a}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/zeta4}} 
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/a}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/b}} 
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/zeta1}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/zeta2}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/zeta3}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/zeta4}} 
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/a0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/a1}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/b0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/b1}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/zetas}} 
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul1/zetas}} 
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul1/a0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul1/a1}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul1/b0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul1/b1}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul1/zetas}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/res0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/res1}} 
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul1/res0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul1/res1}} 
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/a0_b0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/a1_b1}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/a1_b0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/a0_b1}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/a1_b1_zetas}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/add1}} 
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/tmp_add}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/barret_inst2/C}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/barret_inst2/R}} 
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/barret_inst1/R}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/barret_inst1/Q45}} 
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/barret_inst1/C}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/test_a}} {{/tb_mul_poly_matrix/dut/test_b}} {{/tb_mul_poly_matrix/dut/test_tmp}} 
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul6/a0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul6/a1}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul6/b0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul6/b1}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul6/zetas}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul6/res0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul6/res1}} 
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/a0_b0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/a1_b1}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/a1_b0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/a0_b1}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/a1_b1_zetas}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul6/a0_b0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul6/a1_b1}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul6/a1_b0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul6/a0_b1}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul6/a1_b1_zetas}} 
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul6/obarret2}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul6/obarret1}} 
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul6/mul_inst4/A}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul6/mul_inst4/B}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul6/mul_inst4/R}} 
+relaunch_sim
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_mul_12bit [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+add_files -norecurse C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/csa.v
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg
+source tb_mul_12bit.tcl
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_12bit/clk}} {{/tb_mul_12bit/rst_n}} {{/tb_mul_12bit/a}} {{/tb_mul_12bit/b}} {{/tb_mul_12bit/res}} 
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_12bit/uut/clk}} {{/tb_mul_12bit/uut/rst_n}} {{/tb_mul_12bit/uut/A}} {{/tb_mul_12bit/uut/B}} {{/tb_mul_12bit/uut/R}} {{/tb_mul_12bit/uut/tmp}} {{/tb_mul_12bit/uut/tmp_sum}} {{/tb_mul_12bit/uut/tmp_carry}} {{/tb_mul_12bit/uut/B_ex}} {{/tb_mul_12bit/uut/regA}} {{/tb_mul_12bit/uut/regx}} {{/tb_mul_12bit/uut/i}} {{/tb_mul_12bit/uut/WIDTH}} {{/tb_mul_12bit/uut/num_reg}} 
+relaunch_sim
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_12bit/uut/cas_ins0/x}} {{/tb_mul_12bit/uut/cas_ins0/y}} {{/tb_mul_12bit/uut/cas_ins0/z}} {{/tb_mul_12bit/uut/cas_ins0/sum}} {{/tb_mul_12bit/uut/cas_ins0/carry}} 
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_12bit/uut/cas_ins1/x}} {{/tb_mul_12bit/uut/cas_ins1/y}} {{/tb_mul_12bit/uut/cas_ins1/z}} {{/tb_mul_12bit/uut/cas_ins1/sum}} {{/tb_mul_12bit/uut/cas_ins1/carry}} {{/tb_mul_12bit/uut/cas_ins1/carry_stage}} {{/tb_mul_12bit/uut/cas_ins1/WIDTH}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_12bit/uut/tmp_sum}} {{/tb_mul_12bit/uut/tmp_carry}} 
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg
+source tb_mul_12bit.tcl
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_12bit/uut/booth1/A}} {{/tb_mul_12bit/uut/booth1/sel}} {{/tb_mul_12bit/uut/booth1/res}} {{/tb_mul_12bit/uut/booth1/pp}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_12bit/uut/cas_ins0/x}} {{/tb_mul_12bit/uut/cas_ins0/y}} {{/tb_mul_12bit/uut/cas_ins0/z}} {{/tb_mul_12bit/uut/cas_ins0/sum}} {{/tb_mul_12bit/uut/cas_ins0/carry}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_12bit/uut/booth1/A}} {{/tb_mul_12bit/uut/booth1/sel}} {{/tb_mul_12bit/uut/booth1/res}} {{/tb_mul_12bit/uut/booth1/pp}} 
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_12bit/uut/cas_ins0/x}} {{/tb_mul_12bit/uut/cas_ins0/y}} {{/tb_mul_12bit/uut/cas_ins0/z}} {{/tb_mul_12bit/uut/cas_ins0/sum}} {{/tb_mul_12bit/uut/cas_ins0/carry}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_12bit/uut/B_ex}} {{/tb_mul_12bit/uut/regA}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+log_wave {/tb_mul_12bit/uut/booth0/A} {/tb_mul_12bit/uut/booth0/sel} {/tb_mul_12bit/uut/booth0/res} {/tb_mul_12bit/uut/booth0/pp} 
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_12bit/uut/booth0/A}} {{/tb_mul_12bit/uut/booth0/sel}} {{/tb_mul_12bit/uut/booth0/res}} {{/tb_mul_12bit/uut/booth0/pp}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_12bit/count_clock}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_mul_poly [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg
+source tb_mul_poly.tcl
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly/uut/clk}} {{/tb_mul_poly/uut/rst_n}} {{/tb_mul_poly/uut/a0}} {{/tb_mul_poly/uut/a1}} {{/tb_mul_poly/uut/b0}} {{/tb_mul_poly/uut/b1}} {{/tb_mul_poly/uut/zetas}} {{/tb_mul_poly/uut/res0}} {{/tb_mul_poly/uut/res1}} {{/tb_mul_poly/uut/a0_b0}} {{/tb_mul_poly/uut/a1_b1}} {{/tb_mul_poly/uut/a1_b0}} {{/tb_mul_poly/uut/a0_b1}} {{/tb_mul_poly/uut/a1_b1_zetas}} {{/tb_mul_poly/uut/obarret1}} {{/tb_mul_poly/uut/obarret2}} {{/tb_mul_poly/uut/obarret3}} {{/tb_mul_poly/uut/reg_res0}} {{/tb_mul_poly/uut/reg_res1}} {{/tb_mul_poly/uut/reg_zeta}} {{/tb_mul_poly/uut/reg_a0_b0}} {{/tb_mul_poly/uut/reg_obarret3}} {{/tb_mul_poly/uut/mod}} {{/tb_mul_poly/uut/i}} {{/tb_mul_poly/uut/add2}} {{/tb_mul_poly/uut/add1}} {{/tb_mul_poly/uut/tmp_add}} {{/tb_mul_poly/uut/WIDTH}} {{/tb_mul_poly/uut/num_reg_zeta}} {{/tb_mul_poly/uut/num_reg}} 
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+update_compile_order -fileset sources_1
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg
+source tb_mul_poly.tcl
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg
+source tb_mul_poly.tcl
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly/uut/mul_inst4/A}} {{/tb_mul_poly/uut/mul_inst4/B}} {{/tb_mul_poly/uut/mul_inst4/R}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly/uut/tmp_add}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly/uut/barret_inst1/C}} {{/tb_mul_poly/uut/barret_inst1/R}} 
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_mul_poly_matrix [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg
+source tb_mul_poly_matrix.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg
+source tb_mul_poly_matrix.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_mul_poly [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg
+source tb_mul_poly.tcl
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly/uut/tmp}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg
+source tb_mul_poly.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg
+source tb_mul_poly.tcl
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly/uut/a0_b0}} {{/tb_mul_poly/uut/a1_b1}} {{/tb_mul_poly/uut/a1_b0}} {{/tb_mul_poly/uut/a0_b1}} {{/tb_mul_poly/uut/a1_b1_zetas}} 
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly/uut/obarret2}} {{/tb_mul_poly/uut/add1}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly/uut/barret_inst2/C}} {{/tb_mul_poly/uut/barret_inst2/R}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly/uut/add1}} 
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg
+source tb_mul_poly.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_mul_poly_matrix [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg
+source tb_mul_poly_matrix.tcl
+update_compile_order -fileset sim_1
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/clk}} {{/tb_mul_poly_matrix/rst_n}} {{/tb_mul_poly_matrix/k}} {{/tb_mul_poly_matrix/valid_data}} {{/tb_mul_poly_matrix/a}} {{/tb_mul_poly_matrix/b}} {{/tb_mul_poly_matrix/r12}} {{/tb_mul_poly_matrix/r13}} {{/tb_mul_poly_matrix/r14}} {{/tb_mul_poly_matrix/r15}} {{/tb_mul_poly_matrix/res}} {{/tb_mul_poly_matrix/valid_output}} {{/tb_mul_poly_matrix/WIDTH}} {{/tb_mul_poly_matrix/NUM}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/test_a}} {{/tb_mul_poly_matrix/dut/test_b}} {{/tb_mul_poly_matrix/dut/test_tmp}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/add_tmp}} {{/tb_mul_poly_matrix/dut/tmp}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/tmp_res}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/test_add_tmp}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/k}} 
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/test_res_tmp}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/test_a}} {{/tb_mul_poly_matrix/dut/test_b}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/\gen_res[15].barret_inst /C}} {{/tb_mul_poly_matrix/dut/\gen_res[15].barret_inst /R}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/a0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/a1}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/b0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/b1}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/zetas}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/res0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/res1}} 
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul7/a0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul7/a1}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul7/b0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul7/b1}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul7/zetas}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul7/res0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul7/res1}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul7}} 
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg
+source tb_mul_poly_matrix.tcl
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/zeta1}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/zeta2}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/zeta3}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/zeta4}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul3}} 
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul3}} 
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/valid_data}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst}} 
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/valid_output}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/add_tmp}} {{/tb_mul_poly_matrix/dut/tmp}} 
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/tmp_res}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/count_k}} 
+current_wave_config {tb_mul_12bit_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/done_flag}} 
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg}
+relaunch_sim
+current_wave_config {Untitled 1}
+add_wave {{/tb_mul_poly_matrix/dut/tmp_res}} 
+relaunch_sim
+current_wave_config {Untitled 1}
+add_wave {{/tb_mul_poly_matrix/dut/add_tmp}} 
+current_wave_config {Untitled 1}
+add_wave {{/tb_mul_poly_matrix/dut/tmp}} 
+relaunch_sim
+relaunch_sim
+current_wave_config {Untitled 1}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/a0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/a1}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/b0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/b1}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/zetas}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/res0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul0/res1}} 
+relaunch_sim
+relaunch_sim
+current_wave_config {Untitled 1}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/zeta1}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/zeta2}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/zeta3}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/zeta4}} 
+relaunch_sim
+current_wave_config {Untitled 1}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul7}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_poly_matrix_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_poly_matrix_behav.wcfg
+set_property xsim.view {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_poly_matrix_behav.wcfg} [get_filesets sim_1]
+close_sim

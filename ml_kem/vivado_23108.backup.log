@@ -1,0 +1,1002 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Fri Sep  5 08:44:41 2025
+# Process ID: 23108
+# Current directory: C:/Hung/Viettel/Stage2/ML-KEM/ml_kem
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4128 C:\Hung\Viettel\Stage2\ML-KEM\ml_kem\ml_kem.xpr
+# Log file: C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/vivado.log
+# Journal file: C:/Hung/Viettel/Stage2/ML-KEM/ml_kem\vivado.jou
+# Running On: DESKTOP-DA5EM0P, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 16948 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:12 . Memory (MB): peak = 1206.453 ; gain = 408.867
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+[Fri Sep  5 08:45:42 2025] Launched synth_1...
+Run output will be captured here: C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.runs/synth_1/runme.log
+[Fri Sep  5 08:45:42 2025] Launched impl_1...
+Run output will be captured here: C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.runs/impl_1/runme.log
+launch_simulation -mode post-implementation -type functional
+Command: launch_simulation  -mode post-implementation -type functional
+INFO: [Vivado 12-12493] Simulation top is 'tb_top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching post-implementation functional simulation in 'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/func/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [Device 21-403] Loading part xczu9eg-ffvb1156-2-e
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 2176.684 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1892 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.914 . Memory (MB): peak = 2622.551 ; gain = 37.969
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.921 . Memory (MB): peak = 2622.551 ; gain = 37.969
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 3086.934 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 37 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 37 instances
+
+open_run: Time (s): cpu = 00:00:49 ; elapsed = 00:00:34 . Memory (MB): peak = 3323.242 ; gain = 2109.965
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode funcsim -nolib -force -file "C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/func/xsim/tb_top_func_impl.v"
+INFO: [SIM-utils-36] Netlist generated:C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/func/xsim/tb_top_func_impl.v
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/func/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/func/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/func/xsim/tb_top_func_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AddressGenerator
+INFO: [VRFC 10-311] analyzing module BoothDecode
+INFO: [VRFC 10-311] analyzing module BoothDecode_1
+INFO: [VRFC 10-311] analyzing module BoothDecode_10
+INFO: [VRFC 10-311] analyzing module BoothDecode_11
+INFO: [VRFC 10-311] analyzing module BoothDecode_12
+INFO: [VRFC 10-311] analyzing module BoothDecode_13
+INFO: [VRFC 10-311] analyzing module BoothDecode_14
+INFO: [VRFC 10-311] analyzing module BoothDecode_15
+INFO: [VRFC 10-311] analyzing module BoothDecode_16
+INFO: [VRFC 10-311] analyzing module BoothDecode_17
+INFO: [VRFC 10-311] analyzing module BoothDecode_2
+INFO: [VRFC 10-311] analyzing module BoothDecode_3
+INFO: [VRFC 10-311] analyzing module BoothDecode_4
+INFO: [VRFC 10-311] analyzing module BoothDecode_5
+INFO: [VRFC 10-311] analyzing module BoothDecode_6
+INFO: [VRFC 10-311] analyzing module MyBootROM
+INFO: [VRFC 10-311] analyzing module MyReg
+INFO: [VRFC 10-311] analyzing module barret
+INFO: [VRFC 10-311] analyzing module barret_0
+INFO: [VRFC 10-311] analyzing module barret_7
+INFO: [VRFC 10-311] analyzing module barret_8
+INFO: [VRFC 10-311] analyzing module bu_intt
+INFO: [VRFC 10-311] analyzing module bu_ntt
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-311] analyzing module mul_9
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/NTT/tb_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/func/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot tb_top_func_impl xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot tb_top_func_impl xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.FDCE_default
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.CARRY8
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module xil_defaultlib.AddressGenerator
+Compiling module unisims_ver.MUXF8
+Compiling module unisims_ver.MUXF7
+Compiling module xil_defaultlib.MyReg
+Compiling module unisims_ver.OBUF
+Compiling module xil_defaultlib.barret_7
+Compiling module xil_defaultlib.barret_8
+Compiling module xil_defaultlib.BoothDecode_10
+Compiling module xil_defaultlib.BoothDecode_11
+Compiling module xil_defaultlib.BoothDecode_12
+Compiling module xil_defaultlib.BoothDecode_13
+Compiling module xil_defaultlib.BoothDecode_14
+Compiling module xil_defaultlib.BoothDecode_15
+Compiling module xil_defaultlib.BoothDecode_16
+Compiling module xil_defaultlib.BoothDecode_17
+Compiling module unisims_ver.FDRE_default
+Compiling module unisims_ver.SRL16E_default
+Compiling module xil_defaultlib.mul_9
+Compiling module xil_defaultlib.bu_intt
+Compiling module xil_defaultlib.barret
+Compiling module xil_defaultlib.barret_0
+Compiling module xil_defaultlib.BoothDecode
+Compiling module xil_defaultlib.BoothDecode_1
+Compiling module xil_defaultlib.BoothDecode_2
+Compiling module xil_defaultlib.BoothDecode_3
+Compiling module xil_defaultlib.BoothDecode_4
+Compiling module xil_defaultlib.BoothDecode_5
+Compiling module xil_defaultlib.BoothDecode_6
+Compiling module xil_defaultlib.mul
+Compiling module xil_defaultlib.bu_ntt
+Compiling module unisims_ver.BUFGCE(CE_TYPE="ASYNC",SIM_DEVIC...
+Compiling module unisims_ver.IBUF
+Compiling module xil_defaultlib.MyBootROM
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_func_impl
+run_program: Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 4309.043 ; gain = 488.461
+INFO: [USF-XSim-69] 'elaborate' step finished in '24' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/func/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_func_impl -key {Post-Implementation:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -view {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000000ns
+[5668000] DONE_STORE!
+$finish called at time : 5747600 ps : File "C:/Hung/Viettel/Stage2/ML-KEM/NTT/tb_top.v" Line 115
+run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 4309.043 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 4309.043 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_func_impl' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000000ns
+launch_simulation: Time (s): cpu = 00:01:38 ; elapsed = 00:01:14 . Memory (MB): peak = 4309.043 ; gain = 3095.766
+launch_simulation -mode post-implementation -type timing
+Command: launch_simulation  -mode post-implementation -type timing
+INFO: [Vivado 12-12493] Simulation top is 'tb_top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim/tb_top_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim/tb_top_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim/tb_top_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim/tb_top_time_impl.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim/tb_top_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IBUF_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module IBUF_HD1
+INFO: [VRFC 10-311] analyzing module IBUF_HD10
+INFO: [VRFC 10-311] analyzing module IBUF_HD11
+INFO: [VRFC 10-311] analyzing module IBUF_HD12
+INFO: [VRFC 10-311] analyzing module IBUF_HD13
+INFO: [VRFC 10-311] analyzing module IBUF_HD14
+INFO: [VRFC 10-311] analyzing module IBUF_HD15
+INFO: [VRFC 10-311] analyzing module IBUF_HD16
+INFO: [VRFC 10-311] analyzing module IBUF_HD17
+INFO: [VRFC 10-311] analyzing module IBUF_HD18
+INFO: [VRFC 10-311] analyzing module IBUF_HD19
+INFO: [VRFC 10-311] analyzing module IBUF_HD2
+INFO: [VRFC 10-311] analyzing module IBUF_HD20
+INFO: [VRFC 10-311] analyzing module IBUF_HD21
+INFO: [VRFC 10-311] analyzing module IBUF_HD22
+INFO: [VRFC 10-311] analyzing module IBUF_HD23
+INFO: [VRFC 10-311] analyzing module IBUF_HD24
+INFO: [VRFC 10-311] analyzing module IBUF_HD25
+INFO: [VRFC 10-311] analyzing module IBUF_HD26
+INFO: [VRFC 10-311] analyzing module IBUF_HD27
+INFO: [VRFC 10-311] analyzing module IBUF_HD28
+INFO: [VRFC 10-311] analyzing module IBUF_HD29
+INFO: [VRFC 10-311] analyzing module IBUF_HD3
+INFO: [VRFC 10-311] analyzing module IBUF_HD30
+INFO: [VRFC 10-311] analyzing module IBUF_HD31
+INFO: [VRFC 10-311] analyzing module IBUF_HD32
+INFO: [VRFC 10-311] analyzing module IBUF_HD33
+INFO: [VRFC 10-311] analyzing module IBUF_HD34
+INFO: [VRFC 10-311] analyzing module IBUF_HD35
+INFO: [VRFC 10-311] analyzing module IBUF_HD36
+INFO: [VRFC 10-311] analyzing module IBUF_HD4
+INFO: [VRFC 10-311] analyzing module IBUF_HD5
+INFO: [VRFC 10-311] analyzing module IBUF_HD6
+INFO: [VRFC 10-311] analyzing module IBUF_HD7
+INFO: [VRFC 10-311] analyzing module IBUF_HD8
+INFO: [VRFC 10-311] analyzing module IBUF_HD9
+INFO: [VRFC 10-311] analyzing module AddressGenerator
+INFO: [VRFC 10-311] analyzing module BoothDecode
+INFO: [VRFC 10-311] analyzing module BoothDecode_1
+INFO: [VRFC 10-311] analyzing module BoothDecode_10
+INFO: [VRFC 10-311] analyzing module BoothDecode_11
+INFO: [VRFC 10-311] analyzing module BoothDecode_12
+INFO: [VRFC 10-311] analyzing module BoothDecode_13
+INFO: [VRFC 10-311] analyzing module BoothDecode_14
+INFO: [VRFC 10-311] analyzing module BoothDecode_15
+INFO: [VRFC 10-311] analyzing module BoothDecode_16
+INFO: [VRFC 10-311] analyzing module BoothDecode_17
+INFO: [VRFC 10-311] analyzing module BoothDecode_2
+INFO: [VRFC 10-311] analyzing module BoothDecode_3
+INFO: [VRFC 10-311] analyzing module BoothDecode_4
+INFO: [VRFC 10-311] analyzing module BoothDecode_5
+INFO: [VRFC 10-311] analyzing module BoothDecode_6
+INFO: [VRFC 10-311] analyzing module MyBootROM
+INFO: [VRFC 10-311] analyzing module MyReg
+INFO: [VRFC 10-311] analyzing module barret
+INFO: [VRFC 10-311] analyzing module barret_0
+INFO: [VRFC 10-311] analyzing module barret_7
+INFO: [VRFC 10-311] analyzing module barret_8
+INFO: [VRFC 10-311] analyzing module bu_intt
+INFO: [VRFC 10-311] analyzing module bu_ntt
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-311] analyzing module mul_9
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/NTT/tb_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim'
+"xelab --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot tb_top_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot tb_top_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "tb_top_time_impl.sdf", for root module "tb_top/dut".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "tb_top_time_impl.sdf", for root module "tb_top/dut".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module simprims_ver.FDCE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.CARRY8
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.AddressGenerator
+Compiling module simprims_ver.MUXF8
+Compiling module simprims_ver.MUXF7
+Compiling module xil_defaultlib.MyReg
+Compiling module simprims_ver.OBUF
+Compiling module xil_defaultlib.barret_7
+Compiling module xil_defaultlib.barret_8
+Compiling module xil_defaultlib.BoothDecode_10
+Compiling module xil_defaultlib.BoothDecode_11
+Compiling module xil_defaultlib.BoothDecode_12
+Compiling module xil_defaultlib.BoothDecode_13
+Compiling module xil_defaultlib.BoothDecode_14
+Compiling module xil_defaultlib.BoothDecode_15
+Compiling module xil_defaultlib.BoothDecode_16
+Compiling module xil_defaultlib.BoothDecode_17
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.SRL16E_default
+Compiling module xil_defaultlib.mul_9
+Compiling module xil_defaultlib.bu_intt
+Compiling module xil_defaultlib.barret
+Compiling module xil_defaultlib.barret_0
+Compiling module xil_defaultlib.BoothDecode
+Compiling module xil_defaultlib.BoothDecode_1
+Compiling module xil_defaultlib.BoothDecode_2
+Compiling module xil_defaultlib.BoothDecode_3
+Compiling module xil_defaultlib.BoothDecode_4
+Compiling module xil_defaultlib.BoothDecode_5
+Compiling module xil_defaultlib.BoothDecode_6
+Compiling module xil_defaultlib.mul
+Compiling module xil_defaultlib.bu_ntt
+Compiling module simprims_ver.BUFGCE(CE_TYPE="ASYNC",SIM_DEVIC...
+Compiling module simprims_ver.IBUFCTRL_default
+Compiling module simprims_ver.INBUF_default
+Compiling module xil_defaultlib.IBUF_UNIQ_BASE_
+Compiling module xil_defaultlib.IBUF_HD1
+Compiling module xil_defaultlib.IBUF_HD2
+Compiling module xil_defaultlib.IBUF_HD3
+Compiling module xil_defaultlib.IBUF_HD4
+Compiling module xil_defaultlib.IBUF_HD5
+Compiling module xil_defaultlib.IBUF_HD6
+Compiling module xil_defaultlib.IBUF_HD7
+Compiling module xil_defaultlib.IBUF_HD8
+Compiling module xil_defaultlib.IBUF_HD9
+Compiling module xil_defaultlib.IBUF_HD10
+Compiling module xil_defaultlib.IBUF_HD11
+Compiling module xil_defaultlib.IBUF_HD12
+Compiling module xil_defaultlib.IBUF_HD13
+Compiling module xil_defaultlib.IBUF_HD14
+Compiling module xil_defaultlib.IBUF_HD15
+Compiling module xil_defaultlib.IBUF_HD16
+Compiling module xil_defaultlib.IBUF_HD17
+Compiling module xil_defaultlib.IBUF_HD18
+Compiling module xil_defaultlib.IBUF_HD19
+Compiling module xil_defaultlib.IBUF_HD20
+Compiling module xil_defaultlib.IBUF_HD21
+Compiling module xil_defaultlib.IBUF_HD22
+Compiling module xil_defaultlib.IBUF_HD23
+Compiling module xil_defaultlib.IBUF_HD24
+Compiling module xil_defaultlib.IBUF_HD25
+Compiling module xil_defaultlib.IBUF_HD26
+Compiling module xil_defaultlib.IBUF_HD27
+Compiling module xil_defaultlib.IBUF_HD28
+Compiling module xil_defaultlib.IBUF_HD29
+Compiling module xil_defaultlib.IBUF_HD30
+Compiling module xil_defaultlib.IBUF_HD31
+Compiling module xil_defaultlib.IBUF_HD32
+Compiling module xil_defaultlib.IBUF_HD33
+Compiling module xil_defaultlib.MyBootROM
+Compiling module xil_defaultlib.IBUF_HD34
+Compiling module xil_defaultlib.IBUF_HD35
+Compiling module xil_defaultlib.IBUF_HD36
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_time_impl
+run_program: Time (s): cpu = 00:00:21 ; elapsed = 00:10:13 . Memory (MB): peak = 4309.043 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '614' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_time_impl -key {Post-Implementation:sim_1:Timing:tb_top} -tclbatch {tb_top.tcl} -view {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000000ns
+[5673000] DONE_STORE!
+$finish called at time : 5753025 ps : File "C:/Hung/Viettel/Stage2/ML-KEM/NTT/tb_top.v" Line 115
+run: Time (s): cpu = 00:00:39 ; elapsed = 00:01:40 . Memory (MB): peak = 4309.043 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:41 ; elapsed = 00:01:42 . Memory (MB): peak = 4309.043 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_time_impl' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000000ns
+launch_simulation: Time (s): cpu = 00:01:36 ; elapsed = 00:12:01 . Memory (MB): peak = 4309.043 ; gain = 0.000
+current_sim simulation_1
+current_sim simulation_2
+relaunch_sim
+INFO: xsimkernel Simulation Memory Usage: 318736 KB (Peak: 318736 KB), Simulation CPU Usage: 99015 ms
+Command: launch_simulation -step compile -simset sim_1 -mode post-implementation -type timing
+INFO: [Vivado 12-12493] Simulation top is 'tb_top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim/tb_top_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim/tb_top_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim/tb_top_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim/tb_top_time_impl.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim/tb_top_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IBUF_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module IBUF_HD1
+INFO: [VRFC 10-311] analyzing module IBUF_HD10
+INFO: [VRFC 10-311] analyzing module IBUF_HD11
+INFO: [VRFC 10-311] analyzing module IBUF_HD12
+INFO: [VRFC 10-311] analyzing module IBUF_HD13
+INFO: [VRFC 10-311] analyzing module IBUF_HD14
+INFO: [VRFC 10-311] analyzing module IBUF_HD15
+INFO: [VRFC 10-311] analyzing module IBUF_HD16
+INFO: [VRFC 10-311] analyzing module IBUF_HD17
+INFO: [VRFC 10-311] analyzing module IBUF_HD18
+INFO: [VRFC 10-311] analyzing module IBUF_HD19
+INFO: [VRFC 10-311] analyzing module IBUF_HD2
+INFO: [VRFC 10-311] analyzing module IBUF_HD20
+INFO: [VRFC 10-311] analyzing module IBUF_HD21
+INFO: [VRFC 10-311] analyzing module IBUF_HD22
+INFO: [VRFC 10-311] analyzing module IBUF_HD23
+INFO: [VRFC 10-311] analyzing module IBUF_HD24
+INFO: [VRFC 10-311] analyzing module IBUF_HD25
+INFO: [VRFC 10-311] analyzing module IBUF_HD26
+INFO: [VRFC 10-311] analyzing module IBUF_HD27
+INFO: [VRFC 10-311] analyzing module IBUF_HD28
+INFO: [VRFC 10-311] analyzing module IBUF_HD29
+INFO: [VRFC 10-311] analyzing module IBUF_HD3
+INFO: [VRFC 10-311] analyzing module IBUF_HD30
+INFO: [VRFC 10-311] analyzing module IBUF_HD31
+INFO: [VRFC 10-311] analyzing module IBUF_HD32
+INFO: [VRFC 10-311] analyzing module IBUF_HD33
+INFO: [VRFC 10-311] analyzing module IBUF_HD34
+INFO: [VRFC 10-311] analyzing module IBUF_HD35
+INFO: [VRFC 10-311] analyzing module IBUF_HD36
+INFO: [VRFC 10-311] analyzing module IBUF_HD4
+INFO: [VRFC 10-311] analyzing module IBUF_HD5
+INFO: [VRFC 10-311] analyzing module IBUF_HD6
+INFO: [VRFC 10-311] analyzing module IBUF_HD7
+INFO: [VRFC 10-311] analyzing module IBUF_HD8
+INFO: [VRFC 10-311] analyzing module IBUF_HD9
+INFO: [VRFC 10-311] analyzing module AddressGenerator
+INFO: [VRFC 10-311] analyzing module BoothDecode
+INFO: [VRFC 10-311] analyzing module BoothDecode_1
+INFO: [VRFC 10-311] analyzing module BoothDecode_10
+INFO: [VRFC 10-311] analyzing module BoothDecode_11
+INFO: [VRFC 10-311] analyzing module BoothDecode_12
+INFO: [VRFC 10-311] analyzing module BoothDecode_13
+INFO: [VRFC 10-311] analyzing module BoothDecode_14
+INFO: [VRFC 10-311] analyzing module BoothDecode_15
+INFO: [VRFC 10-311] analyzing module BoothDecode_16
+INFO: [VRFC 10-311] analyzing module BoothDecode_17
+INFO: [VRFC 10-311] analyzing module BoothDecode_2
+INFO: [VRFC 10-311] analyzing module BoothDecode_3
+INFO: [VRFC 10-311] analyzing module BoothDecode_4
+INFO: [VRFC 10-311] analyzing module BoothDecode_5
+INFO: [VRFC 10-311] analyzing module BoothDecode_6
+INFO: [VRFC 10-311] analyzing module MyBootROM
+INFO: [VRFC 10-311] analyzing module MyReg
+INFO: [VRFC 10-311] analyzing module barret
+INFO: [VRFC 10-311] analyzing module barret_0
+INFO: [VRFC 10-311] analyzing module barret_7
+INFO: [VRFC 10-311] analyzing module barret_8
+INFO: [VRFC 10-311] analyzing module bu_intt
+INFO: [VRFC 10-311] analyzing module bu_ntt
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-311] analyzing module mul_9
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/NTT/tb_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+launch_simulation: Time (s): cpu = 00:00:32 ; elapsed = 00:00:06 . Memory (MB): peak = 4309.043 ; gain = 0.000
+Command: launch_simulation -step elaborate -simset sim_1 -mode post-implementation -type timing
+INFO: [Vivado 12-12493] Simulation top is 'tb_top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim'
+"xelab --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot tb_top_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot tb_top_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "tb_top_time_impl.sdf", for root module "tb_top/dut".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "tb_top_time_impl.sdf", for root module "tb_top/dut".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module simprims_ver.FDCE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.CARRY8
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.AddressGenerator
+Compiling module simprims_ver.MUXF8
+Compiling module simprims_ver.MUXF7
+Compiling module xil_defaultlib.MyReg
+Compiling module simprims_ver.OBUF
+Compiling module xil_defaultlib.barret_7
+Compiling module xil_defaultlib.barret_8
+Compiling module xil_defaultlib.BoothDecode_10
+Compiling module xil_defaultlib.BoothDecode_11
+Compiling module xil_defaultlib.BoothDecode_12
+Compiling module xil_defaultlib.BoothDecode_13
+Compiling module xil_defaultlib.BoothDecode_14
+Compiling module xil_defaultlib.BoothDecode_15
+Compiling module xil_defaultlib.BoothDecode_16
+Compiling module xil_defaultlib.BoothDecode_17
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.SRL16E_default
+Compiling module xil_defaultlib.mul_9
+Compiling module xil_defaultlib.bu_intt
+Compiling module xil_defaultlib.barret
+Compiling module xil_defaultlib.barret_0
+Compiling module xil_defaultlib.BoothDecode
+Compiling module xil_defaultlib.BoothDecode_1
+Compiling module xil_defaultlib.BoothDecode_2
+Compiling module xil_defaultlib.BoothDecode_3
+Compiling module xil_defaultlib.BoothDecode_4
+Compiling module xil_defaultlib.BoothDecode_5
+Compiling module xil_defaultlib.BoothDecode_6
+Compiling module xil_defaultlib.mul
+Compiling module xil_defaultlib.bu_ntt
+Compiling module simprims_ver.BUFGCE(CE_TYPE="ASYNC",SIM_DEVIC...
+Compiling module simprims_ver.IBUFCTRL_default
+Compiling module simprims_ver.INBUF_default
+Compiling module xil_defaultlib.IBUF_UNIQ_BASE_
+Compiling module xil_defaultlib.IBUF_HD1
+Compiling module xil_defaultlib.IBUF_HD2
+Compiling module xil_defaultlib.IBUF_HD3
+Compiling module xil_defaultlib.IBUF_HD4
+Compiling module xil_defaultlib.IBUF_HD5
+Compiling module xil_defaultlib.IBUF_HD6
+Compiling module xil_defaultlib.IBUF_HD7
+Compiling module xil_defaultlib.IBUF_HD8
+Compiling module xil_defaultlib.IBUF_HD9
+Compiling module xil_defaultlib.IBUF_HD10
+Compiling module xil_defaultlib.IBUF_HD11
+Compiling module xil_defaultlib.IBUF_HD12
+Compiling module xil_defaultlib.IBUF_HD13
+Compiling module xil_defaultlib.IBUF_HD14
+Compiling module xil_defaultlib.IBUF_HD15
+Compiling module xil_defaultlib.IBUF_HD16
+Compiling module xil_defaultlib.IBUF_HD17
+Compiling module xil_defaultlib.IBUF_HD18
+Compiling module xil_defaultlib.IBUF_HD19
+Compiling module xil_defaultlib.IBUF_HD20
+Compiling module xil_defaultlib.IBUF_HD21
+Compiling module xil_defaultlib.IBUF_HD22
+Compiling module xil_defaultlib.IBUF_HD23
+Compiling module xil_defaultlib.IBUF_HD24
+Compiling module xil_defaultlib.IBUF_HD25
+Compiling module xil_defaultlib.IBUF_HD26
+Compiling module xil_defaultlib.IBUF_HD27
+Compiling module xil_defaultlib.IBUF_HD28
+Compiling module xil_defaultlib.IBUF_HD29
+Compiling module xil_defaultlib.IBUF_HD30
+Compiling module xil_defaultlib.IBUF_HD31
+Compiling module xil_defaultlib.IBUF_HD32
+Compiling module xil_defaultlib.IBUF_HD33
+Compiling module xil_defaultlib.MyBootROM
+Compiling module xil_defaultlib.IBUF_HD34
+Compiling module xil_defaultlib.IBUF_HD35
+Compiling module xil_defaultlib.IBUF_HD36
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_time_impl
+run_program: Time (s): cpu = 00:00:22 ; elapsed = 00:09:51 . Memory (MB): peak = 4309.043 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '592' seconds
+launch_simulation: Time (s): cpu = 00:00:22 ; elapsed = 00:09:51 . Memory (MB): peak = 4309.043 ; gain = 0.000
+Time resolution is 1 ps
+[5673000] DONE_STORE!
+$finish called at time : 5753025 ps : File "C:/Hung/Viettel/Stage2/ML-KEM/NTT/tb_top.v" Line 115
+run: Time (s): cpu = 00:00:36 ; elapsed = 00:01:40 . Memory (MB): peak = 4309.043 ; gain = 0.000
+relaunch_xsim_kernel: Time (s): cpu = 00:00:36 ; elapsed = 00:01:41 . Memory (MB): peak = 4309.043 ; gain = 0.000
+relaunch_sim: Time (s): cpu = 00:01:31 ; elapsed = 00:11:39 . Memory (MB): peak = 4309.043 ; gain = 0.000
+close_sim
+INFO: xsimkernel Simulation Memory Usage: 318936 KB (Peak: 318936 KB), Simulation CPU Usage: 99827 ms
+INFO: [Simtcl 6-16] Simulation closed
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -mode post-implementation -type functional
+Command: launch_simulation  -mode post-implementation -type functional
+INFO: [Vivado 12-12493] Simulation top is 'tb_top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching post-implementation functional simulation in 'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/func/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode funcsim -nolib -force -file "C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/func/xsim/tb_top_func_impl.v"
+INFO: [SIM-utils-36] Netlist generated:C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/func/xsim/tb_top_func_impl.v
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/func/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/func/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/func/xsim/tb_top_func_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AddressGenerator
+INFO: [VRFC 10-311] analyzing module BoothDecode
+INFO: [VRFC 10-311] analyzing module BoothDecode_1
+INFO: [VRFC 10-311] analyzing module BoothDecode_10
+INFO: [VRFC 10-311] analyzing module BoothDecode_11
+INFO: [VRFC 10-311] analyzing module BoothDecode_12
+INFO: [VRFC 10-311] analyzing module BoothDecode_13
+INFO: [VRFC 10-311] analyzing module BoothDecode_14
+INFO: [VRFC 10-311] analyzing module BoothDecode_15
+INFO: [VRFC 10-311] analyzing module BoothDecode_16
+INFO: [VRFC 10-311] analyzing module BoothDecode_17
+INFO: [VRFC 10-311] analyzing module BoothDecode_2
+INFO: [VRFC 10-311] analyzing module BoothDecode_3
+INFO: [VRFC 10-311] analyzing module BoothDecode_4
+INFO: [VRFC 10-311] analyzing module BoothDecode_5
+INFO: [VRFC 10-311] analyzing module BoothDecode_6
+INFO: [VRFC 10-311] analyzing module MyBootROM
+INFO: [VRFC 10-311] analyzing module MyReg
+INFO: [VRFC 10-311] analyzing module barret
+INFO: [VRFC 10-311] analyzing module barret_0
+INFO: [VRFC 10-311] analyzing module barret_7
+INFO: [VRFC 10-311] analyzing module barret_8
+INFO: [VRFC 10-311] analyzing module bu_intt
+INFO: [VRFC 10-311] analyzing module bu_ntt
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-311] analyzing module mul_9
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/NTT/tb_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/func/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot tb_top_func_impl xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot tb_top_func_impl xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.FDCE_default
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.CARRY8
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module xil_defaultlib.AddressGenerator
+Compiling module unisims_ver.MUXF8
+Compiling module unisims_ver.MUXF7
+Compiling module xil_defaultlib.MyReg
+Compiling module unisims_ver.OBUF
+Compiling module xil_defaultlib.barret_7
+Compiling module xil_defaultlib.barret_8
+Compiling module xil_defaultlib.BoothDecode_10
+Compiling module xil_defaultlib.BoothDecode_11
+Compiling module xil_defaultlib.BoothDecode_12
+Compiling module xil_defaultlib.BoothDecode_13
+Compiling module xil_defaultlib.BoothDecode_14
+Compiling module xil_defaultlib.BoothDecode_15
+Compiling module xil_defaultlib.BoothDecode_16
+Compiling module xil_defaultlib.BoothDecode_17
+Compiling module unisims_ver.FDRE_default
+Compiling module unisims_ver.SRL16E_default
+Compiling module xil_defaultlib.mul_9
+Compiling module xil_defaultlib.bu_intt
+Compiling module xil_defaultlib.barret
+Compiling module xil_defaultlib.barret_0
+Compiling module xil_defaultlib.BoothDecode
+Compiling module xil_defaultlib.BoothDecode_1
+Compiling module xil_defaultlib.BoothDecode_2
+Compiling module xil_defaultlib.BoothDecode_3
+Compiling module xil_defaultlib.BoothDecode_4
+Compiling module xil_defaultlib.BoothDecode_5
+Compiling module xil_defaultlib.BoothDecode_6
+Compiling module xil_defaultlib.mul
+Compiling module xil_defaultlib.bu_ntt
+Compiling module unisims_ver.BUFGCE(CE_TYPE="ASYNC",SIM_DEVIC...
+Compiling module unisims_ver.IBUF
+Compiling module xil_defaultlib.MyBootROM
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_func_impl
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:21 . Memory (MB): peak = 4309.043 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '21' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/func/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_func_impl -key {Post-Implementation:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -view {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000000ns
+[5668000] DONE_STORE!
+$finish called at time : 5747600 ps : File "C:/Hung/Viettel/Stage2/ML-KEM/NTT/tb_top.v" Line 115
+run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 4309.043 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 4309.043 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_func_impl' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:30 . Memory (MB): peak = 4309.043 ; gain = 0.000
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg}
+launch_simulation -mode post-implementation -type timing
+Command: launch_simulation  -mode post-implementation -type timing
+INFO: [Vivado 12-12493] Simulation top is 'tb_top'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim/tb_top_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim/tb_top_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim/tb_top_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim/tb_top_time_impl.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim/tb_top_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IBUF_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module IBUF_HD1
+INFO: [VRFC 10-311] analyzing module IBUF_HD10
+INFO: [VRFC 10-311] analyzing module IBUF_HD11
+INFO: [VRFC 10-311] analyzing module IBUF_HD12
+INFO: [VRFC 10-311] analyzing module IBUF_HD13
+INFO: [VRFC 10-311] analyzing module IBUF_HD14
+INFO: [VRFC 10-311] analyzing module IBUF_HD15
+INFO: [VRFC 10-311] analyzing module IBUF_HD16
+INFO: [VRFC 10-311] analyzing module IBUF_HD17
+INFO: [VRFC 10-311] analyzing module IBUF_HD18
+INFO: [VRFC 10-311] analyzing module IBUF_HD19
+INFO: [VRFC 10-311] analyzing module IBUF_HD2
+INFO: [VRFC 10-311] analyzing module IBUF_HD20
+INFO: [VRFC 10-311] analyzing module IBUF_HD21
+INFO: [VRFC 10-311] analyzing module IBUF_HD22
+INFO: [VRFC 10-311] analyzing module IBUF_HD23
+INFO: [VRFC 10-311] analyzing module IBUF_HD24
+INFO: [VRFC 10-311] analyzing module IBUF_HD25
+INFO: [VRFC 10-311] analyzing module IBUF_HD26
+INFO: [VRFC 10-311] analyzing module IBUF_HD27
+INFO: [VRFC 10-311] analyzing module IBUF_HD28
+INFO: [VRFC 10-311] analyzing module IBUF_HD29
+INFO: [VRFC 10-311] analyzing module IBUF_HD3
+INFO: [VRFC 10-311] analyzing module IBUF_HD30
+INFO: [VRFC 10-311] analyzing module IBUF_HD31
+INFO: [VRFC 10-311] analyzing module IBUF_HD32
+INFO: [VRFC 10-311] analyzing module IBUF_HD33
+INFO: [VRFC 10-311] analyzing module IBUF_HD34
+INFO: [VRFC 10-311] analyzing module IBUF_HD35
+INFO: [VRFC 10-311] analyzing module IBUF_HD36
+INFO: [VRFC 10-311] analyzing module IBUF_HD4
+INFO: [VRFC 10-311] analyzing module IBUF_HD5
+INFO: [VRFC 10-311] analyzing module IBUF_HD6
+INFO: [VRFC 10-311] analyzing module IBUF_HD7
+INFO: [VRFC 10-311] analyzing module IBUF_HD8
+INFO: [VRFC 10-311] analyzing module IBUF_HD9
+INFO: [VRFC 10-311] analyzing module AddressGenerator
+INFO: [VRFC 10-311] analyzing module BoothDecode
+INFO: [VRFC 10-311] analyzing module BoothDecode_1
+INFO: [VRFC 10-311] analyzing module BoothDecode_10
+INFO: [VRFC 10-311] analyzing module BoothDecode_11
+INFO: [VRFC 10-311] analyzing module BoothDecode_12
+INFO: [VRFC 10-311] analyzing module BoothDecode_13
+INFO: [VRFC 10-311] analyzing module BoothDecode_14
+INFO: [VRFC 10-311] analyzing module BoothDecode_15
+INFO: [VRFC 10-311] analyzing module BoothDecode_16
+INFO: [VRFC 10-311] analyzing module BoothDecode_17
+INFO: [VRFC 10-311] analyzing module BoothDecode_2
+INFO: [VRFC 10-311] analyzing module BoothDecode_3
+INFO: [VRFC 10-311] analyzing module BoothDecode_4
+INFO: [VRFC 10-311] analyzing module BoothDecode_5
+INFO: [VRFC 10-311] analyzing module BoothDecode_6
+INFO: [VRFC 10-311] analyzing module MyBootROM
+INFO: [VRFC 10-311] analyzing module MyReg
+INFO: [VRFC 10-311] analyzing module barret
+INFO: [VRFC 10-311] analyzing module barret_0
+INFO: [VRFC 10-311] analyzing module barret_7
+INFO: [VRFC 10-311] analyzing module barret_8
+INFO: [VRFC 10-311] analyzing module bu_intt
+INFO: [VRFC 10-311] analyzing module bu_ntt
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-311] analyzing module mul_9
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Hung/Viettel/Stage2/ML-KEM/NTT/tb_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim'
+"xelab --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot tb_top_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot tb_top_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "tb_top_time_impl.sdf", for root module "tb_top/dut".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "tb_top_time_impl.sdf", for root module "tb_top/dut".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module simprims_ver.FDCE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.CARRY8
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.AddressGenerator
+Compiling module simprims_ver.MUXF8
+Compiling module simprims_ver.MUXF7
+Compiling module xil_defaultlib.MyReg
+Compiling module simprims_ver.OBUF
+Compiling module xil_defaultlib.barret_7
+Compiling module xil_defaultlib.barret_8
+Compiling module xil_defaultlib.BoothDecode_10
+Compiling module xil_defaultlib.BoothDecode_11
+Compiling module xil_defaultlib.BoothDecode_12
+Compiling module xil_defaultlib.BoothDecode_13
+Compiling module xil_defaultlib.BoothDecode_14
+Compiling module xil_defaultlib.BoothDecode_15
+Compiling module xil_defaultlib.BoothDecode_16
+Compiling module xil_defaultlib.BoothDecode_17
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.SRL16E_default
+Compiling module xil_defaultlib.mul_9
+Compiling module xil_defaultlib.bu_intt
+Compiling module xil_defaultlib.barret
+Compiling module xil_defaultlib.barret_0
+Compiling module xil_defaultlib.BoothDecode
+Compiling module xil_defaultlib.BoothDecode_1
+Compiling module xil_defaultlib.BoothDecode_2
+Compiling module xil_defaultlib.BoothDecode_3
+Compiling module xil_defaultlib.BoothDecode_4
+Compiling module xil_defaultlib.BoothDecode_5
+Compiling module xil_defaultlib.BoothDecode_6
+Compiling module xil_defaultlib.mul
+Compiling module xil_defaultlib.bu_ntt
+Compiling module simprims_ver.BUFGCE(CE_TYPE="ASYNC",SIM_DEVIC...
+Compiling module simprims_ver.IBUFCTRL_default
+Compiling module simprims_ver.INBUF_default
+Compiling module xil_defaultlib.IBUF_UNIQ_BASE_
+Compiling module xil_defaultlib.IBUF_HD1
+Compiling module xil_defaultlib.IBUF_HD2
+Compiling module xil_defaultlib.IBUF_HD3
+Compiling module xil_defaultlib.IBUF_HD4
+Compiling module xil_defaultlib.IBUF_HD5
+Compiling module xil_defaultlib.IBUF_HD6
+Compiling module xil_defaultlib.IBUF_HD7
+Compiling module xil_defaultlib.IBUF_HD8
+Compiling module xil_defaultlib.IBUF_HD9
+Compiling module xil_defaultlib.IBUF_HD10
+Compiling module xil_defaultlib.IBUF_HD11
+Compiling module xil_defaultlib.IBUF_HD12
+Compiling module xil_defaultlib.IBUF_HD13
+Compiling module xil_defaultlib.IBUF_HD14
+Compiling module xil_defaultlib.IBUF_HD15
+Compiling module xil_defaultlib.IBUF_HD16
+Compiling module xil_defaultlib.IBUF_HD17
+Compiling module xil_defaultlib.IBUF_HD18
+Compiling module xil_defaultlib.IBUF_HD19
+Compiling module xil_defaultlib.IBUF_HD20
+Compiling module xil_defaultlib.IBUF_HD21
+Compiling module xil_defaultlib.IBUF_HD22
+Compiling module xil_defaultlib.IBUF_HD23
+Compiling module xil_defaultlib.IBUF_HD24
+Compiling module xil_defaultlib.IBUF_HD25
+Compiling module xil_defaultlib.IBUF_HD26
+Compiling module xil_defaultlib.IBUF_HD27
+Compiling module xil_defaultlib.IBUF_HD28
+Compiling module xil_defaultlib.IBUF_HD29
+Compiling module xil_defaultlib.IBUF_HD30
+Compiling module xil_defaultlib.IBUF_HD31
+Compiling module xil_defaultlib.IBUF_HD32
+Compiling module xil_defaultlib.IBUF_HD33
+Compiling module xil_defaultlib.MyBootROM
+Compiling module xil_defaultlib.IBUF_HD34
+Compiling module xil_defaultlib.IBUF_HD35
+Compiling module xil_defaultlib.IBUF_HD36
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_time_impl
+run_program: Time (s): cpu = 00:00:19 ; elapsed = 00:09:11 . Memory (MB): peak = 4309.043 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '551' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/ml_kem.sim/sim_1/impl/timing/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_time_impl -key {Post-Implementation:sim_1:Timing:tb_top} -tclbatch {tb_top.tcl} -view {C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/ml_kem/tb_top_func_impl.wcfg
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000000ns
+[5673000] DONE_STORE!
+$finish called at time : 5753025 ps : File "C:/Hung/Viettel/Stage2/ML-KEM/NTT/tb_top.v" Line 115
+run: Time (s): cpu = 00:00:18 ; elapsed = 00:01:30 . Memory (MB): peak = 4309.043 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:18 ; elapsed = 00:01:31 . Memory (MB): peak = 4309.043 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_time_impl' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000000ns
+launch_simulation: Time (s): cpu = 00:01:08 ; elapsed = 00:10:49 . Memory (MB): peak = 4309.043 ; gain = 0.000
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+close_sim
+INFO: xsimkernel Simulation Memory Usage: 319012 KB (Peak: 319012 KB), Simulation CPU Usage: 89311 ms
+INFO: [Simtcl 6-16] Simulation closed
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_design
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Sep  5 09:50:28 2025...

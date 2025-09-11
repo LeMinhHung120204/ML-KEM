@@ -2,8 +2,8 @@
 # Vivado v2022.2.2 (64-bit)
 # SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
 # IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
-# Start of session at: Wed Sep  3 11:36:15 2025
-# Process ID: 31768
+# Start of session at: Wed Sep  3 17:14:02 2025
+# Process ID: 28000
 # Current directory: C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/mul_matrix.runs/synth_1
 # Command line: vivado.exe -log mul_cel.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mul_cel.tcl
 # Log file: C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/mul_matrix.runs/synth_1/mul_cel.vds
@@ -11,6 +11,7 @@
 # Running On: DESKTOP-DA5EM0P, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 16948 MB
 #-----------------------------------------------------------
 source mul_cel.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 412.199 ; gain = 67.422
 Command: read_checkpoint -auto_incremental -incremental C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/mul_matrix.srcs/utils_1/imports/synth_1/mul_cel.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/mul_matrix.srcs/utils_1/imports/synth_1/mul_cel.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -23,17 +24,19 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 28512
+INFO: [Synth 8-7075] Helper process launched with PID 27180
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1789.887 ; gain = 339.098
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1792.113 ; gain = 341.527
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'mul_cel' [C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_cell.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mul_cel' [C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_cell.v:2]
 INFO: [Synth 8-6157] synthesizing module 'barret' [C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'barret' (0#1) [C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v:3]
 INFO: [Synth 8-6157] synthesizing module 'add_cell' [C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/add_cell.v:2]
 INFO: [Synth 8-6155] done synthesizing module 'add_cell' (0#1) [C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/add_cell.v:2]
 INFO: [Synth 8-6157] synthesizing module 'mul_poly_matrix' [C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_poly_matrix.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Rom_mul' [C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/Rom_mul.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Rom_mul' (0#1) [C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/Rom_mul.v:3]
 INFO: [Synth 8-6157] synthesizing module 'mul_poly' [C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_poly.v:2]
 INFO: [Synth 8-6157] synthesizing module 'mul_12bit' [C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_12bit.v:3]
 INFO: [Synth 8-6157] synthesizing module 'BoothDecode' [C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/BoothDecode.v:3]
@@ -41,43 +44,42 @@ INFO: [Synth 8-226] default block is never used [C:/Hung/Viettel/Stage2/ML-KEM/m
 INFO: [Synth 8-6155] done synthesizing module 'BoothDecode' (0#1) [C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/BoothDecode.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'mul_12bit' (0#1) [C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_12bit.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'mul_poly' (0#1) [C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_poly.v:2]
-INFO: [Synth 8-6157] synthesizing module 'Rom_mul' [C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/Rom_mul.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'Rom_mul' (0#1) [C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/Rom_mul.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'mul_poly_matrix' (0#1) [C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_poly_matrix.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'mul_cel' (0#1) [C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_cell.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mul_cel' (0#1) [C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_cell.v:2]
 WARNING: [Synth 8-7129] Port clk in module add_cell is either unconnected or has no load
 WARNING: [Synth 8-7129] Port rst_n in module add_cell is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1885.340 ; gain = 434.551
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1884.773 ; gain = 434.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1885.340 ; gain = 434.551
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1884.773 ; gain = 434.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1885.340 ; gain = 434.551
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1884.773 ; gain = 434.188
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.408 . Memory (MB): peak = 1885.340 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.559 . Memory (MB): peak = 1884.773 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/mul_matrix.srcs/constrs_1/new/constrain1.xdc]
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2031.102 ; gain = 29.520
 Finished Parsing XDC File [C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/mul_matrix.srcs/constrs_1/new/constrain1.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2026.617 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2031.102 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.443 . Memory (MB): peak = 2026.617 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.626 . Memory (MB): peak = 2031.102 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2026.617 ; gain = 575.828
+Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 2031.102 ; gain = 580.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -85,16 +87,16 @@ Start Loading Part and Timing Information
 Loading part: xczu9eg-ffvb1156-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2026.617 ; gain = 575.828
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 2031.102 ; gain = 580.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2026.617 ; gain = 575.828
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 2031.102 ; gain = 580.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2026.617 ; gain = 575.828
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 2031.102 ; gain = 580.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -103,8 +105,7 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input   45 Bit       Adders := 160   
 	   4 Input   45 Bit       Adders := 80    
-	   2 Input   32 Bit       Adders := 8     
-	   2 Input   25 Bit       Adders := 8     
+	   2 Input   25 Bit       Adders := 16    
 	   2 Input   24 Bit       Adders := 240   
 	   2 Input   16 Bit       Adders := 40    
 	   2 Input   14 Bit       Adders := 16    
@@ -112,24 +113,29 @@ Detailed RTL Component Info :
 	   2 Input    4 Bit       Adders := 1     
 	   2 Input    3 Bit       Adders := 1     
 +---Registers : 
+	              264 Bit    Registers := 8     
 	              224 Bit    Registers := 1     
+	              132 Bit    Registers := 8     
+	              120 Bit    Registers := 8     
 	               48 Bit    Registers := 16    
 	               45 Bit    Registers := 360   
+	               28 Bit    Registers := 1     
 	               24 Bit    Registers := 480   
+	               19 Bit    Registers := 8     
 	               13 Bit    Registers := 240   
-	               12 Bit    Registers := 272   
+	               12 Bit    Registers := 16    
 	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 181   
+	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input  224 Bit        Muxes := 1     
-	   2 Input   32 Bit        Muxes := 8     
+	   2 Input   25 Bit        Muxes := 8     
 	   5 Input   24 Bit        Muxes := 480   
 	   2 Input   24 Bit        Muxes := 40    
 	   2 Input   13 Bit        Muxes := 40    
 	   2 Input    3 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 1     
 	   4 Input    1 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -147,25 +153,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2026.617 ; gain = 575.828
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 2031.102 ; gain = 580.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 2487.754 ; gain = 1036.965
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:01:04 . Memory (MB): peak = 2477.293 ; gain = 1026.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 2533.418 ; gain = 1082.629
+Finished Timing Optimization : Time (s): cpu = 00:01:06 ; elapsed = 00:01:08 . Memory (MB): peak = 2526.148 ; gain = 1075.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2571.055 ; gain = 1120.266
+Finished Technology Mapping : Time (s): cpu = 00:01:15 ; elapsed = 00:01:17 . Memory (MB): peak = 2570.184 ; gain = 1119.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -183,56 +189,273 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 2606.664 ; gain = 1155.875
+Finished IO Insertion : Time (s): cpu = 00:01:21 ; elapsed = 00:01:23 . Memory (MB): peak = 2610.828 ; gain = 1160.242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 2606.664 ; gain = 1155.875
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:21 ; elapsed = 00:01:23 . Memory (MB): peak = 2610.828 ; gain = 1160.242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 2606.664 ; gain = 1155.875
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:26 ; elapsed = 00:01:28 . Memory (MB): peak = 2610.828 ; gain = 1160.242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 2606.664 ; gain = 1155.875
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:26 ; elapsed = 00:01:28 . Memory (MB): peak = 2610.828 ; gain = 1160.242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 2606.664 ; gain = 1155.875
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:26 ; elapsed = 00:01:28 . Memory (MB): peak = 2610.828 ; gain = 1160.242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 2606.664 ; gain = 1155.875
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:26 ; elapsed = 00:01:29 . Memory (MB): peak = 2610.828 ; gain = 1160.242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Static Shift Register Report:
-+------------+------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name | RTL Name                                                   | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+------------+------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|mul_cel     | mul_poly_matrix_inst/G[0].u_mul/reg_res1_reg[11]           | 12     | 96    | YES          | NO                 | YES               | 96     | 0       | 
-|mul_cel     | mul_poly_matrix_inst/G[0].u_mul/regx_reg[20][11]           | 11     | 96    | YES          | NO                 | YES               | 96     | 0       | 
-|mul_cel     | mul_poly_matrix_inst/G[0].u_mul/mod_reg[18]                | 9      | 8     | YES          | NO                 | YES               | 8      | 0       | 
-|mul_cel     | mul_poly_matrix_inst/G[0].u_mul/regx_reg[9][10]            | 10     | 92    | YES          | NO                 | YES               | 92     | 0       | 
-|mul_cel     | done_flag_reg[20]                                          | 20     | 1     | YES          | NO                 | YES               | 0      | 1       | 
-|mul_cel     | done_flag_reg[26]                                          | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|mul_cel     | mul_poly_matrix_inst/G[0].u_mul/mul_inst0/result_reg[5][5] | 4      | 128   | YES          | NO                 | YES               | 128    | 0       | 
-|mul_cel     | mul_poly_matrix_inst/G[0].u_mul/mul_inst0/result_reg[5][3] | 5      | 128   | YES          | NO                 | YES               | 128    | 0       | 
-|mul_cel     | mul_poly_matrix_inst/G[0].u_mul/mul_inst0/result_reg[5][1] | 6      | 128   | YES          | NO                 | YES               | 128    | 0       | 
-+------------+------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
++------------+--------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                               | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+--------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|mul_cel     | mul_poly_matrix_inst/u_mul0/reg_res1_reg[11]           | 12     | 12    | YES          | NO                 | YES               | 12     | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/reg_a0_b0_reg[263]         | 11     | 24    | YES          | NO                 | YES               | 24     | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mod_reg[18]                | 9      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/reg_zeta_reg[118]          | 10     | 11    | YES          | NO                 | YES               | 11     | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/reg_res1_reg[11]           | 12     | 12    | YES          | NO                 | YES               | 12     | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/reg_a0_b0_reg[263]         | 11     | 24    | YES          | NO                 | YES               | 24     | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mod_reg[18]                | 9      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/reg_zeta_reg[118]          | 10     | 12    | YES          | NO                 | YES               | 12     | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/reg_res1_reg[11]           | 12     | 12    | YES          | NO                 | YES               | 12     | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/reg_a0_b0_reg[263]         | 11     | 24    | YES          | NO                 | YES               | 24     | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mod_reg[18]                | 9      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/reg_zeta_reg[118]          | 10     | 11    | YES          | NO                 | YES               | 11     | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/reg_res1_reg[11]           | 12     | 12    | YES          | NO                 | YES               | 12     | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/reg_a0_b0_reg[263]         | 11     | 24    | YES          | NO                 | YES               | 24     | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mod_reg[18]                | 9      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/reg_zeta_reg[118]          | 10     | 12    | YES          | NO                 | YES               | 12     | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/reg_res1_reg[11]           | 12     | 12    | YES          | NO                 | YES               | 12     | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/reg_a0_b0_reg[263]         | 11     | 24    | YES          | NO                 | YES               | 24     | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mod_reg[18]                | 9      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/reg_zeta_reg[118]          | 10     | 11    | YES          | NO                 | YES               | 11     | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/reg_res1_reg[11]           | 12     | 12    | YES          | NO                 | YES               | 12     | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/reg_a0_b0_reg[263]         | 11     | 24    | YES          | NO                 | YES               | 24     | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mod_reg[18]                | 9      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/reg_zeta_reg[118]          | 10     | 12    | YES          | NO                 | YES               | 12     | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/reg_res1_reg[11]           | 12     | 12    | YES          | NO                 | YES               | 12     | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/reg_a0_b0_reg[263]         | 11     | 24    | YES          | NO                 | YES               | 24     | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mod_reg[18]                | 9      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/reg_zeta_reg[118]          | 10     | 11    | YES          | NO                 | YES               | 11     | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/reg_res1_reg[11]           | 12     | 12    | YES          | NO                 | YES               | 12     | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/reg_a0_b0_reg[263]         | 11     | 24    | YES          | NO                 | YES               | 24     | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mod_reg[18]                | 9      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/reg_zeta_reg[118]          | 10     | 12    | YES          | NO                 | YES               | 12     | 0       | 
+|mul_cel     | reg_done_flag_reg[25]                                  | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|mul_cel     | reg_done_flag_reg[19]                                  | 20     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst0/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst0/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst0/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst1/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst1/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst1/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst2/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst2/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst2/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst3/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst3/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst3/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst4/y_ext_reg[3][2]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst4/y_ext_reg[4][2]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst4/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst4/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst4/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst4/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst0/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst0/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst0/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst1/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst1/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst1/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst2/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst2/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst2/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst3/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst3/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst3/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst4/y_ext_reg[3][2]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst4/y_ext_reg[4][2]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst4/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst4/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst4/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst4/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst0/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst0/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst0/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst1/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst1/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst1/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst2/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst2/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst2/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst3/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst3/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst3/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst4/y_ext_reg[3][2]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst4/y_ext_reg[4][2]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst4/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst4/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst4/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst4/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst0/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst0/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst0/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst1/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst1/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst1/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst2/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst2/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst2/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst3/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst3/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst3/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst4/y_ext_reg[3][2]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst4/y_ext_reg[4][2]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst4/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst4/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst4/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst4/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst0/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst0/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst0/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst1/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst1/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst1/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst2/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst2/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst2/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst3/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst3/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst3/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst4/y_ext_reg[3][2]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst4/y_ext_reg[4][2]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst4/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst4/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst4/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst4/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst0/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst0/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst0/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst1/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst1/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst1/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst2/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst2/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst2/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst3/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst3/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst3/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst4/y_ext_reg[3][2]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst4/y_ext_reg[4][2]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst4/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst4/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst4/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst4/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst0/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst0/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst0/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst1/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst1/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst1/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst2/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst2/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst2/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst3/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst3/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst3/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst4/y_ext_reg[3][2]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst4/y_ext_reg[4][2]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst4/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst4/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst4/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst4/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst0/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst0/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst0/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst1/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst1/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst1/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst2/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst2/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst2/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst3/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst3/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst3/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst4/y_ext_reg[3][2]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst4/y_ext_reg[4][2]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst4/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst4/result_reg[5][5] | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst4/result_reg[5][3] | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst4/result_reg[5][1] | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst3/y_ext_reg[3][2]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst3/y_ext_reg[4][2]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst3/y_ext_reg[3][2]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst3/y_ext_reg[4][2]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst3/y_ext_reg[3][2]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst3/y_ext_reg[4][2]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst3/y_ext_reg[3][2]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst3/y_ext_reg[4][2]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst3/y_ext_reg[3][2]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst3/y_ext_reg[4][2]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst3/y_ext_reg[3][2]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst3/y_ext_reg[4][2]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst3/y_ext_reg[3][2]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst3/y_ext_reg[4][2]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst3/y_ext_reg[3][2]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst3/y_ext_reg[4][2]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst3/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst3/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst3/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst3/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst3/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst3/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst3/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst3/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst2/y_ext_reg[3][1]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst2/y_ext_reg[3][1]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst2/y_ext_reg[3][1]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst2/y_ext_reg[3][1]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst2/y_ext_reg[3][1]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst2/y_ext_reg[3][1]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst2/y_ext_reg[3][1]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst2/y_ext_reg[3][1]  | 4      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst2/y_ext_reg[4][1]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst2/y_ext_reg[4][1]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst2/y_ext_reg[4][1]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst2/y_ext_reg[4][1]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst2/y_ext_reg[4][1]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst2/y_ext_reg[4][1]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst2/y_ext_reg[4][1]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst2/y_ext_reg[4][1]  | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul0/mul_inst2/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul1/mul_inst2/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul2/mul_inst2/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul3/mul_inst2/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul4/mul_inst2/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul5/mul_inst2/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul6/mul_inst2/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|mul_cel     | mul_poly_matrix_inst/u_mul7/mul_inst2/y_ext_reg[5][2]  | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
++------------+--------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -252,43 +475,43 @@ Report Cell Usage:
 |      |Cell    |Count |
 +------+--------+------+
 |1     |BUFG    |     1|
-|2     |CARRY8  |  1936|
+|2     |CARRY8  |  2032|
 |3     |LUT1    |   306|
-|4     |LUT2    |  6674|
-|5     |LUT3    |  1786|
-|6     |LUT4    |  6468|
-|7     |LUT5    |   833|
-|8     |LUT6    |  2124|
-|9     |SRL16E  |   677|
+|4     |LUT2    |  6890|
+|5     |LUT3    |  1834|
+|6     |LUT4    |  6964|
+|7     |LUT5    |  1033|
+|8     |LUT6    |  2404|
+|9     |SRL16E  |   773|
 |10    |SRLC32E |     1|
-|11    |FDCE    |  7036|
-|12    |FDRE    |  6863|
+|11    |FDCE    |  7133|
+|12    |FDRE    |  7455|
 |13    |IBUF    |   390|
 |14    |OBUF    |   193|
 +------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 2606.664 ; gain = 1155.875
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:27 ; elapsed = 00:01:29 . Memory (MB): peak = 2610.828 ; gain = 1160.242
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:44 ; elapsed = 00:00:51 . Memory (MB): peak = 2606.664 ; gain = 1014.598
-Synthesis Optimization Complete : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 2606.664 ; gain = 1155.875
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:03 ; elapsed = 00:01:15 . Memory (MB): peak = 2610.828 ; gain = 1013.914
+Synthesis Optimization Complete : Time (s): cpu = 00:01:27 ; elapsed = 00:01:29 . Memory (MB): peak = 2610.828 ; gain = 1160.242
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.375 . Memory (MB): peak = 2623.277 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 2327 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.516 . Memory (MB): peak = 2624.402 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2423 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2695.902 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2698.906 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 391 instances were transformed.
   BUFG => BUFGCE: 1 instance 
   IBUF => IBUF (IBUFCTRL, INBUF): 390 instances
 
-Synth Design complete, checksum: f4661b26
+Synth Design complete, checksum: 7cb43b51
 INFO: [Common 17-83] Releasing license: Synthesis
 40 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:14 ; elapsed = 00:01:17 . Memory (MB): peak = 2695.902 ; gain = 2259.426
+synth_design: Time (s): cpu = 00:01:47 ; elapsed = 00:01:51 . Memory (MB): peak = 2698.906 ; gain = 2262.840
 INFO: [Common 17-1381] The checkpoint 'C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/mul_matrix.runs/synth_1/mul_cel.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file mul_cel_utilization_synth.rpt -pb mul_cel_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Sep  3 11:37:41 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed Sep  3 17:16:07 2025...

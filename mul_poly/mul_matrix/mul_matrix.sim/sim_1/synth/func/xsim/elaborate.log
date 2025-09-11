@@ -22,9 +22,6 @@ Compiling module unisims_ver.LUT4
 Compiling module unisims_ver.LUT6
 Compiling module unisims_ver.FDCE_default
 Compiling module unisims_ver.LUT5
-Compiling module unisims_ver.SRLC32E_default
-Compiling module unisims_ver.FDRE_default
-Compiling module unisims_ver.SRL16E_default
 Compiling module xil_defaultlib.barret
 Compiling module xil_defaultlib.barret_0
 Compiling module xil_defaultlib.barret_1
@@ -41,9 +38,12 @@ Compiling module xil_defaultlib.barret_11
 Compiling module xil_defaultlib.barret_12
 Compiling module xil_defaultlib.barret_13
 Compiling module xil_defaultlib.barret_14
+Compiling module xil_defaultlib.Rom_mul
 Compiling module xil_defaultlib.barret_286
 Compiling module xil_defaultlib.barret_287
 Compiling module xil_defaultlib.barret_288
+Compiling module unisims_ver.SRL16E_default
+Compiling module unisims_ver.FDRE_default
 Compiling module xil_defaultlib.BoothDecode_318
 Compiling module xil_defaultlib.BoothDecode_319
 Compiling module xil_defaultlib.BoothDecode_320
@@ -353,8 +353,8 @@ Compiling module xil_defaultlib.BoothDecode_32
 Compiling module xil_defaultlib.BoothDecode_33
 Compiling module xil_defaultlib.mul_12bit_28
 Compiling module xil_defaultlib.mul_poly_21
-Compiling module xil_defaultlib.Rom_mul
 Compiling module xil_defaultlib.mul_poly_matrix
+Compiling module unisims_ver.SRLC32E_default
 Compiling module unisims_ver.OBUF
 Compiling module xil_defaultlib.mul_cel
 Compiling module xil_defaultlib.tb_mul_poly_matrix

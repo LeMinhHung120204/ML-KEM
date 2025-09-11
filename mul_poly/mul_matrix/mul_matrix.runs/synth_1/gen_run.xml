@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu9eg-ffvb1156-2-e" LaunchTime="1756874172" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/mul_cel.dcp">
+<GenRun Id="synth_1" LaunchPart="xczu9eg-ffvb1156-2-e" LaunchTime="1756894438" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/mul_cel.dcp">
   <File Type="PA-TCL" Name="mul_cel.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="mul_cel_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="mul_cel_reports.tcl"/>
   <File Type="RDS-RDS" Name="mul_cel.vds"/>
   <File Type="RDS-UTIL" Name="mul_cel_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="mul_cel_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="mul_cel.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="mul_cel_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="mul_cel_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../BoothDecode.v">

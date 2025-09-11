@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Wed Sep 10 23:04:05 2025
+# Process ID: 27396
+# Current directory: C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21792 C:\Hung\Viettel\Stage2\ML-KEM\mul_poly\mul_matrix\mul_matrix.xpr
+# Log file: C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/vivado.log
+# Journal file: C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix\vivado.jou
+# Running On: DESKTOP-DA5EM0P, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 16948 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/mul_matrix.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_12bit_behav.wcfg
+open_wave_config C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_poly_matrix_behav.wcfg
+source tb_mul_poly_matrix.tcl
+current_wave_config {tb_mul_poly_matrix_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul3/a0_b0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul3/a1_b1}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul3/a1_b0}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul3/a0_b1}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul3/a1_b1_zetas}} 
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_poly_matrix_behav.wcfg}
+relaunch_sim
+current_wave_config {tb_mul_poly_matrix_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul3/barret_inst2/C}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul3/barret_inst2/R}} 
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_poly_matrix_behav.wcfg}
+relaunch_sim
+current_wave_config {tb_mul_poly_matrix_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul3/obarret1}} 
+current_wave_config {tb_mul_poly_matrix_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul3/barret_inst0/C}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul3/barret_inst0/R}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_poly_matrix_behav.wcfg}
+current_wave_config {tb_mul_poly_matrix_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul3/barret_inst1/C}} {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul3/barret_inst1/R}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_poly_matrix_behav.wcfg}
+current_wave_config {tb_mul_poly_matrix_behav.wcfg}
+add_wave {{/tb_mul_poly_matrix/dut/mul_poly_matrix_inst/u_mul3/add1}} 
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_poly_matrix_behav.wcfg}
+relaunch_sim
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_poly_matrix_behav.wcfg}
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_poly_matrix_behav.wcfg}
+save_wave_config {C:/Hung/Viettel/Stage2/ML-KEM/mul_poly/mul_matrix/tb_mul_poly_matrix_behav.wcfg}
+close_sim

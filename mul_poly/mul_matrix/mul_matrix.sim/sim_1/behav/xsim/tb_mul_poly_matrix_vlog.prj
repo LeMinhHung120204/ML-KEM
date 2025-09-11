@@ -4,6 +4,7 @@ verilog xil_defaultlib  \
 "../../../../../Rom_mul.v" \
 "../../../../../add_cell.v" \
 "../../../../../../NTT/barret.v" \
+"../../../../../csa.v" \
 "../../../../../mul_12bit.v" \
 "../../../../../mul_cell.v" \
 "../../../../../mul_poly.v" \

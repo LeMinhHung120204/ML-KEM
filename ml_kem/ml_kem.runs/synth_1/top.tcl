@@ -70,7 +70,11 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_msg_config -id {Common 17-41} -limit 10000000
+set_param power.BramSDPPropagationFix 1
+set_param chipscope.maxJobs 4
+set_param power.enableUnconnectedCarry8PinPower 1
+set_param power.enableCarry8RouteBelPower 1
+set_param power.enableLutRouteBelPower 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xczu9eg-ffvb1156-2-e
 
@@ -90,12 +94,11 @@ read_verilog -library xil_defaultlib {
   C:/Hung/Viettel/Stage2/ML-KEM/NTT/AddressGenerator.v
   C:/Hung/Viettel/Stage2/ML-KEM/NTT/BoothDecode.v
   C:/Hung/Viettel/Stage2/ML-KEM/NTT/MyBootRom.v
+  C:/Hung/Viettel/Stage2/ML-KEM/NTT/MyReg.v
   C:/Hung/Viettel/Stage2/ML-KEM/NTT/barret.v
-  C:/Hung/Viettel/Stage2/ML-KEM/NTT/bram.v
   C:/Hung/Viettel/Stage2/ML-KEM/NTT/bu_intt.v
   C:/Hung/Viettel/Stage2/ML-KEM/NTT/bu_ntt.v
   C:/Hung/Viettel/Stage2/ML-KEM/NTT/mul.v
-  C:/Hung/Viettel/Stage2/ML-KEM/NTT/normalize_output.v
   C:/Hung/Viettel/Stage2/ML-KEM/NTT/top.v
 }
 OPTRACE "Adding files" END { }

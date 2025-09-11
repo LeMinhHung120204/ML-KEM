@@ -3,12 +3,11 @@ verilog xil_defaultlib  \
 "../../../../../NTT/AddressGenerator.v" \
 "../../../../../NTT/BoothDecode.v" \
 "../../../../../NTT/MyBootRom.v" \
+"../../../../../NTT/MyReg.v" \
 "../../../../../NTT/barret.v" \
-"../../../../../NTT/bram.v" \
 "../../../../../NTT/bu_intt.v" \
 "../../../../../NTT/bu_ntt.v" \
 "../../../../../NTT/mul.v" \
-"../../../../../NTT/normalize_output.v" \
 "../../../../../NTT/top.v" \
 "../../../../../NTT/tb_top.v" \
 
